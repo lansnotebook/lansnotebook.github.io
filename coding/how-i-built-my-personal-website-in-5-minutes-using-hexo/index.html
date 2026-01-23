@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <title>
+      How I Built My Personal Website in 5 Minutes (Using Hexo)
+    </title>
+    
+        <link rel="stylesheet" href="/css/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <header>
+    <div class="logo">
+      <h2 style="margin:0; color: var(--primary-dark);">
+        <i class="fa-solid fa-leaf" style="color: var(--gold);"></i>
+        <a href="/">
+          Lan&#39;s Notebook
+        </a>
+      </h2>
+    </div>
+    <nav class="nav-links">
+      
+        
+          <a href="/"><i class="fa-solid fa-house"></i>
+            Home
+          </a>
+          
+            
+        
+          <a href="/categories"><i class="fa-solid fa-book-open"></i>
+            Blog
+          </a>
+          
+            
+        
+          <a href="/shop"><i class="fa-solid fa-basket-shopping"></i>
+            Market
+          </a>
+          
+            
+        
+          <a href="/about"><i class="fa-solid fa-user-astronaut"></i>
+            About me
+          </a>
+          
+            
+              <button class="lang-btn" onclick="switchLang()" style="margin-left:10px;">
+                <i class="fa-solid fa-earth-asia"></i> CN/EN
+              </button>
+    </nav>
+  </header>
+
+  <main>
+    <div style="max-width: 900px; margin: 50px auto; padding: 30px; background: #fff; border-radius: var(--radius); box-shadow: 10px 10px 0 var(--cloud);">
+  
+  
+    <div style="text-align: center; margin-bottom: 40px;">
+        <span style="background: var(--primary); color: white; padding: 5px 15px; border-radius: 20px;">
+            January 22nd, 2026
+        </span>
+        <h1 style="margin-top: 15px;">How I Built My Personal Website in 5 Minutes (Using Hexo)</h1>
+    </div>
+    <div class="content" style="font-size: 1.1rem;">
+      <p>Let&#39;s be honest:</p>
+<p>most of us <em>think</em> about building a personal website far more than we actually build one.</p>
+<p>We imagine:</p>
+<ul>
+<li>perfect layouts</li>
+<li>poetic &quot;About Me&quot; pages</li>
+<li>tasteful fonts that say <em>I have depth but also good design sense</em></li>
+</ul>
+<p>And then… we close the tab.</p>
+<p>This time, I did it differently.</p>
+<p>I built my personal website in <strong>about 5 minutes</strong> - no exaggeration, no mystical coding powers, and no web designer alter ego.</p>
+<hr>
+<h2 id="Why-Hexo"><a href="#Why-Hexo" class="headerlink" title="Why Hexo?"></a>Why Hexo?</h2><p>Hexo is a <strong>static site generator</strong>, which is a fancy way of saying:</p>
+<blockquote>
+<p>You write words → Hexo turns them into a website</p>
+</blockquote>
+<p>Why I love it:</p>
+<ul>
+<li>Lightweight</li>
+<li>Markdown-based (aka writing without UI drama)</li>
+<li>Perfect for blogs, journals, portfolios, and &quot;I just want to exist online&quot; websites</li>
+<li>Customizable <em>later</em> (important keyword: later)</li>
+</ul>
+<p>If your goal is <em>sharing thoughts</em>, not <em>fighting CSS</em>, Hexo is a great friend.</p>
+<hr>
+<h2 id="What-You-Need-Very-Short-List"><a href="#What-You-Need-Very-Short-List" class="headerlink" title="What You Need (Very Short List)"></a>What You Need (Very Short List)</h2><p>Before we summon the website gods, make sure you have:</p>
+<ul>
+<li><strong>Node.js</strong> installed</li>
+<li><strong>Git</strong> installed</li>
+<li>A terminal (don&#39;t be scared, it&#39;s just a text box with confidence)</li>
+</ul>
+<p>That&#39;s it. No 27-step checklist.</p>
+<hr>
+<h2 id="Step-1-Install-Hexo-30-seconds"><a href="#Step-1-Install-Hexo-30-seconds" class="headerlink" title="Step 1: Install Hexo (30 seconds)"></a>Step 1: Install Hexo (30 seconds)</h2><p>In your terminal, type:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+
+<p>Congrats. You&#39;ve installed Hexo and are officially someone who &quot;uses the terminal.&quot;</p>
+<hr>
+<h2 id="Step-2-Create-Your-Site-1-minute"><a href="#Step-2-Create-Your-Site-1-minute" class="headerlink" title="Step 2: Create Your Site (1 minute)"></a>Step 2: Create Your Site (1 minute)</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo init my-blog</span><br><span class="line">cd my-blog</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure>
+
+<p>At this point, Hexo quietly created:</p>
+<ul>
+<li>a blog structure</li>
+<li>folders with mysterious names</li>
+<li>a future for your thoughts</li>
+</ul>
+<hr>
+<h2 id="Step-3-Run-It-Locally-30-seconds"><a href="#Step-3-Run-It-Locally-30-seconds" class="headerlink" title="Step 3: Run It Locally (30 seconds)"></a>Step 3: Run It Locally (30 seconds)</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure>
+
+<p>Open your browser and go to:<br> 👉 <a target="_blank" rel="noopener" href="http://localhost:4000/">http://localhost:4000</a></p>
+<p>Boom.</p>
+<p>You have a website.</p>
+<p>Already.</p>
+<p>Yes, this fast.</p>
+<hr>
+<h2 id="Step-4-Write-Something-The-Fun-Part"><a href="#Step-4-Write-Something-The-Fun-Part" class="headerlink" title="Step 4: Write Something (The Fun Part)"></a>Step 4: Write Something (The Fun Part)</h2><p>Create your first post:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new post &quot;Hello World&quot;</span><br></pre></td></tr></table></figure>
+
+<p>Edit the file in the <code>source/_posts</code> folder using Markdown.</p>
+<p>No distractions.</p>
+<p>No formatting anxiety.</p>
+<p>Just words.</p>
+<p>Perfect for:</p>
+<ul>
+<li>journaling</li>
+<li>project notes</li>
+<li>late-night philosophical thoughts</li>
+<li>&quot;what am I doing with my life&quot; essays</li>
+</ul>
+<hr>
+<h2 id="Step-5-Deploy-Optional-but-Magical"><a href="#Step-5-Deploy-Optional-but-Magical" class="headerlink" title="Step 5: Deploy (Optional, but Magical)"></a>Step 5: Deploy (Optional, but Magical)</h2><p>You can deploy to GitHub Pages, Netlify, or anywhere static websites are welcome.</p>
+<p>Once deployed, your personal website officially exists on the internet - which is kind of wild, if you think about it.</p>
+<hr>
+<h2 id="Why-This-Works-for-Personal-Blogs"><a href="#Why-This-Works-for-Personal-Blogs" class="headerlink" title="Why This Works for Personal Blogs"></a>Why This Works for Personal Blogs</h2><p>Hexo doesn&#39;t scream &quot;corporate.&quot;</p>
+<p>It doesn&#39;t force you into templates that feel like LinkedIn profiles with feelings removed.</p>
+<p>Instead, it feels like:</p>
+<ul>
+<li>a notebook</li>
+<li>a quiet corner of the internet</li>
+<li>a place to exist without algorithms yelling at you</li>
+</ul>
+<p>Which is exactly what I wanted.</p>
+<hr>
+<h2 id="Final-Thoughts"><a href="#Final-Thoughts" class="headerlink" title="Final Thoughts"></a>Final Thoughts</h2><p>You don&#39;t need:</p>
+<ul>
+<li>a perfect design</li>
+<li>40 blog posts ready</li>
+<li>a personal brand strategy document</li>
+</ul>
+<p>You just need:</p>
+<ul>
+<li>one page</li>
+<li>one thought</li>
+<li>five minutes of courage</li>
+</ul>
+<p>Your website doesn&#39;t need to be finished.</p>
+<p>It just needs to be <strong>alive</strong>.</p>
+
+    </div>
+    
+    <div style="text-align:center; margin-top:50px; font-size:2rem; color:var(--gold);">
+        ~ 🍂 🐿️ 🍂 ~
+    </div>
+  
+</div>
+  </main>
+
+  <footer style="text-align: center;">
+    <p>
+      <i class="fa-solid fa-cloud" style="color: #fff;"></i><br>
+      &copy; 2026
+        Lan
+          <br>Living on Earth, dreaming in the maple forest.
+    </p>
+  </footer>
+
+  <script>
+    function switchLang() {
+      let path = window.location.pathname;
+      if (path.includes('/zh-CN/')) window.location.href = path.replace('/zh-CN/', '/');
+      else window.location.href = '/zh-CN' + path;
+    }
+  </script>
+</body>
+
+</html>

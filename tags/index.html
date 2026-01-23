@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <title>
+      Tags
+    </title>
+    
+        <link rel="stylesheet" href="/css/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <header>
+    <div class="logo">
+      <h2 style="margin:0; color: var(--primary-dark);">
+        <i class="fa-solid fa-leaf" style="color: var(--gold);"></i>
+        <a href="/">
+          Lan&#39;s Notebook
+        </a>
+      </h2>
+    </div>
+    <nav class="nav-links">
+      
+        
+          <a href="/"><i class="fa-solid fa-house"></i>
+            Home
+          </a>
+          
+            
+        
+          <a href="/categories"><i class="fa-solid fa-book-open"></i>
+            Blog
+          </a>
+          
+            
+        
+          <a href="/shop"><i class="fa-solid fa-basket-shopping"></i>
+            Market
+          </a>
+          
+            
+        
+          <a href="/about"><i class="fa-solid fa-user-astronaut"></i>
+            About me
+          </a>
+          
+            
+              <button class="lang-btn" onclick="switchLang()" style="margin-left:10px;">
+                <i class="fa-solid fa-earth-asia"></i> CN/EN
+              </button>
+    </nav>
+  </header>
+
+  <main>
+    
+  <!-- 标签索引页面：显示所有标签 -->
+  <div style="text-align: center; padding: 40px;">
+    <h1><i class="fa-solid fa-tags"></i> All Tags</h1>
+    <p>Explore by tags.</p>
+  </div>
+  <div class="grid-container">
+    
+      
+        <a href="/tags/blogs/" class="box-item">
+          <div style="color: var(--gold); font-size: 2rem; margin-bottom: 10px;">
+            <i class="fa-solid fa-tag"></i>
+          </div>
+          <h3>blogs</h3>
+          <p style="opacity: 0.6;">1 post</p>
+        </a>
+      
+        <a href="/tags/calligraphy-art/" class="box-item">
+          <div style="color: var(--gold); font-size: 2rem; margin-bottom: 10px;">
+            <i class="fa-solid fa-tag"></i>
+          </div>
+          <h3>calligraphy art</h3>
+          <p style="opacity: 0.6;">1 post</p>
+        </a>
+      
+        <a href="/tags/daily-sparks/" class="box-item">
+          <div style="color: var(--gold); font-size: 2rem; margin-bottom: 10px;">
+            <i class="fa-solid fa-tag"></i>
+          </div>
+          <h3>daily sparks</h3>
+          <p style="opacity: 0.6;">1 post</p>
+        </a>
+      
+        <a href="/tags/marketing/" class="box-item">
+          <div style="color: var(--gold); font-size: 2rem; margin-bottom: 10px;">
+            <i class="fa-solid fa-tag"></i>
+          </div>
+          <h3>marketing</h3>
+          <p style="opacity: 0.6;">1 post</p>
+        </a>
+      
+        <a href="/tags/monthly-review/" class="box-item">
+          <div style="color: var(--gold); font-size: 2rem; margin-bottom: 10px;">
+            <i class="fa-solid fa-tag"></i>
+          </div>
+          <h3>monthly review</h3>
+          <p style="opacity: 0.6;">1 post</p>
+        </a>
+      
+        <a href="/tags/paintings/" class="box-item">
+          <div style="color: var(--gold); font-size: 2rem; margin-bottom: 10px;">
+            <i class="fa-solid fa-tag"></i>
+          </div>
+          <h3>paintings</h3>
+          <p style="opacity: 0.6;">1 post</p>
+        </a>
+      
+        <a href="/tags/reading-notes/" class="box-item">
+          <div style="color: var(--gold); font-size: 2rem; margin-bottom: 10px;">
+            <i class="fa-solid fa-tag"></i>
+          </div>
+          <h3>reading notes</h3>
+          <p style="opacity: 0.6;">1 post</p>
+        </a>
+      
+        <a href="/tags/swimming/" class="box-item">
+          <div style="color: var(--gold); font-size: 2rem; margin-bottom: 10px;">
+            <i class="fa-solid fa-tag"></i>
+          </div>
+          <h3>swimming</h3>
+          <p style="opacity: 0.6;">1 post</p>
+        </a>
+      
+        <a href="/tags/vibe-coding/" class="box-item">
+          <div style="color: var(--gold); font-size: 2rem; margin-bottom: 10px;">
+            <i class="fa-solid fa-tag"></i>
+          </div>
+          <h3>vibe coding</h3>
+          <p style="opacity: 0.6;">1 post</p>
+        </a>
+      
+    
+  </div>
+
+
+  </main>
+
+  <footer style="text-align: center;">
+    <p>
+      <i class="fa-solid fa-cloud" style="color: #fff;"></i><br>
+      &copy; 2026
+        Lan
+          <br>Living on Earth, dreaming in the maple forest.
+    </p>
+  </footer>
+
+  <script>
+    function switchLang() {
+      let path = window.location.pathname;
+      if (path.includes('/zh-CN/')) window.location.href = path.replace('/zh-CN/', '/');
+      else window.location.href = '/zh-CN' + path;
+    }
+  </script>
+</body>
+
+</html>
