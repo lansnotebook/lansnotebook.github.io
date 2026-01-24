@@ -204,6 +204,250 @@ header {
 
 /* --------------Shop & Blog ends-------------- */
 
+/* --------------Blog Page Starts-------------- */
+.blog-title-section {
+  text-align: center;
+  padding: 40px;
+}
+.blog-title-section h1 {
+  color: var(--gold);
+}
+
+.blog-title-section h1 i {
+  color: var(--gold);
+}
+.blog-icon {
+  color: var(--gold);
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.blog-count {
+  opacity: 0.6;
+}
+
+.blog-empty-state {
+  text-align: center;
+  padding: 40px;
+  opacity: 0.6;
+  grid-column: 1 / -1;
+}
+
+/* --------------Blog Page ends-------------- */
+
+/* --------------tags-in-one-category Page Starts-------------- */
+.tags-title-section {
+  text-align: center;
+  padding: 40px;
+}
+.tags-title-section h1 {
+  color: var(--gold);
+}
+
+.tags-title-section h1 i {
+  color: var(--gold);
+}
+
+.tags-icon {
+  color: var(--gold);
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.tags-count {
+  opacity: 0.6;
+}
+
+/* --------------tags-in-one-category Page ends-------------- */
+
+/* --------------Posts in One Tag Page Starts-------------- */
+.posts-title-section {
+  text-align: center;
+  padding: 40px;
+}
+
+.posts-title-section h1 {
+  color: var(--gold);
+}
+
+.posts-title-section h1 i {
+  color: var(--gold);
+}
+
+.posts-icon {
+  color: var(--gold);
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.posts-date {
+  opacity: 0.6;
+}
+
+.posts-empty-state {
+  text-align: center;
+  padding: 40px;
+  opacity: 0.6;
+  grid-column: 1 / -1;
+}
+
+/* --------------Posts in One Tag Page Styles ends-------------- */
+
+/* --------------Shop Page Starts-------------- */
+.shop-title-section {
+  text-align: center;
+  padding: 40px;
+}
+.shop-title-section h1 {
+  color: var(--gold);
+}
+
+.shop-title-section h1 i {
+  color: var(--gold);
+}
+
+.shop-intro-section {
+  text-align: center;
+  /* padding: 60px 40px; */
+  /* background: linear-gradient(135deg, var(--cloud) 0%, #fff 100%); */
+  border-radius: var(--radius);
+  margin-bottom: 50px;
+}
+
+.shop-intro-section p {
+  font-size: 1.2rem;
+  color: var(--text);
+  margin-bottom: 30px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.shop-intro-section .btn {
+  font-size: 1rem;
+  padding: 12px 30px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.featured-products-category {
+  margin-bottom: 60px;
+}
+
+.featured-products-category-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 30px;
+  padding-bottom: 15px;
+  border-bottom: 3px solid var(--cloud);
+}
+
+.featured-products-category-header i {
+  font-size: 2rem;
+}
+
+.featured-products-category-header h2 {
+  margin: 0;
+  color: var(--text);
+}
+
+.box-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.box-item a {
+  text-decoration: none;
+  color: inherit;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-image-container {
+  height: 180px;
+  background: #f9f9f9;
+  border-radius: 15px;
+  margin-bottom: 15px;
+  overflow: hidden;
+}
+
+.product-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.box-item h3 {
+  margin: 5px 0;
+  color: var(--text);
+}
+
+.product-price {
+  color: var(--nut-brown);
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-top: auto;
+}
+
+.box-item .snipcart-add-item {
+  font-size: 0.8rem;
+  padding: 8px 15px;
+  margin-top: 10px;
+}
+
+.shop-empty-state {
+  text-align: center;
+  padding: 60px 40px;
+  background: var(--cloud);
+  border-radius: var(--radius);
+}
+
+.shop-empty-state i {
+  font-size: 3rem;
+  color: var(--gold);
+  margin-bottom: 20px;
+}
+
+.shop-empty-state p {
+  font-size: 1.1rem;
+  color: var(--text);
+}
+
+/* --------------Shop Page Styles ends-------------- */
+
+/* --------------All Products Page Styles-------------- */
+.category-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.category-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.category-box-icon {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.category-box h3 {
+  margin: 10px 0;
+  color: var(--text);
+}
+
+.category-box-count {
+  opacity: 0.6;
+  font-size: 0.9rem;
+}
+
+/* --------------All Products Page Styles ends-------------- */
 
 /* --------------Footer starts-------------- */
 footer {

@@ -64,15 +64,20 @@
   </header>
 
   <main>
-    <!-- Intro Section -->
-<div style="text-align: center; padding: 60px 40px; background: linear-gradient(135deg, var(--cloud) 0%, #fff 100%); border-radius: var(--radius); margin-bottom: 50px;">
-  <h1 style="color: var(--primary-dark); margin-bottom: 20px;">
-    <i class="fa-solid fa-store" style="color: var(--gold);"></i> The Forest Market
+    <div class="shop-title-section">
+  <h1>
+    <i class="fa-solid fa-store"></i> The Forest Market
   </h1>
-  <p style="font-size: 1.2rem; color: var(--text); margin-bottom: 30px; max-width: 600px; margin-left: auto; margin-right: auto;">
-    Handmade treasures exchanged for shiny coins. Discover unique digital products crafted with care.
+</div>
+<!-- Intro Section -->
+<div class="shop-intro-section">
+  <p>
+    Handmade treasures exchanged for shiny coins.
   </p>
-  <a href="#all-products" class="btn" style="font-size: 1rem; padding: 12px 30px; text-decoration: none; display: inline-block;">
+  <!-- <p>
+    Discover unique digital products crafted with care.
+  </p> -->
+  <a href="/products/" class="btn">
     <i class="fa-solid fa-grid-2"></i> View All Products
   </a>
 </div>
@@ -80,35 +85,33 @@
 <!-- Products by Category -->
 
 
-<div id="all-products">
+<div id="featured-products">
   
-    <div style="margin-bottom: 60px;">
-      <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 30px; padding-bottom: 15px; border-bottom: 3px solid var(--cloud);">
-        <i class="fa-solid fa-box" style="font-size: 2rem; color: var(--gold);"></i>
-        <h2 style="margin: 0; color: var(--text);">Instruction videos</h2>
-        <span style="background: var(--cloud); color: var(--text); padding: 5px 15px; border-radius: 20px; font-size: 0.9rem;">
+    <div class="featured-products-category">
+      <div class="featured-products-category-header">
+        <i class="fa-solid fa-video" style="color: var(--gold);"></i>
+        <h2>Instruction Videos</h2>
+        <!-- <span style="background: var(--cloud); color: var(--text); padding: 5px 15px; border-radius: 20px; font-size: 0.9rem;">
           3 products
-        </span>
+        </span> -->
       </div>
       
       <div class="grid-container">
         
-          <div class="box-item" style="display: flex; flex-direction: column;">
-            <a href="/instruction-videos/building-a-personal-blog/" style="text-decoration: none; color: inherit; flex: 1; display: flex; flex-direction: column;">
-              <div style="height:180px; background:#f9f9f9; border-radius:15px; margin-bottom:15px; overflow:hidden;">
+          <div class="box-item">
+            <a href="/instruction-videos/building-a-personal-blog/">
+              <div class="product-image-container">
                 <img src="/img/product-image.jpg" 
-                     alt="building a personal blog" 
-                     style="width:100%; height:100%; object-fit:cover;">
+                     alt="building a personal blog">
               </div>
-              <h3 style="margin: 5px 0; color: var(--text);">building a personal blog</h3>
-              <p style="color: var(--nut-brown); font-weight: bold; font-size: 1.2rem; margin-top: auto;">
+              <h3>building a personal blog</h3>
+              <p class="product-price">
                 $49.99
               </p>
             </a>
             <button 
               class="snipcart-add-item btn" 
-              style="font-size: 0.8rem; padding: 8px 15px; margin-top: 10px;"
-              data-item-id="cmks8w1c3000184dc5h3xg5gj"
+              data-item-id="cmksen4e40001y0dc7gyvffyh"
               data-item-price="49.99"
               data-item-url="/instruction-videos/building-a-personal-blog/"
               data-item-name="building a personal blog"
@@ -118,47 +121,20 @@
             </button>
           </div>
         
-          <div class="box-item" style="display: flex; flex-direction: column;">
-            <a href="/instruction-videos/creating-an-application-using-AI-without-coding/" style="text-decoration: none; color: inherit; flex: 1; display: flex; flex-direction: column;">
-              <div style="height:180px; background:#f9f9f9; border-radius:15px; margin-bottom:15px; overflow:hidden;">
+          <div class="box-item">
+            <a href="/instruction-videos/creating-a-personal-journaling-system-using-onenote/">
+              <div class="product-image-container">
                 <img src="/img/product-image.jpg" 
-                     alt="creating an application using AI (without coding)" 
-                     style="width:100%; height:100%; object-fit:cover;">
+                     alt="creating a personal journaling system (using onenote)">
               </div>
-              <h3 style="margin: 5px 0; color: var(--text);">creating an application using AI (without coding)</h3>
-              <p style="color: var(--nut-brown); font-weight: bold; font-size: 1.2rem; margin-top: auto;">
-                $89.99
-              </p>
-            </a>
-            <button 
-              class="snipcart-add-item btn" 
-              style="font-size: 0.8rem; padding: 8px 15px; margin-top: 10px;"
-              data-item-id="cmks8w1c9000884dcbeblf7wz"
-              data-item-price="89.99"
-              data-item-url="/instruction-videos/creating-an-application-using-AI-without-coding/"
-              data-item-name="creating an application using AI (without coding)"
-              data-item-description="creating an application using AI (without coding)"
-              data-item-image="/img/product-image.jpg">
-              <i class="fa-solid fa-basket-shopping"></i> Add to Cart
-            </button>
-          </div>
-        
-          <div class="box-item" style="display: flex; flex-direction: column;">
-            <a href="/instruction-videos/creating-a-personal-journaling-system-using-onenote/" style="text-decoration: none; color: inherit; flex: 1; display: flex; flex-direction: column;">
-              <div style="height:180px; background:#f9f9f9; border-radius:15px; margin-bottom:15px; overflow:hidden;">
-                <img src="/img/product-image.jpg" 
-                     alt="creating a personal journaling system (using onenote)" 
-                     style="width:100%; height:100%; object-fit:cover;">
-              </div>
-              <h3 style="margin: 5px 0; color: var(--text);">creating a personal journaling system (using onenote)</h3>
-              <p style="color: var(--nut-brown); font-weight: bold; font-size: 1.2rem; margin-top: auto;">
+              <h3>creating a personal journaling system (using onenote)</h3>
+              <p class="product-price">
                 $69.99
               </p>
             </a>
             <button 
               class="snipcart-add-item btn" 
-              style="font-size: 0.8rem; padding: 8px 15px; margin-top: 10px;"
-              data-item-id="cmks8w1ca000b84dc10kp1ygz"
+              data-item-id="cmksen4ea0009y0dcbbix1ajl"
               data-item-price="69.99"
               data-item-url="/instruction-videos/creating-a-personal-journaling-system-using-onenote/"
               data-item-name="creating a personal journaling system (using onenote)"
@@ -168,36 +144,57 @@
             </button>
           </div>
         
+          <div class="box-item">
+            <a href="/instruction-videos/creating-an-application-using-AI-without-coding/">
+              <div class="product-image-container">
+                <img src="/img/product-image.jpg" 
+                     alt="creating an application using AI (without coding)">
+              </div>
+              <h3>creating an application using AI (without coding)</h3>
+              <p class="product-price">
+                $89.99
+              </p>
+            </a>
+            <button 
+              class="snipcart-add-item btn" 
+              data-item-id="cmksen4eb000by0dc7w8g9wq4"
+              data-item-price="89.99"
+              data-item-url="/instruction-videos/creating-an-application-using-AI-without-coding/"
+              data-item-name="creating an application using AI (without coding)"
+              data-item-description="creating an application using AI (without coding)"
+              data-item-image="/img/product-image.jpg">
+              <i class="fa-solid fa-basket-shopping"></i> Add to Cart
+            </button>
+          </div>
+        
       </div>
     </div>
   
-    <div style="margin-bottom: 60px;">
-      <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 30px; padding-bottom: 15px; border-bottom: 3px solid var(--cloud);">
-        <i class="fa-solid fa-palette" style="font-size: 2rem; color: var(--primary);"></i>
-        <h2 style="margin: 0; color: var(--text);">Design Art</h2>
-        <span style="background: var(--cloud); color: var(--text); padding: 5px 15px; border-radius: 20px; font-size: 0.9rem;">
+    <div class="featured-products-category">
+      <div class="featured-products-category-header">
+        <i class="fa-solid fa-palette" style="color: var(--primary);"></i>
+        <h2>Design Art</h2>
+        <!-- <span style="background: var(--cloud); color: var(--text); padding: 5px 15px; border-radius: 20px; font-size: 0.9rem;">
           3 products
-        </span>
+        </span> -->
       </div>
       
       <div class="grid-container">
         
-          <div class="box-item" style="display: flex; flex-direction: column;">
-            <a href="/design-art/candy-store-logo/" style="text-decoration: none; color: inherit; flex: 1; display: flex; flex-direction: column;">
-              <div style="height:180px; background:#f9f9f9; border-radius:15px; margin-bottom:15px; overflow:hidden;">
+          <div class="box-item">
+            <a href="/design-art/candy-store-logo/">
+              <div class="product-image-container">
                 <img src="/img/product-image.jpg" 
-                     alt="candy store logo" 
-                     style="width:100%; height:100%; object-fit:cover;">
+                     alt="candy store logo">
               </div>
-              <h3 style="margin: 5px 0; color: var(--text);">candy store logo</h3>
-              <p style="color: var(--nut-brown); font-weight: bold; font-size: 1.2rem; margin-top: auto;">
+              <h3>candy store logo</h3>
+              <p class="product-price">
                 $29.99
               </p>
             </a>
             <button 
               class="snipcart-add-item btn" 
-              style="font-size: 0.8rem; padding: 8px 15px; margin-top: 10px;"
-              data-item-id="cmks8w1c5000384dcbbt7els8"
+              data-item-id="cmksen4e70003y0dca75gekk3"
               data-item-price="29.99"
               data-item-url="/design-art/candy-store-logo/"
               data-item-name="candy store logo"
@@ -207,22 +204,20 @@
             </button>
           </div>
         
-          <div class="box-item" style="display: flex; flex-direction: column;">
-            <a href="/design-art/coffee-shop-poster/" style="text-decoration: none; color: inherit; flex: 1; display: flex; flex-direction: column;">
-              <div style="height:180px; background:#f9f9f9; border-radius:15px; margin-bottom:15px; overflow:hidden;">
+          <div class="box-item">
+            <a href="/design-art/coffee-shop-poster/">
+              <div class="product-image-container">
                 <img src="/img/product-image.jpg" 
-                     alt="coffee shop poster" 
-                     style="width:100%; height:100%; object-fit:cover;">
+                     alt="coffee shop poster">
               </div>
-              <h3 style="margin: 5px 0; color: var(--text);">coffee shop poster</h3>
-              <p style="color: var(--nut-brown); font-weight: bold; font-size: 1.2rem; margin-top: auto;">
+              <h3>coffee shop poster</h3>
+              <p class="product-price">
                 $29.99
               </p>
             </a>
             <button 
               class="snipcart-add-item btn" 
-              style="font-size: 0.8rem; padding: 8px 15px; margin-top: 10px;"
-              data-item-id="cmks8w1c8000784dc9ghd9d8o"
+              data-item-id="cmksen4ea0008y0dc1unr5vol"
               data-item-price="29.99"
               data-item-url="/design-art/coffee-shop-poster/"
               data-item-name="coffee shop poster"
@@ -232,22 +227,20 @@
             </button>
           </div>
         
-          <div class="box-item" style="display: flex; flex-direction: column;">
-            <a href="/design-art/perfume-shop-logo/" style="text-decoration: none; color: inherit; flex: 1; display: flex; flex-direction: column;">
-              <div style="height:180px; background:#f9f9f9; border-radius:15px; margin-bottom:15px; overflow:hidden;">
+          <div class="box-item">
+            <a href="/design-art/perfume-shop-logo/">
+              <div class="product-image-container">
                 <img src="/img/product-image.jpg" 
-                     alt="perfume store logo" 
-                     style="width:100%; height:100%; object-fit:cover;">
+                     alt="perfume store logo">
               </div>
-              <h3 style="margin: 5px 0; color: var(--text);">perfume store logo</h3>
-              <p style="color: var(--nut-brown); font-weight: bold; font-size: 1.2rem; margin-top: auto;">
+              <h3>perfume store logo</h3>
+              <p class="product-price">
                 $29.99
               </p>
             </a>
             <button 
               class="snipcart-add-item btn" 
-              style="font-size: 0.8rem; padding: 8px 15px; margin-top: 10px;"
-              data-item-id="cmks8w1co001c84dchheu5tns"
+              data-item-id="cmksen4el0017y0dcblgc1jh9"
               data-item-price="29.99"
               data-item-url="/design-art/perfume-shop-logo/"
               data-item-name="perfume store logo"
@@ -260,58 +253,54 @@
       </div>
     </div>
   
-    <div style="margin-bottom: 60px;">
-      <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 30px; padding-bottom: 15px; border-bottom: 3px solid var(--cloud);">
-        <i class="fa-solid fa-code" style="font-size: 2rem; color: var(--nut-brown);"></i>
-        <h2 style="margin: 0; color: var(--text);">Web Development Kit</h2>
-        <span style="background: var(--cloud); color: var(--text); padding: 5px 15px; border-radius: 20px; font-size: 0.9rem;">
+    <div class="featured-products-category">
+      <div class="featured-products-category-header">
+        <i class="fa-solid fa-laptop-code" style="color: var(--nut-brown);"></i>
+        <h2>Web Development Kit</h2>
+        <!-- <span style="background: var(--cloud); color: var(--text); padding: 5px 15px; border-radius: 20px; font-size: 0.9rem;">
           3 products
-        </span>
+        </span> -->
       </div>
       
       <div class="grid-container">
         
-          <div class="box-item" style="display: flex; flex-direction: column;">
-            <a href="/web-development/hexo-theme-autumn/" style="text-decoration: none; color: inherit; flex: 1; display: flex; flex-direction: column;">
-              <div style="height:180px; background:#f9f9f9; border-radius:15px; margin-bottom:15px; overflow:hidden;">
+          <div class="box-item">
+            <a href="/web-development/hexo-theme-spring/">
+              <div class="product-image-container">
                 <img src="/img/product-image.jpg" 
-                     alt="hexo theme - Autumn" 
-                     style="width:100%; height:100%; object-fit:cover;">
+                     alt="hexo theme - Spring">
               </div>
-              <h3 style="margin: 5px 0; color: var(--text);">hexo theme - Autumn</h3>
-              <p style="color: var(--nut-brown); font-weight: bold; font-size: 1.2rem; margin-top: auto;">
+              <h3>hexo theme - Spring</h3>
+              <p class="product-price">
                 $49.99
               </p>
             </a>
             <button 
               class="snipcart-add-item btn" 
-              style="font-size: 0.8rem; padding: 8px 15px; margin-top: 10px;"
-              data-item-id="cmks8w1cb000e84dc6mt4bwvi"
+              data-item-id="cmksen4ec000cy0dc4wbpawfd"
               data-item-price="49.99"
-              data-item-url="/web-development/hexo-theme-autumn/"
-              data-item-name="hexo theme - Autumn"
-              data-item-description="hexo theme - Autumn"
+              data-item-url="/web-development/hexo-theme-spring/"
+              data-item-name="hexo theme - Spring"
+              data-item-description="hexo theme - Spring"
               data-item-image="/img/product-image.jpg">
               <i class="fa-solid fa-basket-shopping"></i> Add to Cart
             </button>
           </div>
         
-          <div class="box-item" style="display: flex; flex-direction: column;">
-            <a href="/web-development/hexo-theme-summer/" style="text-decoration: none; color: inherit; flex: 1; display: flex; flex-direction: column;">
-              <div style="height:180px; background:#f9f9f9; border-radius:15px; margin-bottom:15px; overflow:hidden;">
+          <div class="box-item">
+            <a href="/web-development/hexo-theme-summer/">
+              <div class="product-image-container">
                 <img src="/img/product-image.jpg" 
-                     alt="hexo theme - Summer" 
-                     style="width:100%; height:100%; object-fit:cover;">
+                     alt="hexo theme - Summer">
               </div>
-              <h3 style="margin: 5px 0; color: var(--text);">hexo theme - Summer</h3>
-              <p style="color: var(--nut-brown); font-weight: bold; font-size: 1.2rem; margin-top: auto;">
+              <h3>hexo theme - Summer</h3>
+              <p class="product-price">
                 $49.99
               </p>
             </a>
             <button 
               class="snipcart-add-item btn" 
-              style="font-size: 0.8rem; padding: 8px 15px; margin-top: 10px;"
-              data-item-id="cmks8w1cc000g84dc8sjjaj8p"
+              data-item-id="cmksen4ee000hy0dc84485un3"
               data-item-price="49.99"
               data-item-url="/web-development/hexo-theme-summer/"
               data-item-name="hexo theme - Summer"
@@ -321,26 +310,24 @@
             </button>
           </div>
         
-          <div class="box-item" style="display: flex; flex-direction: column;">
-            <a href="/web-development/hexo-theme-spring/" style="text-decoration: none; color: inherit; flex: 1; display: flex; flex-direction: column;">
-              <div style="height:180px; background:#f9f9f9; border-radius:15px; margin-bottom:15px; overflow:hidden;">
+          <div class="box-item">
+            <a href="/web-development/hexo-theme-autumn/">
+              <div class="product-image-container">
                 <img src="/img/product-image.jpg" 
-                     alt="hexo theme - Spring" 
-                     style="width:100%; height:100%; object-fit:cover;">
+                     alt="hexo theme - Autumn">
               </div>
-              <h3 style="margin: 5px 0; color: var(--text);">hexo theme - Spring</h3>
-              <p style="color: var(--nut-brown); font-weight: bold; font-size: 1.2rem; margin-top: auto;">
+              <h3>hexo theme - Autumn</h3>
+              <p class="product-price">
                 $49.99
               </p>
             </a>
             <button 
               class="snipcart-add-item btn" 
-              style="font-size: 0.8rem; padding: 8px 15px; margin-top: 10px;"
-              data-item-id="cmks8w1cd000l84dc3txaa6h6"
+              data-item-id="cmksen4ef000my0dchgli89j1"
               data-item-price="49.99"
-              data-item-url="/web-development/hexo-theme-spring/"
-              data-item-name="hexo theme - Spring"
-              data-item-description="hexo theme - Spring"
+              data-item-url="/web-development/hexo-theme-autumn/"
+              data-item-name="hexo theme - Autumn"
+              data-item-description="hexo theme - Autumn"
               data-item-image="/img/product-image.jpg">
               <i class="fa-solid fa-basket-shopping"></i> Add to Cart
             </button>

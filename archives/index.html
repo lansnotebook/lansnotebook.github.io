@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="48x48" href="/img/favicon.png">
+	<link rel="shortcut icon" type="image/png" href="/img/favicon.png">
+  
+      <title>
+        Lan&#39;s Notebook | The Life Journal of an Earthling
+      </title>
+      
+        <link rel="stylesheet" href="/css/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <!-- Snipcart CSS -->
+        <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.4.0/default/snipcart.css" />
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <header>
+    <div class="logo">
+      <h2 style="margin:0; color: var(--primary-dark);">
+        <i class="fa-solid fa-leaf" style="color: var(--gold);"></i>
+        <a href="/">
+          Lan&#39;s Notebook
+        </a>
+      </h2>
+    </div>
+    <nav class="nav-links">
+      
+        
+          <a href="/"><i class="fa-solid fa-house"></i>
+            Home
+          </a>
+          
+            
+        
+          <a href="/categories"><i class="fa-solid fa-book-open"></i>
+            Blog
+          </a>
+          
+            
+        
+          <a href="/shop"><i class="fa-solid fa-basket-shopping"></i>
+            Market
+          </a>
+          
+            
+        
+          <a href="/about"><i class="fa-solid fa-user-astronaut"></i>
+            About me
+          </a>
+          
+            
+              <button class="snipcart-checkout lang-btn" style="margin-left:10px; position: relative;">
+                <i class="fa-solid fa-shopping-cart"></i> Cart
+                <span class="snipcart-items-count" style="position: absolute; top: -8px; right: -8px; background: var(--gold); color: white; border-radius: 50%; width: 20px; height: 20px; display: flex; align-items: center; justify-content: center; font-size: 0.7rem; font-weight: bold;">0</span>
+              </button>
+              <button class="lang-btn" onclick="switchLang()" style="margin-left:10px;">
+                <i class="fa-solid fa-earth-asia"></i> CN/EN
+              </button>
+    </nav>
+  </header>
+
+  <main>
+    <div class="profile-section">
+  <div class="avatar-frame">
+    <img src="/img/profile.png" alt="Me" class="avatar">
+  </div>
+
+  <h1 style="color: var(--text); margin-bottom: 5px;">
+    Hi, I'm Lan！
+  </h1>
+
+  <p class="description">
+    <!-- <i class="fa-solid fa-quote-left"></i> -->
+    Welcome to my notebook, where I record everything I love about the world and about living on Earth.
+      <!-- <i class="fa-solid fa-quote-right"></i> -->
+  </p>
+
+  <h2 style="margin-top: 60px; color: var(--text);">
+    <i class="fa-solid fa-seedling" style="color: var(--gold);"></i> What I'd Love to do as a Human Being
+  </h2>
+  <div class="categories-grid">
+    
+      
+        <a href="/categories/journaling" class="category-card">
+          <img src="/img/1.jpg" alt="">
+          <span><i class="fa-solid fa-heart"></i>
+            Journaling
+          </span>
+        </a>
+        
+          
+      
+        <a href="/categories/learning" class="category-card">
+          <img src="/img/1.jpg" alt="">
+          <span><i class="fa-solid fa-heart"></i>
+            Learning
+          </span>
+        </a>
+        
+          
+      
+        <a href="/categories/creating" class="category-card">
+          <img src="/img/1.jpg" alt="">
+          <span><i class="fa-solid fa-heart"></i>
+            Creating
+          </span>
+        </a>
+        
+          
+      
+        <a href="/categories/coding" class="category-card">
+          <img src="/img/1.jpg" alt="">
+          <span><i class="fa-solid fa-heart"></i>
+            Coding
+          </span>
+        </a>
+        
+          
+  </div>
+
+  <h2><i class="fa-solid fa-crown" style="color: var(--gold);"></i> My Golden Acorns</h2>
+  <div class="achievements">
+    <!-- <h3><i class="fa-solid fa-crown" style="color: var(--gold);"></i> My Golden Acorns</h3> -->
+    <ul style="text-align: left; list-style: none; padding: 0;">
+      <li style="margin: 10px 0;"><i class="fa-solid fa-check-circle" style="color: var(--primary);"></i> Built a cozy
+        home on the web</li>
+      <li style="margin: 10px 0;"><i class="fa-solid fa-check-circle" style="color: var(--primary);"></i> Befriended a
+        neighborhood cat</li>
+      <li style="margin: 10px 0;"><i class="fa-solid fa-check-circle" style="color: var(--primary);"></i> Kept my plants
+        alive for 1 year</li>
+    </ul>
+  </div>
+</div>
+  </main>
+
+  <footer style="text-align: center;">
+    <p>
+      <i class="fa-solid fa-cloud" style="color: #fff;"></i><br>
+      &copy; 2026
+        Lan
+          <br>Living on Earth, dreaming in the forest.
+    </p>
+  </footer>
+
+  <script>
+    function switchLang() {
+      let path = window.location.pathname;
+      if (path.includes('/zh-CN/')) window.location.href = path.replace('/zh-CN/', '/');
+      else window.location.href = '/zh-CN' + path;
+    }
+  </script>
+  
+  <!-- Snipcart JavaScript -->
+  <script async src="https://cdn.snipcart.com/themes/v3.4.0/default/snipcart.js"></script>
+  <div hidden id="snipcart" 
+       data-api-key="YOUR_SNIPCART_API_KEY"
+       data-config-modal-style="side"
+       data-config-add-product-behavior="none"
+       data-config-currency="usd"
+       data-config-payment-methods="card,alipay">
+  </div>
+  
+  <!-- Update cart count -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      if (typeof Snipcart !== 'undefined') {
+        Snipcart.store.subscribe(function() {
+          var count = Snipcart.store.getState().cart.items.count;
+          var countElement = document.querySelector('.snipcart-items-count');
+          if (countElement) {
+            countElement.textContent = count;
+            countElement.style.display = count > 0 ? 'flex' : 'none';
+          }
+        });
+      }
+    });
+  </script>
+</body>
+
+</html>
