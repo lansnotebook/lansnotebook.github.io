@@ -92,7 +92,7 @@
         <button 
           class="snipcart-add-item btn" 
           style="width: 100%; margin-top: 30px; font-size: 1.2rem;"
-          data-item-id="cmkuo2qwo000364dch3nt6buf"
+          data-item-id="cmkv70kyt000aj0dc3zr09uu4"
           data-item-price="29.99"
           data-item-url="/design-art/burger-store-logo/"
           data-item-name="burger store logo"
@@ -193,6 +193,8 @@
       }
 
       function setOpen(open) {
+        var isOpen = header.classList.contains('nav-open');
+        if (open === isOpen) return;
         header.classList.toggle('nav-open', open);
         toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
         if (open) lockScroll();
@@ -210,21 +212,21 @@
       });
 
       document.addEventListener('click', function(e) {
-        if (!header.contains(e.target)) setOpen(false);
+        if (header.classList.contains('nav-open') && !header.contains(e.target)) setOpen(false);
       });
 
       document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape') setOpen(false);
+        if (e.key === 'Escape' && header.classList.contains('nav-open')) setOpen(false);
       });
 
       window.addEventListener('resize', function() {
         updateHeaderHeightVar();
-        if (window.innerWidth > 768) setOpen(false);
+        if (window.innerWidth > 768 && header.classList.contains('nav-open')) setOpen(false);
       });
 
       if (backdrop) {
         backdrop.addEventListener('click', function() {
-          setOpen(false);
+          if (header.classList.contains('nav-open')) setOpen(false);
         });
       }
     })();

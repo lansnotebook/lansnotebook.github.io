@@ -98,11 +98,34 @@
         </a>
         <button 
           class="snipcart-add-item btn" 
-          data-item-id="cmkuo2qwl000164dc5yr87nfs"
+          data-item-id="cmkv70kys0009j0dc2hxe2erd"
           data-item-price="49.99"
           data-item-url="/instruction-videos/building-a-personal-blog/"
           data-item-name="building a personal blog"
           data-item-description="building a personal blog"
+          data-item-image="/img/product-image.jpg">
+          <i class="fa-solid fa-basket-shopping"></i> Add to Cart
+        </button>
+      </div>
+    
+      <div class="box-item">
+        <a href="/instruction-videos/creating-a-personal-journaling-system-using-onenote/">
+          <div class="product-image-container">
+            <img src="/img/product-image.jpg" 
+                 alt="creating a personal journaling system (using onenote)">
+          </div>
+          <h3>creating a personal journaling system (using onenote)</h3>
+          <p class="product-price">
+            $69.99
+          </p>
+        </a>
+        <button 
+          class="snipcart-add-item btn" 
+          data-item-id="cmkv70kyw000ej0dcghr4h0kn"
+          data-item-price="69.99"
+          data-item-url="/instruction-videos/creating-a-personal-journaling-system-using-onenote/"
+          data-item-name="creating a personal journaling system (using onenote)"
+          data-item-description="creating a personal journaling system (using onenote)"
           data-item-image="/img/product-image.jpg">
           <i class="fa-solid fa-basket-shopping"></i> Add to Cart
         </button>
@@ -121,7 +144,7 @@
         </a>
         <button 
           class="snipcart-add-item btn" 
-          data-item-id="cmkuo2qws000964dc9giw6vcl"
+          data-item-id="cmkv70kyx000hj0dcdvuh0msq"
           data-item-price="89.99"
           data-item-url="/instruction-videos/creating-an-application-using-AI-without-coding/"
           data-item-name="creating an application using AI (without coding)"
@@ -144,34 +167,11 @@
         </a>
         <button 
           class="snipcart-add-item btn" 
-          data-item-id="cmkuo2qws000b64dcbc53d16d"
+          data-item-id="cmkv70kyy000kj0dcal1wg2cr"
           data-item-price="39.99"
           data-item-url="/instruction-videos/expanding-your-english-vocabulary/"
           data-item-name="expanding your english vocabulary"
           data-item-description="expanding your english vocabulary"
-          data-item-image="/img/product-image.jpg">
-          <i class="fa-solid fa-basket-shopping"></i> Add to Cart
-        </button>
-      </div>
-    
-      <div class="box-item">
-        <a href="/instruction-videos/creating-a-personal-journaling-system-using-onenote/">
-          <div class="product-image-container">
-            <img src="/img/product-image.jpg" 
-                 alt="creating a personal journaling system (using onenote)">
-          </div>
-          <h3>creating a personal journaling system (using onenote)</h3>
-          <p class="product-price">
-            $69.99
-          </p>
-        </a>
-        <button 
-          class="snipcart-add-item btn" 
-          data-item-id="cmkuo2qwt000c64dcblfs3jrz"
-          data-item-price="69.99"
-          data-item-url="/instruction-videos/creating-a-personal-journaling-system-using-onenote/"
-          data-item-name="creating a personal journaling system (using onenote)"
-          data-item-description="creating a personal journaling system (using onenote)"
           data-item-image="/img/product-image.jpg">
           <i class="fa-solid fa-basket-shopping"></i> Add to Cart
         </button>
@@ -268,6 +268,8 @@
       }
 
       function setOpen(open) {
+        var isOpen = header.classList.contains('nav-open');
+        if (open === isOpen) return;
         header.classList.toggle('nav-open', open);
         toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
         if (open) lockScroll();
@@ -285,21 +287,21 @@
       });
 
       document.addEventListener('click', function(e) {
-        if (!header.contains(e.target)) setOpen(false);
+        if (header.classList.contains('nav-open') && !header.contains(e.target)) setOpen(false);
       });
 
       document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape') setOpen(false);
+        if (e.key === 'Escape' && header.classList.contains('nav-open')) setOpen(false);
       });
 
       window.addEventListener('resize', function() {
         updateHeaderHeightVar();
-        if (window.innerWidth > 768) setOpen(false);
+        if (window.innerWidth > 768 && header.classList.contains('nav-open')) setOpen(false);
       });
 
       if (backdrop) {
         backdrop.addEventListener('click', function() {
-          setOpen(false);
+          if (header.classList.contains('nav-open')) setOpen(false);
         });
       }
     })();

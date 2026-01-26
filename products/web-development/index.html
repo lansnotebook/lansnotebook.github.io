@@ -98,7 +98,7 @@
         </a>
         <button 
           class="snipcart-add-item btn" 
-          data-item-id="cmkuo2qwu000f64dc20twcs21"
+          data-item-id="cmkv70kyz000mj0dc4lhnedby"
           data-item-price="49.99"
           data-item-url="/web-development/hexo-theme-autumn/"
           data-item-name="hexo theme - Autumn"
@@ -121,7 +121,7 @@
         </a>
         <button 
           class="snipcart-add-item btn" 
-          data-item-id="cmkuo2qwv000h64dc19sqdq4p"
+          data-item-id="cmkv70kyz000pj0dc63woc7c0"
           data-item-price="49.99"
           data-item-url="/web-development/hexo-theme-spring/"
           data-item-name="hexo theme - Spring"
@@ -144,7 +144,7 @@
         </a>
         <button 
           class="snipcart-add-item btn" 
-          data-item-id="cmkuo2qww000k64dcc6b9bppc"
+          data-item-id="cmkv70kz0000rj0dcgjex9de6"
           data-item-price="49.99"
           data-item-url="/web-development/hexo-theme-summer/"
           data-item-name="hexo theme - Summer"
@@ -167,7 +167,7 @@
         </a>
         <button 
           class="snipcart-add-item btn" 
-          data-item-id="cmkuo2qx0000v64dce2kma0xw"
+          data-item-id="cmkv70kz0000uj0dc62gcftvx"
           data-item-price="49.99"
           data-item-url="/web-development/hexo-theme-winter/"
           data-item-name="hexo theme - Winter"
@@ -268,6 +268,8 @@
       }
 
       function setOpen(open) {
+        var isOpen = header.classList.contains('nav-open');
+        if (open === isOpen) return;
         header.classList.toggle('nav-open', open);
         toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
         if (open) lockScroll();
@@ -285,21 +287,21 @@
       });
 
       document.addEventListener('click', function(e) {
-        if (!header.contains(e.target)) setOpen(false);
+        if (header.classList.contains('nav-open') && !header.contains(e.target)) setOpen(false);
       });
 
       document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape') setOpen(false);
+        if (e.key === 'Escape' && header.classList.contains('nav-open')) setOpen(false);
       });
 
       window.addEventListener('resize', function() {
         updateHeaderHeightVar();
-        if (window.innerWidth > 768) setOpen(false);
+        if (window.innerWidth > 768 && header.classList.contains('nav-open')) setOpen(false);
       });
 
       if (backdrop) {
         backdrop.addEventListener('click', function() {
-          setOpen(false);
+          if (header.classList.contains('nav-open')) setOpen(false);
         });
       }
     })();

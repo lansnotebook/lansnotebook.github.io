@@ -276,22 +276,36 @@ body.nav-locked{
   margin-bottom: 60px;
 }
 
+/* -------------- Homepage Sections Common -------------- */
+.home-section {
+  margin-bottom: 80px;
+  padding: 0 10%;
+}
+
+.home-section h2 {
+  /* font-family: 'Fredoka', sans-serif; */
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .home-section {
+    padding: 0 5%;
+  }
+}
+
 /* --------------Categories-------------- */
 .categories-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 25px;
-  padding: 10px 10%;
+  padding: 10px;
 }
-.category-card {
-  /* height: 220px;
-  border-radius: var(--radius) 0 var(--radius) var(--radius);
-  overflow: hidden;
-  box-shadow: 5px 5px 0px var(--primary);
-  border: 2px solid var(--primary);
-  background: #fff;
-  transition: 0.3s; */
-  
+.category-card {  
   position: relative;
   height: 220px;
   border-radius: var(--radius);
@@ -321,19 +335,226 @@ body.nav-locked{
   .categories-grid { padding: 20px 5%; }
 }
 
+/* --- SECTION 2: Golden Acorns Album (Carousel) --- */
+.album-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.album-viewport {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none; /* Hide scrollbar Firefox */
+  padding: 10px;
+}
+
+.album-viewport::-webkit-scrollbar { display: none; } /* Hide scrollbar Chrome/Safari */
+
+.album-card {
+  flex: 0 0 280px;
+  background: var(--white);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 15px rgba(0,0,0,0.08);
+  border: 3px solid var(--white);
+  transition: 0.3s;
+}
+
+.album-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.album-label {
+  padding: 12px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--text);
+}
+
+.album-arrow {
+  background: var(--white);
+  border: none;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  cursor: pointer;
+  z-index: 10;
+  color: var(--nut-brown);
+  font-size: 1.2rem;
+  transition: 0.3s;
+}
+
+.album-arrow:hover { background: var(--gold); color: white; }
+.album-arrow.left { position: absolute; left: -20px; }
+.album-arrow.right { position: absolute; right: -20px; }
+
 /* --------------Achievements-------------- */
 .achievements {
   background: var(--white); 
-  padding: 40px; 
-  margin: 25px 10%;
+  padding: 30px; 
+  margin: 10px;
   border-radius: var(--radius); 
-  border: 7px solid var(--nut-brown);
+  /* border: 7px solid var(--nut-brown); */
   box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+.achievements ul {
+  text-align: left; list-style: none; padding: 0;
 }
 /* Responsive */
 @media (max-width: 768px) {
   .achievements { margin: 25px;}
 }
+
+
+/* --- SECTION 3: Sunlight through the Leaves (3x2 Grid) --- */
+.memory-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 220px);
+  gap: 15px;
+  padding: 0;
+
+}
+
+.memory-box {
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+  background: var(--white);
+}
+
+.memory-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.memory-overlay {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(128, 93, 71, 0.85); /* Uses var(--text) with transparency */
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  padding: 20px;
+}
+
+.memory-box:hover .memory-overlay { opacity: 1; }
+.memory-box:hover img { transform: scale(1.1); }
+
+.memory-date {
+  display: block;
+  font-family: 'Fredoka', sans-serif;
+  font-size: 0.8rem;
+  margin-bottom: 8px;
+  color: var(--gold);
+  /* text-align: center; */
+}
+
+.overlay-content p {
+  font-size: 0.9rem;
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .memory-grid { grid-template-columns: repeat(2, 1fr); grid-template-rows: auto; }
+}
+@media (max-width: 600px) {
+  .memory-grid { grid-template-columns: 1fr; }
+  .album-arrow { display: none; } /* Touch users can swipe */
+}
+
+/* -------------- 4. Projects (Twigs & Branches) -------------- */
+.projects-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.project-item {
+  display: flex;
+  align-items: center;
+  background: var(--white);
+  margin-bottom: 15px;
+  padding: 20px;
+  border-radius: var(--radius);
+  transition: 0.3s;
+  border-left: 5px solid var(--primary);
+}
+
+.project-item:hover {
+  transform: translateX(10px);
+  background: #fffdfb;
+}
+
+.project-icon {
+  font-size: 1.5rem;
+  color: var(--primary);
+  margin-right: 20px;
+}
+
+.project-info {
+  flex: 1;
+  text-align: left;
+}
+
+.project-info h3 { margin: 0; color: var(--text); }
+.project-info p { margin: 5px 0 0; font-size: 0.9rem; opacity: 0.8; }
+
+.external-link { font-size: 0.8rem; opacity: 0.3; }
+
+/* -------------- 5. Recommendations -------------- */
+.recommendation-table {
+  background: var(--white);
+  border-radius: var(--radius);
+  overflow: hidden;
+  max-width: 800px;
+  margin: 0 auto;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.recommendation-header {
+  background: var(--primary-dark);
+  display: grid;
+  grid-template-columns: 100px 1fr 120px;
+  padding: 15px 20px;
+  font-weight: bold;
+  color: var(--text);
+}
+
+.recommendation-row {
+  display: grid;
+  grid-template-columns: 100px 1fr 120px;
+  padding: 15px 20px;
+  border-bottom: 1px solid var(--cloud);
+  align-items: center;
+}
+
+.recommendation-badge {
+  font-size: 0.7rem;
+  background: var(--cloud);
+  color: var(--nut-brown);
+  padding: 4px 8px;
+  border-radius: 99px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.recommendation-title { text-align: left; padding: 0 15px; font-weight: 600; }
+.recommendation-date { font-size: 0.8rem; opacity: 0.5; }
 
 /* --------------homepage-ends-------------- */
 
