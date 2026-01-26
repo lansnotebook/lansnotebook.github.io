@@ -87,7 +87,7 @@ header {
   display: none;
 }
 
-.nav-links a { 
+.nav-links a {
     margin-left: 20px; 
     font-weight: 700; 
     position: relative;
@@ -168,7 +168,7 @@ header {
     position: fixed;
     top: var(--site-header-height, 72px);
     right: 0;
-    height: min(50dvh, calc(100dvh - var(--site-header-height, 72px)));
+    height: min(100dvh, calc(100dvh - var(--site-header-height, 72px)));
     width: min(82vw, 150px);
     /* padding: 20px 10px 14px; */
     padding: 20px;
@@ -193,7 +193,8 @@ header {
 
   .site-header .nav-links a{
     margin-left: 0;
-    padding: 8px 15px;
+    padding: 12px 15px;
+    /* padding: 40px;  */
     border-radius: 16px;
     /* border: 2px solid var(--primary-dark); */
     background: var(--white);
@@ -215,6 +216,7 @@ header {
     justify-content: flex-start;
   }
   .nav-cart {
+    margin-left: 0;
     margin-top: 20px;
   }
 
