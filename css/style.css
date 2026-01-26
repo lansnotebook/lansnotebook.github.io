@@ -38,12 +38,53 @@ header {
   align-items: center;
   padding: 15px 5%;
   background: var(--white);
-  /* border-bottom: 4px solid var(--primary); */
   border-radius: 0 0 30px 30px;
   box-shadow: 0 10px 20px rgba(0,0,0,0.05);
   position: sticky;
   top: 0;
   z-index: 100;
+}
+
+.site-header .header-bar{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.site-header .nav-links{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+.site-header .nav-btn{
+  margin-left: 10px;
+}
+
+.site-header .nav-cart{
+  position: relative;
+}
+
+.site-header .nav-toggle{
+  display: none;
+  align-items: center;
+  gap: 10px;
+  background: var(--white);
+  color: var(--text);
+  border: 2px solid var(--primary-dark);
+  border-radius: 999px;
+  padding: 10px 14px;
+  cursor: pointer;
+  font-family: 'Fredoka', sans-serif;
+  font-weight: 600;
+  box-shadow: 0 4px var(--gold);
+}
+.site-header .nav-toggle:active { transform: translateY(4px); box-shadow: 0 0 var(--gold); }
+.site-header .nav-toggle:hover { background: #fff; }
+
+.site-header .nav-backdrop{
+  display: none;
 }
 
 .nav-links a { 
@@ -81,7 +122,107 @@ header {
 
 /* Responsive */
 @media (max-width: 768px) {
-  header { flex-direction: column; gap: 15px; padding-bottom: 20px; }
+  header.site-header { 
+    flex-direction: row;
+    align-items: center;
+    gap: 10px; 
+  }
+
+  .site-header .header-bar{
+    width: 100%;
+    justify-content: space-between;
+    position: relative;
+    z-index: 101;
+  }
+
+  .site-header .nav-toggle{
+    display: inline-flex;
+  }
+
+  .site-header .nav-toggle-label{
+    font-size: 0.95rem;
+  }
+
+  /* Backdrop (keeps header clickable) */
+  .site-header .nav-backdrop{
+    display: block;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: var(--site-header-height, 72px);
+    background: rgba(0,0,0,0.25);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+    z-index: 98;
+  }
+
+  .site-header.nav-open .nav-backdrop{
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  /* Right-side drawer menu (does not push content) */
+  .site-header .nav-links{
+    position: fixed;
+    top: var(--site-header-height, 72px);
+    right: 0;
+    height: min(50dvh, calc(100dvh - var(--site-header-height, 72px)));
+    width: min(82vw, 150px);
+    /* padding: 20px 10px 14px; */
+    padding: 20px;
+    background: var(--cloud);
+    box-shadow: -10px 0 30px rgba(0,0,0,0.08);
+    border-radius: 0 0 0 24px;
+    z-index: 99;
+
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    gap: 14px;
+    overflow-y: auto;
+
+    transform: translateX(110%);
+    transition: transform 0.25s ease;
+  }
+
+  .site-header.nav-open .nav-links{
+    transform: translateX(0);
+  }
+
+  .site-header .nav-links a{
+    margin-left: 0;
+    padding: 8px 15px;
+    border-radius: 16px;
+    /* border: 2px solid var(--primary-dark); */
+    background: var(--white);
+  }
+
+  /* Emoji hover decoration looks odd in stacked layout */
+  .site-header .nav-links a::after{
+    display: none;
+  }
+
+  .site-header .nav-links .nav-btn{
+    margin-left: 0;
+    width: 100%;
+    text-align: left;
+  }
+
+  .site-header .nav-links .lang-btn{
+    width: 100%;
+    justify-content: flex-start;
+  }
+  .nav-cart {
+    margin-top: 20px;
+  }
+
+}
+
+/* Prevent background scroll while drawer is open (JS also fixes scroll position) */
+body.nav-locked{
+  overflow: hidden;
 }
 
 

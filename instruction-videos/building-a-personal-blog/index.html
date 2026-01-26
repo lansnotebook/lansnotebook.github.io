@@ -18,16 +18,24 @@
 <meta name="generator" content="Hexo 6.3.0"></head>
 
 <body>
-  <header>
-    <div class="logo">
-      <h2 style="margin:0; color: var(--primary-dark);">
-        <i class="fa-solid fa-leaf" style="color: var(--gold);"></i>
-        <a href="/">
-          Lan&#39;s Notebook
-        </a>
-      </h2>
+  <header class="site-header">
+    <div class="header-bar">
+      <div class="logo">
+        <h2 style="margin:0; color: var(--primary-dark);">
+          <i class="fa-solid fa-leaf" style="color: var(--gold);"></i>
+          <a href="/">
+            Lan&#39;s Notebook
+          </a>
+        </h2>
+      </div>
+
+      <button class="nav-toggle" type="button" aria-controls="site-nav" aria-expanded="false">
+        <i class="fa-solid fa-bars"></i>
+        <span class="nav-toggle-label">Menu</span>
+      </button>
     </div>
-    <nav class="nav-links">
+
+    <nav id="site-nav" class="nav-links">
       
         
           <a href="/"><i class="fa-solid fa-house"></i>
@@ -53,14 +61,15 @@
           </a>
           
             
-              <button class="snipcart-checkout lang-btn" style="margin-left:10px; position: relative;">
+              <button class="snipcart-checkout lang-btn nav-btn nav-cart" type="button">
                 <i class="fa-solid fa-shopping-cart"></i> Cart
                 <span class="snipcart-items-count" style="position: absolute; top: -8px; right: -8px; background: var(--gold); color: white; border-radius: 50%; width: 20px; height: 20px; display: flex; align-items: center; justify-content: center; font-size: 0.7rem; font-weight: bold;">0</span>
               </button>
-              <button class="lang-btn" onclick="switchLang()" style="margin-left:10px;">
+              <button class="lang-btn nav-btn nav-lang" type="button" onclick="switchLang()">
                 <i class="fa-solid fa-earth-asia"></i> CN/EN
               </button>
     </nav>
+    <div class="nav-backdrop" aria-hidden="true"></div>
   </header>
 
   <main>
@@ -83,7 +92,7 @@
         <button 
           class="snipcart-add-item btn" 
           style="width: 100%; margin-top: 30px; font-size: 1.2rem;"
-          data-item-id="cmkseq6im0001x4dcdnre7ee3"
+          data-item-id="cmkujeokx0006a8dc2a5jc3jl"
           data-item-price="49.99"
           data-item-url="/instruction-videos/building-a-personal-blog/"
           data-item-name="building a personal blog"
@@ -139,6 +148,86 @@
         });
       }
     });
+  </script>
+
+  <script>
+    (function() {
+      var header = document.querySelector('header.site-header');
+      if (!header) return;
+
+      var toggle = header.querySelector('.nav-toggle');
+      var nav = header.querySelector('#site-nav');
+      var backdrop = header.querySelector('.nav-backdrop');
+      if (!toggle || !nav) return;
+
+      function updateHeaderHeightVar() {
+        // Use sticky header height (includes padding); drawer starts below it
+        var h = header.offsetHeight || 0;
+        document.documentElement.style.setProperty('--site-header-height', h + 'px');
+      }
+
+      updateHeaderHeightVar();
+
+      function lockScroll() {
+        var scrollY = window.scrollY || document.documentElement.scrollTop || 0;
+        document.body.dataset.navScrollY = String(scrollY);
+        document.body.classList.add('nav-locked');
+        document.body.style.position = 'fixed';
+        document.body.style.top = '-' + scrollY + 'px';
+        document.body.style.left = '0';
+        document.body.style.right = '0';
+        document.body.style.width = '100%';
+      }
+
+      function unlockScroll() {
+        var raw = document.body.dataset.navScrollY || '0';
+        var scrollY = parseInt(raw, 10) || 0;
+        document.body.classList.remove('nav-locked');
+        document.body.style.position = '';
+        document.body.style.top = '';
+        document.body.style.left = '';
+        document.body.style.right = '';
+        document.body.style.width = '';
+        delete document.body.dataset.navScrollY;
+        window.scrollTo(0, scrollY);
+      }
+
+      function setOpen(open) {
+        header.classList.toggle('nav-open', open);
+        toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+        if (open) lockScroll();
+        else unlockScroll();
+      }
+
+      toggle.addEventListener('click', function(e) {
+        e.stopPropagation();
+        setOpen(!header.classList.contains('nav-open'));
+      });
+
+      nav.addEventListener('click', function(e) {
+        var link = e.target && e.target.closest ? e.target.closest('a') : null;
+        if (link) setOpen(false);
+      });
+
+      document.addEventListener('click', function(e) {
+        if (!header.contains(e.target)) setOpen(false);
+      });
+
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') setOpen(false);
+      });
+
+      window.addEventListener('resize', function() {
+        updateHeaderHeightVar();
+        if (window.innerWidth > 768) setOpen(false);
+      });
+
+      if (backdrop) {
+        backdrop.addEventListener('click', function() {
+          setOpen(false);
+        });
+      }
+    })();
   </script>
 </body>
 
