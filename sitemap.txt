@@ -27,9 +27,9 @@ http://example.com/coding/how-i-built-my-personal-website-in-5-minutes-using-hex
 http://example.com/
 http://example.com/tags/blogs/
 http://example.com/tags/marketing/
-http://example.com/tags/monthly-review/
 http://example.com/tags/swimming/
 http://example.com/tags/vibe-coding/
+http://example.com/tags/monthly-review/
 http://example.com/tags/paintings/
 http://example.com/tags/calligraphy-art/
 http://example.com/tags/reading-notes/

@@ -43,6 +43,7 @@ header {
   position: sticky;
   top: 0;
   z-index: 100;
+  font-size: 1rem; 
 }
 
 .site-header .header-bar{
@@ -60,10 +61,12 @@ header {
 
 .site-header .nav-btn{
   margin-left: 10px;
+  font-size: 0.9rem;
 }
 
 .site-header .nav-cart{
   position: relative;
+  margin-left: 30px;
 }
 
 .site-header .nav-toggle{
@@ -121,7 +124,7 @@ header {
 .lang-btn:hover { background: var(--gold); }
 
 /* Responsive */
-@media (max-width: 768px) {
+@media (max-width: 950px) {
   header.site-header { 
     flex-direction: row;
     align-items: center;
@@ -163,13 +166,13 @@ header {
     pointer-events: auto;
   }
 
-  /* Right-side drawer menu (does not push content) */
+  /* Right-side drawer menu */
   .site-header .nav-links{
     position: fixed;
     top: var(--site-header-height, 72px);
     right: 0;
     height: min(100dvh, calc(100dvh - var(--site-header-height, 72px)));
-    width: min(82vw, 150px);
+    width: min(82vw, 250px);
     /* padding: 20px 10px 14px; */
     padding: 20px;
     background: var(--cloud);
@@ -214,12 +217,18 @@ header {
   .site-header .nav-links .lang-btn{
     width: 100%;
     justify-content: flex-start;
+    font-size: 0.95rem;
   }
   .nav-cart {
     margin-left: 0;
     margin-top: 20px;
   }
 
+}
+@media (max-width: 580px) {
+  .site-header .nav-links{
+    width: min(82vw, 150px);
+  }
 }
 
 /* Prevent background scroll while drawer is open (JS also fixes scroll position) */
@@ -233,6 +242,14 @@ body.nav-locked{
   text-align: center;
   padding: 80px 20px;
   position: relative;
+}
+.profile-section h1{
+  color: var(--text); 
+  margin-bottom: 5px;
+}
+.profile-section h2{
+  margin-top: 60px; 
+  color: var(--text);
 }
 .avatar-frame {
   display: inline-block;
@@ -256,6 +273,7 @@ body.nav-locked{
   background: var(--white); 
   padding: 30px; 
   border-radius: 20px;
+  margin-bottom: 60px;
 }
 
 /* --------------Categories-------------- */
@@ -263,7 +281,7 @@ body.nav-locked{
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 25px;
-  padding: 40px 10%;
+  padding: 10px 10%;
 }
 .category-card {
   /* height: 220px;
@@ -307,11 +325,16 @@ body.nav-locked{
 .achievements {
   background: var(--white); 
   padding: 40px; 
-  margin: 40px 10%; 
+  margin: 25px 10%;
   border-radius: var(--radius); 
   border: 7px solid var(--nut-brown);
   box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
+/* Responsive */
+@media (max-width: 768px) {
+  .achievements { margin: 25px;}
+}
+
 /* --------------homepage-ends-------------- */
 
 /* --------------Shop & Blog starts-------------- */
