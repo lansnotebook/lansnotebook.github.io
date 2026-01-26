@@ -99,8 +99,8 @@
               Journaling
             </span>
           </a>
-        
-      
+          
+            
         
           <a href="/categories/learning" class="category-card">
             <img src="/img/1.jpg" alt="">
@@ -108,8 +108,8 @@
               Learning
             </span>
           </a>
-        
-      
+          
+            
         
           <a href="/categories/creating" class="category-card">
             <img src="/img/1.jpg" alt="">
@@ -117,8 +117,8 @@
               Creating
             </span>
           </a>
-        
-      
+          
+            
         
           <a href="/categories/coding" class="category-card">
             <img src="/img/1.jpg" alt="">
@@ -126,62 +126,131 @@
               Coding
             </span>
           </a>
-        
-      
+          
+            
     </div>
   </section>
 
   <section class="home-section">
     <h2><i class="fa-solid fa-crown" style="color: var(--gold);"></i> Things I'm Proud of</h2>
-    <div class="achievements">
-      <!-- <h3><i class="fa-solid fa-crown" style="color: var(--gold);"></i> My Golden Acorns</h3> -->
-      <ul>
-        <li style="margin: 10px 0;"><i class="fa-solid fa-check-circle" style="color: var(--primary);"></i> Built a cozy
-          home on the web</li>
-        <li style="margin: 10px 0;"><i class="fa-solid fa-check-circle" style="color: var(--primary);"></i> Befriended a
-          neighborhood cat</li>
-        <li style="margin: 10px 0;"><i class="fa-solid fa-check-circle" style="color: var(--primary);"></i> Kept my plants
-          alive for 1 year</li>
-      </ul>
-    </div>
-    <div class="album-container">
-      <button class="album-arrow left" onclick="scrollAlbum(-1)">&#10094;</button>
-      <div class="album-viewport" id="albumViewport">
+    
+    
+    
+    <div class="achievements-container">
+      <div class="achievements-bento" id="achievementsBento" data-shuffle="true">
         
-          <div class="album-card">
-            <img src="/achievement-img/1.jpg" alt="Achievement">
-            <div class="album-label">Completed Stardew Community Center!</div>
+          <div class="bento-item bento-text" data-bento="text">
+            
+              <h3 class="bento-title">My Golden Acorns</h3>
+            
+
+            
+              <ul class="bento-list">
+                
+                  <li>
+                    <i class="fa-solid fa-check-circle bento-icon" data-color="var(--primary)"></i>
+                    <span>Kept track of monthly calendar journals for over 9 years</span>
+                  </li>
+                
+                  <li>
+                    <i class="fa-solid fa-check-circle bento-icon" data-color="var(--primary)"></i>
+                    <span>Built an aesthetic and functional online shopping website within 30 days</span>
+                  </li>
+                
+                  <li>
+                    <i class="fa-solid fa-check-circle bento-icon" data-color="var(--primary)"></i>
+                    <span>Maintained a consistent workout routine every other day for over 2 years</span>
+                  </li>
+                
+              </ul>
+            
+
+            
+              <p class="bento-note">Add more text blocks here anytime.</p>
+            
           </div>
         
-          <div class="album-card">
-            <img src="/achievement-img/1.jpg" alt="Achievement">
-            <div class="album-label">Completed Stardew Community Center!</div>
-          </div>
+
         
-          <div class="album-card">
-            <img src="/achievement-img/1.jpg" alt="Achievement">
-            <div class="album-label">Completed Stardew Community Center!</div>
-          </div>
+          <a class="bento-item bento-image" data-bento="image" href="/achievement-img/1.jpg" target="_blank" rel="noopener" title="1">
+            <img src="/achievement-img/1.jpg" alt="1" loading="lazy">
+          </a>
         
-          <div class="album-card">
-            <img src="/achievement-img/1.jpg" alt="Achievement">
-            <div class="album-label">Completed Stardew Community Center!</div>
-          </div>
+          <a class="bento-item bento-image" data-bento="image" href="/achievement-img/2.jpg" target="_blank" rel="noopener" title="2">
+            <img src="/achievement-img/2.jpg" alt="2" loading="lazy">
+          </a>
         
-          <div class="album-card">
-            <img src="/achievement-img/1.jpg" alt="Achievement">
-            <div class="album-label">Completed Stardew Community Center!</div>
-          </div>
+          <a class="bento-item bento-image" data-bento="image" href="/achievement-img/3.jpg" target="_blank" rel="noopener" title="3">
+            <img src="/achievement-img/3.jpg" alt="3" loading="lazy">
+          </a>
         
-          <div class="album-card">
-            <img src="/achievement-img/1.jpg" alt="Achievement">
-            <div class="album-label">Completed Stardew Community Center!</div>
-          </div>
+          <a class="bento-item bento-image" data-bento="image" href="/achievement-img/4.jpg" target="_blank" rel="noopener" title="4">
+            <img src="/achievement-img/4.jpg" alt="4" loading="lazy">
+          </a>
+        
+          <a class="bento-item bento-image" data-bento="image" href="/achievement-img/5.jpg" target="_blank" rel="noopener" title="5">
+            <img src="/achievement-img/5.jpg" alt="5" loading="lazy">
+          </a>
+        
+          <a class="bento-item bento-image" data-bento="image" href="/achievement-img/6.jpg" target="_blank" rel="noopener" title="6">
+            <img src="/achievement-img/6.jpg" alt="6" loading="lazy">
+          </a>
+        
+
         
       </div>
-      <button class="album-arrow right" onclick="scrollAlbum(1)">&#10095;</button>
     </div>
   </section>
+
+  <!-- <div class="album-container">
+    <button class="album-arrow left" onclick="scrollAlbum(-1)">&#10094;</button>
+    <div class="album-viewport" id="albumViewport">
+      
+        <div class="album-card">
+          <img src="/achievement-img/1.jpg" alt="Achievement">
+          <div class="album-label">
+            Completed Stardew Community Center!
+          </div>
+        </div>
+        
+        <div class="album-card">
+          <img src="/achievement-img/1.jpg" alt="Achievement">
+          <div class="album-label">
+            Completed Stardew Community Center!
+          </div>
+        </div>
+        
+        <div class="album-card">
+          <img src="/achievement-img/1.jpg" alt="Achievement">
+          <div class="album-label">
+            Completed Stardew Community Center!
+          </div>
+        </div>
+        
+        <div class="album-card">
+          <img src="/achievement-img/1.jpg" alt="Achievement">
+          <div class="album-label">
+            Completed Stardew Community Center!
+          </div>
+        </div>
+        
+        <div class="album-card">
+          <img src="/achievement-img/1.jpg" alt="Achievement">
+          <div class="album-label">
+            Completed Stardew Community Center!
+          </div>
+        </div>
+        
+        <div class="album-card">
+          <img src="/achievement-img/1.jpg" alt="Achievement">
+          <div class="album-label">
+            Completed Stardew Community Center!
+          </div>
+        </div>
+        
+    </div>
+    <button class="album-arrow right" onclick="scrollAlbum(1)">&#10095;</button>
+  </div> -->
 
 
   <section class="home-section">
@@ -192,92 +261,86 @@
           <img src="/memory-img/1.jpg" alt="Memory">
           <div class="memory-overlay">
             <div class="overlay-content">
-              <span class="memory-date">2026.01.15</span>
-              <p>The light on the fresh strawberry looked like diamonds.</p>
+              <span class="memory-date">
+                2026.01.15
+              </span>
+              <p>
+                The light on the fresh strawberry looked like diamonds.
+              </p>
             </div>
           </div>
         </div>
-      
+        
         <div class="memory-box">
           <img src="/memory-img/1.jpg" alt="Memory">
           <div class="memory-overlay">
             <div class="overlay-content">
-              <span class="memory-date">2026.01.15</span>
-              <p>The light on the fresh strawberry looked like diamonds.</p>
+              <span class="memory-date">
+                2026.01.15
+              </span>
+              <p>
+                The light on the fresh strawberry looked like diamonds.
+              </p>
             </div>
           </div>
         </div>
-      
+        
         <div class="memory-box">
           <img src="/memory-img/1.jpg" alt="Memory">
           <div class="memory-overlay">
             <div class="overlay-content">
-              <span class="memory-date">2026.01.15</span>
-              <p>The light on the fresh strawberry looked like diamonds.</p>
+              <span class="memory-date">
+                2026.01.15
+              </span>
+              <p>
+                The light on the fresh strawberry looked like diamonds.
+              </p>
             </div>
           </div>
         </div>
-      
+        
         <div class="memory-box">
           <img src="/memory-img/1.jpg" alt="Memory">
           <div class="memory-overlay">
             <div class="overlay-content">
-              <span class="memory-date">2026.01.15</span>
-              <p>The light on the fresh strawberry looked like diamonds.</p>
+              <span class="memory-date">
+                2026.01.15
+              </span>
+              <p>
+                The light on the fresh strawberry looked like diamonds.
+              </p>
             </div>
           </div>
         </div>
-      
+        
         <div class="memory-box">
           <img src="/memory-img/1.jpg" alt="Memory">
           <div class="memory-overlay">
             <div class="overlay-content">
-              <span class="memory-date">2026.01.15</span>
-              <p>The light on the fresh strawberry looked like diamonds.</p>
+              <span class="memory-date">
+                2026.01.15
+              </span>
+              <p>
+                The light on the fresh strawberry looked like diamonds.
+              </p>
             </div>
           </div>
         </div>
-      
+        
         <div class="memory-box">
           <img src="/memory-img/1.jpg" alt="Memory">
           <div class="memory-overlay">
             <div class="overlay-content">
-              <span class="memory-date">2026.01.15</span>
-              <p>The light on the fresh strawberry looked like diamonds.</p>
+              <span class="memory-date">
+                2026.01.15
+              </span>
+              <p>
+                The light on the fresh strawberry looked like diamonds.
+              </p>
             </div>
           </div>
         </div>
-      
-        <div class="memory-box">
-          <img src="/memory-img/1.jpg" alt="Memory">
-          <div class="memory-overlay">
-            <div class="overlay-content">
-              <span class="memory-date">2026.01.15</span>
-              <p>The light on the fresh strawberry looked like diamonds.</p>
-            </div>
-          </div>
-        </div>
-      
-        <div class="memory-box">
-          <img src="/memory-img/1.jpg" alt="Memory">
-          <div class="memory-overlay">
-            <div class="overlay-content">
-              <span class="memory-date">2026.01.15</span>
-              <p>The light on the fresh strawberry looked like diamonds.</p>
-            </div>
-          </div>
-        </div>
-      
-        <div class="memory-box">
-          <img src="/memory-img/1.jpg" alt="Memory">
-          <div class="memory-overlay">
-            <div class="overlay-content">
-              <span class="memory-date">2026.01.15</span>
-              <p>The light on the fresh strawberry looked like diamonds.</p>
-            </div>
-          </div>
-        </div>
-      
+        
     </div>
   </section>
 
@@ -288,12 +351,16 @@
         <a href="" target="_blank" class="project-item">
           <div class="project-icon"><i class="fa-solid fa-folder-open"></i></div>
           <div class="project-info">
-            <h3>fresh strawberry</h3>
-            <p>The light on the fresh strawberry looked like diamonds.</p>
+            <h3>
+              fresh strawberry
+            </h3>
+            <p>
+              The light on the fresh strawberry looked like diamonds.
+            </p>
           </div>
           <i class="fa-solid fa-arrow-up-right-from-square external-link"></i>
         </a>
-      
+        
     </div>
   </section>
 
@@ -307,11 +374,17 @@
       </div>
       
         <div class="recommendation-row">
-          <span class="recommendation-badge">Music</span>
-          <span class="recommendation-title">Spirited Away (Soundtrack)</span>
-          <span class="recommendation-date">2026-01-26</span>
+          <span class="recommendation-badge">
+            Music
+          </span>
+          <span class="recommendation-title">
+            Spirited Away (Soundtrack)
+          </span>
+          <span class="recommendation-date">
+            2026-01-26
+          </span>
         </div>
-      
+        
     </div>
   </section>
 
@@ -361,11 +434,76 @@
 </div>
 
 <script>
-  function scrollAlbum(direction) {
-    const viewport = document.getElementById('albumViewport');
-    const scrollAmount = 300; 
-    viewport.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
-  }
+  (function () {
+    const grid = document.getElementById('achievementsBento');
+    if (!grid) return;
+
+    const sizeClasses = ['bento--sm', 'bento--wide', 'bento--tall', 'bento--big'];
+
+    function shuffle(arr) {
+      for (let i = arr.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        const tmp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = tmp;
+      }
+      return arr;
+    }
+
+    function pickWeighted(choices) {
+      let total = 0;
+      for (let i = 0; i < choices.length; i++) total += choices[i].w;
+
+      let r = Math.random() * total;
+      for (let i = 0; i < choices.length; i++) {
+        r -= choices[i].w;
+        if (r <= 0) return choices[i].cls;
+      }
+      return choices[choices.length - 1].cls;
+    }
+
+    function clearSizes(el) {
+      for (let i = 0; i < sizeClasses.length; i++) {
+        el.classList.remove(sizeClasses[i]);
+      }
+    }
+
+    const items = Array.prototype.slice.call(grid.querySelectorAll('.bento-item'));
+    if (!items.length) return;
+
+    const shouldShuffle = grid.dataset.shuffle !== 'false';
+    const working = shouldShuffle ? shuffle(items.slice()) : items.slice();
+
+    const imageChoices = [
+      { cls: 'bento--sm', w: 45 },
+      { cls: 'bento--wide', w: 25 },
+      { cls: 'bento--tall', w: 20 },
+      { cls: 'bento--big', w: 10 },
+    ];
+
+    const textChoices = [
+      { cls: 'bento--wide', w: 45 },
+      { cls: 'bento--big', w: 55 },
+    ];
+
+    const frag = document.createDocumentFragment();
+    for (let i = 0; i < working.length; i++) {
+      const el = working[i];
+      clearSizes(el);
+      const type = el.dataset.bento;
+      el.classList.add(pickWeighted(type === 'text' ? textChoices : imageChoices));
+      frag.appendChild(el);
+    }
+
+    grid.appendChild(frag);
+
+    // Apply per-item icon colors from config (e.g. "var(--primary)")
+    const icons = grid.querySelectorAll('.bento-icon');
+    for (let i = 0; i < icons.length; i++) {
+      const color = icons[i].dataset.color;
+      if (color) icons[i].style.color = color;
+    }
+  })();
 </script>
   </main>
 

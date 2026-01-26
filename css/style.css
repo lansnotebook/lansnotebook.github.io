@@ -335,7 +335,138 @@ body.nav-locked{
   .categories-grid { padding: 20px 5%; }
 }
 
-/* --- SECTION 2: Golden Acorns Album (Carousel) --- */
+/* ------ Achievements Album (Carousel) --------- */
+.achievements-container {
+  background-color: var(--white);
+  padding: 20px;
+  border-radius: var(--radius);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* --- Achievements Bento Grid --- */
+.achievements-bento{
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-auto-rows: 92px;
+  gap: 14px;
+  padding: 10px;
+  grid-auto-flow: dense;
+}
+
+.bento-item{
+  border-radius: 20px;
+  overflow: hidden;
+  background: var(--white);
+  border: 2px solid var(--cloud);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.06);
+}
+
+.bento-image{
+  display: block;
+  position: relative;
+}
+
+.bento-image img{
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.45s ease;
+}
+
+.bento-image:hover img{
+  transform: scale(1.06);
+}
+
+.bento-text{
+  padding: 16px 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background: linear-gradient(135deg, #fff, var(--cloud));
+}
+
+.bento-title{
+  margin: 0 0 10px;
+  font-family: 'Fredoka', sans-serif;
+  font-size: 1rem;
+  color: var(--text);
+}
+
+.bento-list{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.bento-list li{
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  line-height: 1.4;
+}
+
+.bento-list li i{
+  margin-top: 2px;
+}
+
+.bento-icon{
+  color: var(--primary);
+}
+
+.bento-note{
+  margin: 12px 0 0;
+  font-size: 0.9rem;
+  opacity: 0.75;
+}
+
+.bento--sm{ grid-column: span 2; grid-row: span 2; }
+.bento--wide{ grid-column: span 4; grid-row: span 2; }
+.bento--tall{ grid-column: span 2; grid-row: span 3; }
+.bento--big{ grid-column: span 4; grid-row: span 3; }
+
+@media (max-width: 900px) {
+  .achievements-bento{
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 90px;
+  }
+
+  .bento--wide{ grid-column: span 4; }
+  .bento--big{ grid-column: span 4; }
+  .bento--sm{ grid-column: span 2; }
+  .bento--tall{ grid-column: span 2; }
+}
+
+@media (max-width: 600px) {
+  .achievements-bento{
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 86px;
+  }
+
+  .bento--wide{ grid-column: span 2; }
+  .bento--big{ grid-column: span 2; }
+}
+
+/* -----Achievements---- */
+.achievements {
+  /* background: var(--cloud);  */
+  padding: 30px; 
+  margin: 10px;
+  border-radius: var(--radius); 
+  border: 3px dashed var(--gold);
+  /* box-shadow: 0 5px 15px rgba(0,0,0,0.1); */
+}
+.achievements ul {
+  text-align: left; list-style: none; padding: 0;
+}
+/* Responsive */
+@media (max-width: 768px) {
+  .achievements { margin: 25px;}
+}
+
 .album-container {
   position: relative;
   display: flex;
@@ -359,7 +490,7 @@ body.nav-locked{
   background: var(--white);
   border-radius: 20px;
   overflow: hidden;
-  box-shadow: 0 8px 15px rgba(0,0,0,0.08);
+  /* box-shadow: 0 8px 15px rgba(0,0,0,0.08); */
   border: 3px solid var(--white);
   transition: 0.3s;
 }
@@ -395,29 +526,12 @@ body.nav-locked{
 .album-arrow.left { position: absolute; left: -20px; }
 .album-arrow.right { position: absolute; right: -20px; }
 
-/* --------------Achievements-------------- */
-.achievements {
-  background: var(--white); 
-  padding: 30px; 
-  margin: 10px;
-  border-radius: var(--radius); 
-  /* border: 7px solid var(--nut-brown); */
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-}
-.achievements ul {
-  text-align: left; list-style: none; padding: 0;
-}
-/* Responsive */
-@media (max-width: 768px) {
-  .achievements { margin: 25px;}
-}
-
 
 /* --- SECTION 3: Sunlight through the Leaves (3x2 Grid) --- */
 .memory-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 220px);
+  grid-template-rows: repeat(1, 220px);
   gap: 15px;
   padding: 0;
 
@@ -480,7 +594,7 @@ body.nav-locked{
 
 /* -------------- 4. Projects (Twigs & Branches) -------------- */
 .projects-container {
-  max-width: 800px;
+  /* max-width: 800px; */
   margin: 0 auto;
 }
 
