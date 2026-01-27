@@ -83,9 +83,7 @@
   </h1>
 
   <p class="description">
-    <!-- <i class="fa-solid fa-quote-left"></i> -->
     Welcome to my notebook, where I record everything I love about the world and about living on Earth.
-      <!-- <i class="fa-solid fa-quote-right"></i> -->
   </p>
 
   <section class="home-section">
@@ -136,14 +134,17 @@
     
     
     
+    
+    
+    <script type="application/json" id="achievementsImagesJson">[{"src":"/achievements/2015-11-05-calligraphy.jpg","alt":"calligraphy","date":"2015.11.05","title":"calligraphy"},{"src":"/achievements/2020-12-21-stardew-valley.jpg","alt":"stardew valley","date":"2020.12.21","title":"stardew valley"},{"src":"/achievements/2023-08-07-golden-trio-night.jpg","alt":"golden trio night","date":"2023.08.07","title":"golden trio night"},{"src":"/achievements/2023-10-15-desk-set-up.jpg","alt":"desk set up","date":"2023.10.15","title":"desk set up"},{"src":"/achievements/2024-03-01-headphone-paintings.jpg","alt":"headphone paintings","date":"2024.03.01","title":"headphone paintings"},{"src":"/achievements/2025-03-29-%E5%8A%A8%E7%89%A9%E6%A3%AE%E5%8F%8B%E4%BC%9A-%E6%B9%96.jpg","alt":"动物森友会 湖","date":"2025.03.29","title":"动物森友会 湖"}]</script>
     <div class="achievements-container">
-      <div class="achievements-bento" id="achievementsBento" data-shuffle="true">
-        
-          <div class="bento-item bento-text" data-bento="text">
-            
-              <h3 class="bento-title">My Golden Acorns</h3>
-            
+      <div class="achievements-bento achievements-bento--fixed"
+           id="achievementsBento"
+           data-random-images="true">
 
+        <!-- Fixed layout like screenshot: 1 text + 6 images -->
+        <div class="bento-item bento-text bento-slot bento-slot--text">
+          
             
               <ul class="bento-list">
                 
@@ -164,183 +165,221 @@
                 
               </ul>
             
+          
 
-            
-              <p class="bento-note">Add more text blocks here anytime.</p>
-            
+          
+        </div>
+
+        <a class="bento-item bento-image bento-slot bento-slot--img1" data-slot="1" href="#" aria-label="Achievement image 1">
+          <img alt="" loading="lazy">
+          <div class="bento-overlay" aria-hidden="true">
+            <span class="bento-overlay-date"></span>
+            <span class="bento-overlay-title"></span>
           </div>
-        
-
-        
-          <a class="bento-item bento-image" data-bento="image" href="/achievement-img/1.jpg" target="_blank" rel="noopener" title="1">
-            <img src="/achievement-img/1.jpg" alt="1" loading="lazy">
-          </a>
-        
-          <a class="bento-item bento-image" data-bento="image" href="/achievement-img/2.jpg" target="_blank" rel="noopener" title="2">
-            <img src="/achievement-img/2.jpg" alt="2" loading="lazy">
-          </a>
-        
-          <a class="bento-item bento-image" data-bento="image" href="/achievement-img/3.jpg" target="_blank" rel="noopener" title="3">
-            <img src="/achievement-img/3.jpg" alt="3" loading="lazy">
-          </a>
-        
-          <a class="bento-item bento-image" data-bento="image" href="/achievement-img/4.jpg" target="_blank" rel="noopener" title="4">
-            <img src="/achievement-img/4.jpg" alt="4" loading="lazy">
-          </a>
-        
-          <a class="bento-item bento-image" data-bento="image" href="/achievement-img/5.jpg" target="_blank" rel="noopener" title="5">
-            <img src="/achievement-img/5.jpg" alt="5" loading="lazy">
-          </a>
-        
-          <a class="bento-item bento-image" data-bento="image" href="/achievement-img/6.jpg" target="_blank" rel="noopener" title="6">
-            <img src="/achievement-img/6.jpg" alt="6" loading="lazy">
-          </a>
-        
-
-        
+        </a>
+        <a class="bento-item bento-image bento-slot bento-slot--img2" data-slot="2" href="#" aria-label="Achievement image 2">
+          <img alt="" loading="lazy">
+          <div class="bento-overlay" aria-hidden="true">
+            <span class="bento-overlay-date"></span>
+            <span class="bento-overlay-title"></span>
+          </div>
+        </a>
+        <a class="bento-item bento-image bento-slot bento-slot--img3" data-slot="3" href="#" aria-label="Achievement image 3">
+          <img alt="" loading="lazy">
+          <div class="bento-overlay" aria-hidden="true">
+            <span class="bento-overlay-date"></span>
+            <span class="bento-overlay-title"></span>
+          </div>
+        </a>
+        <a class="bento-item bento-image bento-slot bento-slot--img4" data-slot="4" href="#" aria-label="Achievement image 4">
+          <img alt="" loading="lazy">
+          <div class="bento-overlay" aria-hidden="true">
+            <span class="bento-overlay-date"></span>
+            <span class="bento-overlay-title"></span>
+          </div>
+        </a>
+        <a class="bento-item bento-image bento-slot bento-slot--img5" data-slot="5" href="#" aria-label="Achievement image 5">
+          <img alt="" loading="lazy">
+          <div class="bento-overlay" aria-hidden="true">
+            <span class="bento-overlay-date"></span>
+            <span class="bento-overlay-title"></span>
+          </div>
+        </a>
+        <a class="bento-item bento-image bento-slot bento-slot--img6" data-slot="6" href="#" aria-label="Achievement image 6">
+          <img alt="" loading="lazy">
+          <div class="bento-overlay" aria-hidden="true">
+            <span class="bento-overlay-date"></span>
+            <span class="bento-overlay-title"></span>
+          </div>
+        </a>
       </div>
     </div>
   </section>
 
-  <!-- <div class="album-container">
-    <button class="album-arrow left" onclick="scrollAlbum(-1)">&#10094;</button>
-    <div class="album-viewport" id="albumViewport">
-      
-        <div class="album-card">
-          <img src="/achievement-img/1.jpg" alt="Achievement">
-          <div class="album-label">
-            Completed Stardew Community Center!
-          </div>
-        </div>
-        
-        <div class="album-card">
-          <img src="/achievement-img/1.jpg" alt="Achievement">
-          <div class="album-label">
-            Completed Stardew Community Center!
-          </div>
-        </div>
-        
-        <div class="album-card">
-          <img src="/achievement-img/1.jpg" alt="Achievement">
-          <div class="album-label">
-            Completed Stardew Community Center!
-          </div>
-        </div>
-        
-        <div class="album-card">
-          <img src="/achievement-img/1.jpg" alt="Achievement">
-          <div class="album-label">
-            Completed Stardew Community Center!
-          </div>
-        </div>
-        
-        <div class="album-card">
-          <img src="/achievement-img/1.jpg" alt="Achievement">
-          <div class="album-label">
-            Completed Stardew Community Center!
-          </div>
-        </div>
-        
-        <div class="album-card">
-          <img src="/achievement-img/1.jpg" alt="Achievement">
-          <div class="album-label">
-            Completed Stardew Community Center!
-          </div>
-        </div>
-        
-    </div>
-    <button class="album-arrow right" onclick="scrollAlbum(1)">&#10095;</button>
-  </div> -->
-
-
   <section class="home-section">
     <h2><i class="fa-solid fa-sun" style="color: var(--gold);"></i> Moments I Felt Alive</h2>
-    <div class="memory-grid">
-      
-        <div class="memory-box">
-          <img src="/memory-img/1.jpg" alt="Memory">
-          <div class="memory-overlay">
-            <div class="overlay-content">
-              <span class="memory-date">
-                2026.01.15
-              </span>
-              <p>
-                The light on the fresh strawberry looked like diamonds.
-              </p>
+    
+    <div class="memory-scroll-container">
+      <button class="memory-scroll-arrow memory-scroll-arrow--left" id="memoryScrollLeft" aria-label="Scroll left">
+        <i class="fa-solid fa-chevron-left"></i>
+      </button>
+      <div class="memory-scroll-viewport" id="memoryScrollViewport">
+        
+          <div class="memory-card">
+            <div class="memory-card-image">
+              <img src="/memories/date-2025-03-29-location-ppppp-title-%E5%8A%A8%E7%89%A9%E6%A3%AE%E5%8F%8B%E4%BC%9A-%E6%B9%96.jpg" alt="动物森友会 湖" loading="lazy">
+            </div>
+            <div class="memory-card-info">
+              
+                <div class="memory-card-date">
+                  <i class="fa-regular fa-calendar"></i>
+                  <span>2025.03.29</span>
+                </div>
+              
+              
+                <div class="memory-card-location">
+                  <i class="fa-solid fa-location-dot"></i>
+                  <span>ppppp</span>
+                </div>
+              
+              
+                <div class="memory-card-title">
+                  动物森友会 湖
+                </div>
+              
             </div>
           </div>
-        </div>
         
-        <div class="memory-box">
-          <img src="/memory-img/1.jpg" alt="Memory">
-          <div class="memory-overlay">
-            <div class="overlay-content">
-              <span class="memory-date">
-                2026.01.15
-              </span>
-              <p>
-                The light on the fresh strawberry looked like diamonds.
-              </p>
+          <div class="memory-card">
+            <div class="memory-card-image">
+              <img src="/memories/date-2024-03-01-location-aaa-title-headphone-paintings.jpg" alt="headphone paintings" loading="lazy">
+            </div>
+            <div class="memory-card-info">
+              
+                <div class="memory-card-date">
+                  <i class="fa-regular fa-calendar"></i>
+                  <span>2024.03.01</span>
+                </div>
+              
+              
+                <div class="memory-card-location">
+                  <i class="fa-solid fa-location-dot"></i>
+                  <span>aaa</span>
+                </div>
+              
+              
+                <div class="memory-card-title">
+                  Headphone paintings
+                </div>
+              
             </div>
           </div>
-        </div>
         
-        <div class="memory-box">
-          <img src="/memory-img/1.jpg" alt="Memory">
-          <div class="memory-overlay">
-            <div class="overlay-content">
-              <span class="memory-date">
-                2026.01.15
-              </span>
-              <p>
-                The light on the fresh strawberry looked like diamonds.
-              </p>
+          <div class="memory-card">
+            <div class="memory-card-image">
+              <img src="/memories/date-2023-10-15-location-eee-title-desk-set-up.jpg" alt="desk set up" loading="lazy">
+            </div>
+            <div class="memory-card-info">
+              
+                <div class="memory-card-date">
+                  <i class="fa-regular fa-calendar"></i>
+                  <span>2023.10.15</span>
+                </div>
+              
+              
+                <div class="memory-card-location">
+                  <i class="fa-solid fa-location-dot"></i>
+                  <span>eee</span>
+                </div>
+              
+              
+                <div class="memory-card-title">
+                  Desk set up
+                </div>
+              
             </div>
           </div>
-        </div>
         
-        <div class="memory-box">
-          <img src="/memory-img/1.jpg" alt="Memory">
-          <div class="memory-overlay">
-            <div class="overlay-content">
-              <span class="memory-date">
-                2026.01.15
-              </span>
-              <p>
-                The light on the fresh strawberry looked like diamonds.
-              </p>
+          <div class="memory-card">
+            <div class="memory-card-image">
+              <img src="/memories/date-2023-08-07-location-chongqing-china-title-golden-trio-night.jpg" alt="golden trio night" loading="lazy">
+            </div>
+            <div class="memory-card-info">
+              
+                <div class="memory-card-date">
+                  <i class="fa-regular fa-calendar"></i>
+                  <span>2023.08.07</span>
+                </div>
+              
+              
+                <div class="memory-card-location">
+                  <i class="fa-solid fa-location-dot"></i>
+                  <span>chongqing china</span>
+                </div>
+              
+              
+                <div class="memory-card-title">
+                  Golden trio night
+                </div>
+              
             </div>
           </div>
-        </div>
         
-        <div class="memory-box">
-          <img src="/memory-img/1.jpg" alt="Memory">
-          <div class="memory-overlay">
-            <div class="overlay-content">
-              <span class="memory-date">
-                2026.01.15
-              </span>
-              <p>
-                The light on the fresh strawberry looked like diamonds.
-              </p>
+          <div class="memory-card">
+            <div class="memory-card-image">
+              <img src="/memories/date-2020-12-21-location-chongqing-china-title-stardew-valley.jpg" alt="stardew valley" loading="lazy">
+            </div>
+            <div class="memory-card-info">
+              
+                <div class="memory-card-date">
+                  <i class="fa-regular fa-calendar"></i>
+                  <span>2020.12.21</span>
+                </div>
+              
+              
+                <div class="memory-card-location">
+                  <i class="fa-solid fa-location-dot"></i>
+                  <span>chongqing china</span>
+                </div>
+              
+              
+                <div class="memory-card-title">
+                  Stardew valley
+                </div>
+              
             </div>
           </div>
-        </div>
         
-        <div class="memory-box">
-          <img src="/memory-img/1.jpg" alt="Memory">
-          <div class="memory-overlay">
-            <div class="overlay-content">
-              <span class="memory-date">
-                2026.01.15
-              </span>
-              <p>
-                The light on the fresh strawberry looked like diamonds.
-              </p>
+          <div class="memory-card">
+            <div class="memory-card-image">
+              <img src="/memories/date-2015-11-05-location-chongqing-china-title-calligraphy.jpg" alt="calligraphy" loading="lazy">
+            </div>
+            <div class="memory-card-info">
+              
+                <div class="memory-card-date">
+                  <i class="fa-regular fa-calendar"></i>
+                  <span>2015.11.05</span>
+                </div>
+              
+              
+                <div class="memory-card-location">
+                  <i class="fa-solid fa-location-dot"></i>
+                  <span>chongqing china</span>
+                </div>
+              
+              
+                <div class="memory-card-title">
+                  Calligraphy
+                </div>
+              
             </div>
           </div>
-        </div>
         
+        
+      </div>
+      <button class="memory-scroll-arrow memory-scroll-arrow--right" id="memoryScrollRight" aria-label="Scroll right">
+        <i class="fa-solid fa-chevron-right"></i>
+      </button>
     </div>
   </section>
 
@@ -388,57 +427,12 @@
     </div>
   </section>
 
-  <!-- <h2>
-    <i class="fa-solid fa-seedling" style="color: var(--gold);"></i> What I'd Love to do
-  </h2>
-  <div class="categories-grid">
-    
-      
-        <a href="/categories/journaling" class="category-card">
-          <img src="/img/1.jpg" alt="">
-          <span><i class="fa-solid fa-heart"></i>
-            Journaling
-          </span>
-        </a>
-        
-          
-      
-        <a href="/categories/learning" class="category-card">
-          <img src="/img/1.jpg" alt="">
-          <span><i class="fa-solid fa-heart"></i>
-            Learning
-          </span>
-        </a>
-        
-          
-      
-        <a href="/categories/creating" class="category-card">
-          <img src="/img/1.jpg" alt="">
-          <span><i class="fa-solid fa-heart"></i>
-            Creating
-          </span>
-        </a>
-        
-          
-      
-        <a href="/categories/coding" class="category-card">
-          <img src="/img/1.jpg" alt="">
-          <span><i class="fa-solid fa-heart"></i>
-            Coding
-          </span>
-        </a>
-        
-          
-  </div> -->
-
 </div>
 
 <script>
   (function () {
     const grid = document.getElementById('achievementsBento');
     if (!grid) return;
-
-    const sizeClasses = ['bento--sm', 'bento--wide', 'bento--tall', 'bento--big'];
 
     function shuffle(arr) {
       for (let i = arr.length - 1; i > 0; i--) {
@@ -450,52 +444,52 @@
       return arr;
     }
 
-    function pickWeighted(choices) {
-      let total = 0;
-      for (let i = 0; i < choices.length; i++) total += choices[i].w;
+    // Randomly pick images for 6 fixed slots (layout stays the same)
+    const dataEl = document.getElementById('achievementsImagesJson');
+    let images = [];
+    try {
+      images = dataEl ? JSON.parse(dataEl.textContent || '[]') : [];
+    } catch (e) {
+      images = [];
+    }
 
-      let r = Math.random() * total;
-      for (let i = 0; i < choices.length; i++) {
-        r -= choices[i].w;
-        if (r <= 0) return choices[i].cls;
+    const randomImages = grid.dataset.randomImages !== 'false';
+    const picked = randomImages ? shuffle(images.slice()).slice(0, 6) : images.slice(0, 6);
+
+    const slots = grid.querySelectorAll('.bento-slot[data-slot]');
+    for (let i = 0; i < slots.length; i++) {
+      const slot = slots[i];
+      const imgEl = slot.querySelector('img');
+      const dateEl = slot.querySelector('.bento-overlay-date');
+      const titleEl = slot.querySelector('.bento-overlay-title');
+      const img = picked[i];
+
+      if (!img || !imgEl) {
+        slot.classList.add('bento-empty');
+        slot.setAttribute('aria-disabled', 'true');
+        slot.removeAttribute('target');
+        slot.removeAttribute('rel');
+        continue;
       }
-      return choices[choices.length - 1].cls;
-    }
 
-    function clearSizes(el) {
-      for (let i = 0; i < sizeClasses.length; i++) {
-        el.classList.remove(sizeClasses[i]);
+      slot.classList.remove('bento-empty');
+      slot.removeAttribute('aria-disabled');
+      slot.setAttribute('target', '_blank');
+      slot.setAttribute('rel', 'noopener');
+      slot.href = img.src;
+      slot.title = img.title || img.alt || '';
+      slot.setAttribute('aria-label', [img.date, img.title || img.alt].filter(Boolean).join(' '));
+      imgEl.src = img.src;
+      imgEl.alt = img.title || img.alt || '';
+
+      if (dateEl) {
+        dateEl.textContent = img.date || '';
+        dateEl.style.display = img.date ? '' : 'none';
+      }
+      if (titleEl) {
+        titleEl.textContent = img.title || img.alt || '';
       }
     }
-
-    const items = Array.prototype.slice.call(grid.querySelectorAll('.bento-item'));
-    if (!items.length) return;
-
-    const shouldShuffle = grid.dataset.shuffle !== 'false';
-    const working = shouldShuffle ? shuffle(items.slice()) : items.slice();
-
-    const imageChoices = [
-      { cls: 'bento--sm', w: 45 },
-      { cls: 'bento--wide', w: 25 },
-      { cls: 'bento--tall', w: 20 },
-      { cls: 'bento--big', w: 10 },
-    ];
-
-    const textChoices = [
-      { cls: 'bento--wide', w: 45 },
-      { cls: 'bento--big', w: 55 },
-    ];
-
-    const frag = document.createDocumentFragment();
-    for (let i = 0; i < working.length; i++) {
-      const el = working[i];
-      clearSizes(el);
-      const type = el.dataset.bento;
-      el.classList.add(pickWeighted(type === 'text' ? textChoices : imageChoices));
-      frag.appendChild(el);
-    }
-
-    grid.appendChild(frag);
 
     // Apply per-item icon colors from config (e.g. "var(--primary)")
     const icons = grid.querySelectorAll('.bento-icon');
@@ -504,7 +498,40 @@
       if (color) icons[i].style.color = color;
     }
   })();
+
+  // Memory scroll with arrow buttons
+  (function () {
+    const viewport = document.getElementById('memoryScrollViewport');
+    const btnLeft = document.getElementById('memoryScrollLeft');
+    const btnRight = document.getElementById('memoryScrollRight');
+    if (!viewport || !btnLeft || !btnRight) return;
+
+    const scrollAmount = 340; // card width (320px) + gap (20px)
+
+    function updateButtons() {
+      const canScrollLeft = viewport.scrollLeft > 0;
+      const canScrollRight = viewport.scrollLeft < (viewport.scrollWidth - viewport.clientWidth - 1);
+
+      btnLeft.classList.toggle('memory-scroll-arrow--disabled', !canScrollLeft);
+      btnRight.classList.toggle('memory-scroll-arrow--disabled', !canScrollRight);
+      btnLeft.disabled = !canScrollLeft;
+      btnRight.disabled = !canScrollRight;
+    }
+
+    btnLeft.addEventListener('click', function () {
+      viewport.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+    });
+
+    btnRight.addEventListener('click', function () {
+      viewport.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+    });
+
+    viewport.addEventListener('scroll', updateButtons);
+    window.addEventListener('resize', updateButtons);
+    updateButtons(); // Initial check
+  })();
 </script>
+
   </main>
 
   <footer style="text-align: center;">

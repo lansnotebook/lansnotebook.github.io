@@ -335,7 +335,7 @@ body.nav-locked{
   .categories-grid { padding: 20px 5%; }
 }
 
-/* ------ Achievements Album (Carousel) --------- */
+/* ------ Achievements --------- */
 .achievements-container {
   background-color: var(--white);
   padding: 20px;
@@ -346,12 +346,33 @@ body.nav-locked{
 /* --- Achievements Bento Grid --- */
 .achievements-bento{
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-auto-rows: 92px;
   gap: 14px;
   padding: 10px;
-  grid-auto-flow: dense;
 }
+
+.achievements-bento--fixed{
+  /* Layout exactly like the reference screenshot:
+     1 text + 6 images (3 columns, 3 rows) */
+  grid-template-columns: 1fr 1fr 0.9fr;
+  grid-template-areas:
+    "text text img1"
+    "img2 img2 img3"
+    "img4 img5 img6";
+  grid-template-rows:
+    clamp(200px, 18vw, 180px)
+    clamp(210px, 30vw, 320px)
+    clamp(230px, 18vw, 180px);
+  align-items: stretch;
+}
+
+.bento-slot{ width: 100%; height: 100%; }
+.bento-slot--text{ grid-area: text; }
+.bento-slot--img1{ grid-area: img1; }
+.bento-slot--img2{ grid-area: img2; }
+.bento-slot--img3{ grid-area: img3; }
+.bento-slot--img4{ grid-area: img4; }
+.bento-slot--img5{ grid-area: img5; }
+.bento-slot--img6{ grid-area: img6; }
 
 .bento-item{
   border-radius: 20px;
@@ -364,6 +385,8 @@ body.nav-locked{
 .bento-image{
   display: block;
   position: relative;
+  width: 100%;
+  height: 100%;
 }
 
 .bento-image img{
@@ -371,7 +394,48 @@ body.nav-locked{
   height: 100%;
   display: block;
   object-fit: cover;
+  object-position: center;
   transition: transform 0.45s ease;
+}
+
+.bento-overlay{
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 18px;
+  background: rgba(128, 93, 71, 0.82);
+  color: #fff;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  pointer-events: none;
+  text-transform: capitalize;
+}
+
+.bento-overlay-date{
+  font-family: 'Fredoka', sans-serif;
+  font-size: 0.8rem;
+  color: var(--gold);
+}
+
+.bento-overlay-title{
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.bento-image:hover .bento-overlay,
+.bento-image:focus-visible .bento-overlay,
+.bento-image:focus-within .bento-overlay{
+  opacity: 1;
+}
+
+.bento-empty{
+  background: linear-gradient(135deg, var(--primary-dark), var(--cloud));
+  border-color: var(--primary-dark);
 }
 
 .bento-image:hover img{
@@ -379,27 +443,20 @@ body.nav-locked{
 }
 
 .bento-text{
-  padding: 16px 18px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   background: linear-gradient(135deg, #fff, var(--cloud));
 }
 
-.bento-title{
-  margin: 0 0 10px;
-  font-family: 'Fredoka', sans-serif;
-  font-size: 1rem;
-  color: var(--text);
-}
-
 .bento-list{
   list-style: none;
-  padding: 0;
-  margin: 0;
+  padding: 10px;
+  margin: 10px;
   display: flex;
   flex-direction: column;
   gap: 8px;
+  /* vertical-align: middle; */
 }
 
 .bento-list li{
@@ -423,179 +480,260 @@ body.nav-locked{
   opacity: 0.75;
 }
 
-.bento--sm{ grid-column: span 2; grid-row: span 2; }
-.bento--wide{ grid-column: span 4; grid-row: span 2; }
-.bento--tall{ grid-column: span 2; grid-row: span 3; }
-.bento--big{ grid-column: span 4; grid-row: span 3; }
-
 @media (max-width: 900px) {
-  .achievements-bento{
-    grid-template-columns: repeat(4, 1fr);
-    grid-auto-rows: 90px;
+  .achievements-bento--fixed{
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "text text"
+      "img1 img2"
+      "img3 img4"
+      "img5 img6";
+    grid-template-rows: auto;
+    grid-auto-rows: clamp(140px, 34vw, 220px);
   }
-
-  .bento--wide{ grid-column: span 4; }
-  .bento--big{ grid-column: span 4; }
-  .bento--sm{ grid-column: span 2; }
-  .bento--tall{ grid-column: span 2; }
 }
 
 @media (max-width: 600px) {
-  .achievements-bento{
-    grid-template-columns: repeat(2, 1fr);
-    grid-auto-rows: 86px;
+  .achievements-bento--fixed{
+    gap: 12px;
+    grid-auto-rows: clamp(130px, 44vw, 220px);
   }
-
-  .bento--wide{ grid-column: span 2; }
-  .bento--big{ grid-column: span 2; }
 }
-
-/* -----Achievements---- */
-.achievements {
-  /* background: var(--cloud);  */
-  padding: 30px; 
-  margin: 10px;
-  border-radius: var(--radius); 
-  border: 3px dashed var(--gold);
-  /* box-shadow: 0 5px 15px rgba(0,0,0,0.1); */
-}
-.achievements ul {
-  text-align: left; list-style: none; padding: 0;
-}
-/* Responsive */
-@media (max-width: 768px) {
-  .achievements { margin: 25px;}
-}
-
-.album-container {
+/* --- Moments I Felt Alive: Horizontal Scrolling Cards (Instagram-style) --- */
+.memory-scroll-container {
   position: relative;
-  display: flex;
-  align-items: center;
-  padding: 20px 0;
+  padding: 0 50px;
+  overflow: hidden;
 }
 
-.album-viewport {
+.memory-scroll-viewport {
   display: flex;
   gap: 20px;
   overflow-x: auto;
+  overflow-y: hidden;
   scroll-behavior: smooth;
   scrollbar-width: none; /* Hide scrollbar Firefox */
-  padding: 10px;
+  padding: 10px 0 20px;
+  -webkit-overflow-scrolling: touch;
 }
 
-.album-viewport::-webkit-scrollbar { display: none; } /* Hide scrollbar Chrome/Safari */
-
-.album-card {
-  flex: 0 0 280px;
-  background: var(--white);
-  border-radius: 20px;
-  overflow: hidden;
-  /* box-shadow: 0 8px 15px rgba(0,0,0,0.08); */
-  border: 3px solid var(--white);
-  transition: 0.3s;
+.memory-scroll-viewport::-webkit-scrollbar {
+  display: none; /* Hide scrollbar Chrome/Safari */
 }
 
-.album-card img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-}
-
-.album-label {
-  padding: 12px;
-  font-weight: 600;
-  font-size: 0.9rem;
-  color: var(--text);
-}
-
-.album-arrow {
-  background: var(--white);
-  border: none;
+.memory-scroll-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
   width: 45px;
   height: 45px;
   border-radius: 50%;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  background: var(--white);
+  border: 2px solid var(--cloud);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   cursor: pointer;
   z-index: 10;
   color: var(--nut-brown);
-  font-size: 1.2rem;
-  transition: 0.3s;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
 }
 
-.album-arrow:hover { background: var(--gold); color: white; }
-.album-arrow.left { position: absolute; left: -20px; }
-.album-arrow.right { position: absolute; right: -20px; }
-
-
-/* --- SECTION 3: Sunlight through the Leaves (3x2 Grid) --- */
-.memory-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(1, 220px);
-  gap: 15px;
-  padding: 0;
-
+.memory-scroll-arrow:hover:not(.memory-scroll-arrow--disabled) {
+  background: var(--gold);
+  color: white;
+  border-color: var(--gold);
+  transform: translateY(-50%) scale(1.1);
 }
 
-.memory-box {
-  position: relative;
-  border-radius: 15px;
-  overflow: hidden;
+.memory-scroll-arrow:active:not(.memory-scroll-arrow--disabled) {
+  transform: translateY(-50%) scale(0.95);
+}
+
+.memory-scroll-arrow--left {
+  left: 0;
+}
+
+.memory-scroll-arrow--right {
+  right: 0;
+}
+
+.memory-scroll-arrow--disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.memory-card {
+  flex: 0 0 320px;
+  width: 320px;
   background: var(--white);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  animation: slideInFromRight 0.6s ease-out backwards;
 }
 
-.memory-box img {
+.memory-card:nth-child(1) { animation-delay: 0.05s; }
+.memory-card:nth-child(2) { animation-delay: 0.1s; }
+.memory-card:nth-child(3) { animation-delay: 0.15s; }
+.memory-card:nth-child(4) { animation-delay: 0.2s; }
+.memory-card:nth-child(5) { animation-delay: 0.25s; }
+.memory-card:nth-child(n+6) { animation-delay: 0.3s; }
+
+@keyframes slideInFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.memory-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  /* box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); */
+}
+
+.memory-card-image {
+  width: 100%;
+  height: 320px;
+  overflow: hidden;
+  background: var(--cloud);
+  position: relative;
+}
+
+.memory-card-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   transition: transform 0.5s ease;
 }
 
-.memory-overlay {
-  position: absolute;
-  top: 0; left: 0; width: 100%; height: 100%;
-  background: rgba(128, 93, 71, 0.85); /* Uses var(--text) with transparency */
-  color: white;
+.memory-card-info {
+  padding: 16px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-height: 100px;
+}
+
+.memory-card-date,
+.memory-card-location {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  color: var(--text);
+  opacity: 0.8;
+}
+
+.memory-card-date i,
+.memory-card-location i {
+  color: var(--gold);
+  font-size: 0.9rem;
+}
+
+.memory-card-title {
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--text);
+  margin-top: 4px;
+  line-height: 1.4;
+  display: -webkit-box;
+  line-clamp: 2;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.memory-card-empty .memory-card-image {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.memory-empty-placeholder {
   text-align: center;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  padding: 20px;
+  color: var(--text);
+  opacity: 0.5;
+  padding: 40px 20px;
 }
 
-.memory-box:hover .memory-overlay { opacity: 1; }
-.memory-box:hover img { transform: scale(1.1); }
-
-.memory-date {
-  display: block;
-  font-family: 'Fredoka', sans-serif;
-  font-size: 0.8rem;
-  margin-bottom: 8px;
-  color: var(--gold);
-  /* text-align: center; */
+.memory-empty-placeholder i {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  color: var(--primary);
+  opacity: 0.6;
 }
 
-.overlay-content p {
-  font-size: 0.9rem;
-  line-height: 1.4;
+.memory-empty-placeholder p {
   margin: 0;
+  font-size: 0.9rem;
+}
+
+.memory-empty-placeholder code {
+  background: var(--cloud);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.85rem;
 }
 
 /* Responsive adjustments */
 @media (max-width: 900px) {
-  .memory-grid { grid-template-columns: repeat(2, 1fr); grid-template-rows: auto; }
+  .memory-scroll-container {
+    padding: 20px 45px;
+  }
+  .memory-card {
+    flex: 0 0 280px;
+    width: 280px;
+  }
+  .memory-card-image {
+    height: 280px;
+  }
+  .memory-scroll-arrow {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
 }
+
 @media (max-width: 600px) {
-  .memory-grid { grid-template-columns: 1fr; }
-  .album-arrow { display: none; } /* Touch users can swipe */
+  .memory-scroll-container {
+    padding: 20px 40px;
+  }
+  .memory-card {
+    flex: 0 0 260px;
+    width: 260px;
+  }
+  .memory-card-image {
+    height: 260px;
+  }
+  .memory-scroll-viewport {
+    gap: 15px;
+  }
+  .memory-scroll-arrow {
+    width: 36px;
+    height: 36px;
+    font-size: 0.9rem;
+  }
 }
 
 /* -------------- 4. Projects (Twigs & Branches) -------------- */
 .projects-container {
-  /* max-width: 800px; */
-  margin: 0 auto;
+  /* margin: 0 auto; */
+
+  background-color: var(--white);
+  padding: 20px;
+  border-radius: var(--radius);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
 .project-item {
