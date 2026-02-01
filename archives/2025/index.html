@@ -21,8 +21,8 @@
   <header class="site-header">
     <div class="header-bar">
       <div class="logo">
-        <h2 style="margin:0; color: var(--primary-dark);">
-          <i class="fa-solid fa-leaf" style="color: var(--gold);"></i>
+        <h2 style="margin:0; color: var(--text);">
+          <i class="fa-solid fa-leaf" style="color: var(--icon);"></i>
           <a href="/">
             Lan&#39;s Notebook
           </a>
@@ -87,7 +87,7 @@
   </p>
 
   <section class="home-section">
-    <h2><i class="fa-solid fa-seedling" style="color: var(--gold);"></i> What I'd Love to do</h2>
+    <h2><i class="fa-solid fa-seedling" style="color: var(--icon);"></i> What I'd Love to do</h2>
     <div class="categories-grid">
       
         
@@ -138,51 +138,35 @@
   </section>
 
   <section class="home-section">
-    <h2><i class="fa-solid fa-crown" style="color: var(--gold);"></i> Things I'm Proud of</h2>
+    <h2><i class="fa-solid fa-crown" style="color: var(--icon);"></i> Things I'm Proud of</h2>
     
     
     
     
     
-    <script type="application/json" id="achievementsImagesJson">[{"src":"/achievements/2015-11-05-calligraphy.jpg","alt":"calligraphy","date":"2015.11.05","title":"calligraphy"},{"src":"/achievements/2020-12-21-stardew-valley.jpg","alt":"stardew valley","date":"2020.12.21","title":"stardew valley"},{"src":"/achievements/2021-04-27-calligraphy.jpg","alt":"calligraphy","date":"2021.04.27","title":"calligraphy"},{"src":"/achievements/2024-03-01-headphone-paintings.jpg","alt":"headphone paintings","date":"2024.03.01","title":"headphone paintings"},{"src":"/achievements/2025-03-29-%E5%8A%A8%E7%89%A9%E6%A3%AE%E5%8F%8B%E4%BC%9A-%E6%B9%96.jpg","alt":"动物森友会 湖","date":"2025.03.29","title":"动物森友会 湖"},{"src":"/achievements/2025-04-09-%E5%8A%A8%E7%89%A9%E6%A3%AE%E5%8F%8B%E4%BC%9A-%E5%92%96%E5%95%A1%E5%8E%85.jpg","alt":"动物森友会 咖啡厅","date":"2025.04.09","title":"动物森友会 咖啡厅"}]</script>
+    <script type="application/json" id="achievementsImagesJson">[{"src":"/achievements/2015-11-05-calligraphy.jpg","alt":"calligraphy","date":"2015.11.05","title":"calligraphy"},{"src":"/achievements/2020-12-21-stardew-valley.jpg","alt":"stardew valley","date":"2020.12.21","title":"stardew valley"},{"src":"/achievements/2021-04-27-calligraphy.jpg","alt":"calligraphy","date":"2021.04.27","title":"calligraphy"},{"src":"/achievements/2024-03-01-headphone-paintings.jpg","alt":"headphone paintings","date":"2024.03.01","title":"headphone paintings"},{"src":"/achievements/2025-03-29-%E5%8A%A8%E7%89%A9%E6%A3%AE%E5%8F%8B%E4%BC%9A-%E6%B9%96.jpg","alt":"动物森友会 湖","date":"2025.03.29","title":"动物森友会 湖"},{"src":"/achievements/2025-04-09-%E5%8A%A8%E7%89%A9%E6%A3%AE%E5%8F%8B%E4%BC%9A-%E5%92%96%E5%95%A1%E5%8E%85.jpg","alt":"动物森友会 咖啡厅","date":"2025.04.09","title":"动物森友会 咖啡厅"},{"src":"/achievements/2025-04-09-dongsen-muji.jpg","alt":"dongsen muji","date":"2025.04.09","title":"dongsen muji"}]</script>
     <div class="achievements-container">
       <div class="achievements-bento achievements-bento--fixed"
            id="achievementsBento"
            data-random-images="true">
 
-        <!-- Fixed layout like screenshot: 1 text + 6 images -->
-        <div class="bento-item bento-text bento-slot bento-slot--text">
-          
-            
-              <ul class="bento-list">
-                
-                  <li>
-                    <i class="fa-solid fa-check-circle bento-icon" data-color="var(--primary)"></i>
-                    <span>Kept track of monthly calendar journals for over 9 years</span>
-                  </li>
-                
-                  <li>
-                    <i class="fa-solid fa-check-circle bento-icon" data-color="var(--primary)"></i>
-                    <span>Built an aesthetic and functional online shopping website within 30 days</span>
-                  </li>
-                
-                  <li>
-                    <i class="fa-solid fa-check-circle bento-icon" data-color="var(--primary)"></i>
-                    <span>Maintained a consistent workout routine every other day for over 2 years</span>
-                  </li>
-                
-              </ul>
-            
-          
-
-          
-        </div>
-
+        <!-- Row 1: image, text, image -->
         <div class="bento-item bento-image bento-slot bento-slot--img1" data-slot="1" role="img" aria-label="Achievement image 1">
           <img alt="" loading="lazy">
           <div class="bento-overlay" aria-hidden="true">
             <span class="bento-overlay-date"></span>
             <span class="bento-overlay-title"></span>
+          </div>
+        </div>
+        <div class="bento-item bento-text bento-slot bento-slot--text1">
+          <span class="bento-text-icon" aria-hidden="true"><i class="fa-solid fa-wand-magic-sparkles"></i></span>
+          <div class="bento-text-overlay">
+            <ul class="bento-list">
+              
+                <li><span>Kept track of monthly calendar journals for over 9 years</span></li>
+              
+            </ul>
+            
           </div>
         </div>
         <div class="bento-item bento-image bento-slot bento-slot--img2" data-slot="2" role="img" aria-label="Achievement image 2">
@@ -192,6 +176,18 @@
             <span class="bento-overlay-title"></span>
           </div>
         </div>
+
+        <!-- Row 2: text, image, text -->
+        <div class="bento-item bento-text bento-slot bento-slot--text2">
+          <span class="bento-text-icon" aria-hidden="true"><i class="fa-solid fa-store"></i></span>
+          <div class="bento-text-overlay">
+            <ul class="bento-list">
+              
+                <li><span>Built an aesthetic and functional online shopping website within 30 days</span></li>
+              
+            </ul>
+          </div>
+        </div>
         <div class="bento-item bento-image bento-slot bento-slot--img3" data-slot="3" role="img" aria-label="Achievement image 3">
           <img alt="" loading="lazy">
           <div class="bento-overlay" aria-hidden="true">
@@ -199,25 +195,14 @@
             <span class="bento-overlay-title"></span>
           </div>
         </div>
-        <div class="bento-item bento-image bento-slot bento-slot--img4" data-slot="4" role="img" aria-label="Achievement image 4">
-          <img alt="" loading="lazy">
-          <div class="bento-overlay" aria-hidden="true">
-            <span class="bento-overlay-date"></span>
-            <span class="bento-overlay-title"></span>
-          </div>
-        </div>
-        <div class="bento-item bento-image bento-slot bento-slot--img5" data-slot="5" role="img" aria-label="Achievement image 5">
-          <img alt="" loading="lazy">
-          <div class="bento-overlay" aria-hidden="true">
-            <span class="bento-overlay-date"></span>
-            <span class="bento-overlay-title"></span>
-          </div>
-        </div>
-        <div class="bento-item bento-image bento-slot bento-slot--img6" data-slot="6" role="img" aria-label="Achievement image 6">
-          <img alt="" loading="lazy">
-          <div class="bento-overlay" aria-hidden="true">
-            <span class="bento-overlay-date"></span>
-            <span class="bento-overlay-title"></span>
+        <div class="bento-item bento-text bento-slot bento-slot--text3">
+          <span class="bento-text-icon" aria-hidden="true"><i class="fa-solid fa-dumbbell"></i></span>
+          <div class="bento-text-overlay">
+            <ul class="bento-list">
+              
+                <li><span>Maintained a consistent workout routine every other day for over 2 years</span></li>
+              
+            </ul>
           </div>
         </div>
       </div>
@@ -225,7 +210,7 @@
   </section>
 
   <section class="home-section">
-    <h2><i class="fa-solid fa-sun" style="color: var(--gold);"></i> Moments I Felt Alive</h2>
+    <h2><i class="fa-solid fa-sun" style="color: var(--icon);"></i> Moments I Felt Alive</h2>
     
     <div class="memory-scroll-container">
       <button class="memory-scroll-arrow memory-scroll-arrow--left" id="memoryScrollLeft" aria-label="Scroll left">
@@ -1092,7 +1077,7 @@
   </section>
 
   <section class="home-section">
-    <h2><i class="fa-solid fa-code-branch" style="color: var(--nut-brown);"></i> Things I've Made</h2>
+    <h2><i class="fa-solid fa-laptop" style="color: var(--icon);"></i> Things I've Made</h2>
     <div class="projects-container">
       
         <a href="" target="_blank" class="project-item">
@@ -1167,7 +1152,7 @@
       return arr;
     }
 
-    // Randomly pick images for 6 fixed slots
+    // Randomly pick images for 3 fixed slots (6 boxes total: 3 image + 3 text)
     const dataEl = document.getElementById('achievementsImagesJson');
     let images = [];
     try {
@@ -1177,7 +1162,7 @@
     }
 
     const randomImages = grid.dataset.randomImages !== 'false';
-    const picked = randomImages ? shuffle(images.slice()).slice(0, 6) : images.slice(0, 6);
+    const picked = randomImages ? shuffle(images.slice()).slice(0, 3) : images.slice(0, 3);
 
     const slots = grid.querySelectorAll('.bento-slot[data-slot]');
     for (let i = 0; i < slots.length; i++) {
@@ -1216,7 +1201,7 @@
       }
     }
 
-    // Apply per-item icon colors from config (e.g. "var(--primary)")
+    // Apply per-item icon colors from config)
     const icons = grid.querySelectorAll('.bento-icon');
     for (let i = 0; i < icons.length; i++) {
       const color = icons[i].dataset.color;
