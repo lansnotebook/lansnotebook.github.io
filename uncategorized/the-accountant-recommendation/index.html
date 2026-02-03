@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="48x48" href="/img/favicon.png">
+	<link rel="shortcut icon" type="image/png" href="/img/favicon.png">
+  
+    <title>
+      The accountant
+    </title>
+    
+        <link rel="stylesheet" href="/css/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <!-- Snipcart CSS -->
+        <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.4.0/default/snipcart.css" />
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <header class="site-header">
+    <div class="header-bar">
+      <div class="logo">
+        <h2 style="margin:0; color: var(--text);">
+          <i class="fa-solid fa-leaf" style="color: var(--hover);"></i>
+          <a href="/">
+            Lan&#39;s Notebook
+          </a>
+        </h2>
+      </div>
+
+      <button class="nav-toggle" type="button" aria-controls="site-nav" aria-expanded="false">
+        <i class="fa-solid fa-bars"></i>
+        <span class="nav-toggle-label">Menu</span>
+      </button>
+    </div>
+
+    <nav id="site-nav" class="nav-links">
+      
+        
+          <a href="/"><i class="fa-solid fa-house"></i>
+            Home
+          </a>
+          
+            
+        
+          <a href="/categories"><i class="fa-solid fa-book-open"></i>
+            Blog
+          </a>
+          
+            
+        
+          <a href="/shop"><i class="fa-solid fa-basket-shopping"></i>
+            Market
+          </a>
+          
+            
+        
+          <a href="/about"><i class="fa-solid fa-user-astronaut"></i>
+            About me
+          </a>
+          
+            
+              <button class="snipcart-checkout lang-btn nav-btn nav-cart" type="button">
+                <i class="fa-solid fa-shopping-cart"></i> Cart
+                <span class="snipcart-items-count" style="position: absolute; top: -8px; right: -8px; background: var(--icon); color: var(--block); border-radius: 50%; width: 20px; height: 20px; display: flex; align-items: center; justify-content: center; font-size: 0.7rem; font-weight: bold;">0</span>
+              </button>
+              <button class="lang-btn nav-btn nav-lang" type="button" onclick="switchLang()">
+                <i class="fa-solid fa-earth-asia"></i> CN/EN
+              </button>
+    </nav>
+    <div class="nav-backdrop" aria-hidden="true"></div>
+  </header>
+
+  <main>
+    <div style="max-width: 900px; margin: 50px auto; padding: 30px; background: var(--block); border-radius: var(--radius); box-shadow: 10px 10px 0 var(--cloud);">
+  
+  
+    <div style="text-align: center; margin-bottom: 40px;">
+        <span style="background: var(--icon); color: white; padding: 5px 15px; border-radius: 20px;">
+            February 3rd, 2026
+        </span>
+        <h1 style="margin-top: 15px;">The accountant</h1>
+    </div>
+    <div class="content" style="font-size: 1.1rem;">
+      
+    </div>
+    
+    <div style="text-align:center; margin-top:50px; font-size:2rem; color:var(--icon);">
+        ~ 🍂 🐿️ 🍂 ~
+    </div>
+  
+</div>
+  </main>
+
+  <footer style="text-align: center;">
+    <p>
+      <i class="fa-solid fa-cloud" style="color: #fff;"></i><br>
+      &copy; 2026
+        Lan
+          <br>Living on Earth, dreaming in the forest.
+    </p>
+  </footer>
+
+  <script>
+    function switchLang() {
+      let path = window.location.pathname;
+      if (path.includes('/zh-CN/')) window.location.href = path.replace('/zh-CN/', '/');
+      else window.location.href = '/zh-CN' + path;
+    }
+  </script>
+  
+  <!-- Snipcart JavaScript -->
+  <script async src="https://cdn.snipcart.com/themes/v3.4.0/default/snipcart.js"></script>
+  <div hidden id="snipcart" 
+       data-api-key="YOUR_SNIPCART_API_KEY"
+       data-config-modal-style="side"
+       data-config-add-product-behavior="none"
+       data-config-currency="usd"
+       data-config-payment-methods="card,alipay">
+  </div>
+  
+  <!-- Update cart count -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      if (typeof Snipcart !== 'undefined') {
+        Snipcart.store.subscribe(function() {
+          var count = Snipcart.store.getState().cart.items.count;
+          var countElement = document.querySelector('.snipcart-items-count');
+          if (countElement) {
+            countElement.textContent = count;
+            countElement.style.display = count > 0 ? 'flex' : 'none';
+          }
+        });
+      }
+    });
+  </script>
+
+  <script>
+    (function() {
+      var header = document.querySelector('header.site-header');
+      if (!header) return;
+
+      var toggle = header.querySelector('.nav-toggle');
+      var nav = header.querySelector('#site-nav');
+      var backdrop = header.querySelector('.nav-backdrop');
+      if (!toggle || !nav) return;
+
+      function updateHeaderHeightVar() {
+        // Use sticky header height (includes padding); drawer starts below it
+        var h = header.offsetHeight || 0;
+        document.documentElement.style.setProperty('--site-header-height', h + 'px');
+      }
+
+      updateHeaderHeightVar();
+
+      function lockScroll() {
+        var scrollY = window.scrollY || document.documentElement.scrollTop || 0;
+        document.body.dataset.navScrollY = String(scrollY);
+        document.body.classList.add('nav-locked');
+        document.body.style.position = 'fixed';
+        document.body.style.top = '-' + scrollY + 'px';
+        document.body.style.left = '0';
+        document.body.style.right = '0';
+        document.body.style.width = '100%';
+      }
+
+      function unlockScroll() {
+        var raw = document.body.dataset.navScrollY || '0';
+        var scrollY = parseInt(raw, 10) || 0;
+        document.body.classList.remove('nav-locked');
+        document.body.style.position = '';
+        document.body.style.top = '';
+        document.body.style.left = '';
+        document.body.style.right = '';
+        document.body.style.width = '';
+        delete document.body.dataset.navScrollY;
+        window.scrollTo(0, scrollY);
+      }
+
+      function setOpen(open) {
+        var isOpen = header.classList.contains('nav-open');
+        if (open === isOpen) return;
+        header.classList.toggle('nav-open', open);
+        toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+        if (open) lockScroll();
+        else unlockScroll();
+      }
+
+      toggle.addEventListener('click', function(e) {
+        e.stopPropagation();
+        setOpen(!header.classList.contains('nav-open'));
+      });
+
+      nav.addEventListener('click', function(e) {
+        var link = e.target && e.target.closest ? e.target.closest('a') : null;
+        if (link) setOpen(false);
+      });
+
+      document.addEventListener('click', function(e) {
+        if (header.classList.contains('nav-open') && !header.contains(e.target)) setOpen(false);
+      });
+
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && header.classList.contains('nav-open')) setOpen(false);
+      });
+
+      window.addEventListener('resize', function() {
+        updateHeaderHeightVar();
+        if (window.innerWidth > 768 && header.classList.contains('nav-open')) setOpen(false);
+      });
+
+      if (backdrop) {
+        backdrop.addEventListener('click', function() {
+          if (header.classList.contains('nav-open')) setOpen(false);
+        });
+      }
+    })();
+  </script>
+</body>
+
+</html>

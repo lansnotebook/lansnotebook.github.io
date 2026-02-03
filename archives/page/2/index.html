@@ -22,7 +22,7 @@
     <div class="header-bar">
       <div class="logo">
         <h2 style="margin:0; color: var(--text);">
-          <i class="fa-solid fa-leaf" style="color: var(--icon);"></i>
+          <i class="fa-solid fa-leaf" style="color: var(--hover);"></i>
           <a href="/">
             Lan&#39;s Notebook
           </a>
@@ -63,7 +63,7 @@
             
               <button class="snipcart-checkout lang-btn nav-btn nav-cart" type="button">
                 <i class="fa-solid fa-shopping-cart"></i> Cart
-                <span class="snipcart-items-count" style="position: absolute; top: -8px; right: -8px; background: var(--gold); color: white; border-radius: 50%; width: 20px; height: 20px; display: flex; align-items: center; justify-content: center; font-size: 0.7rem; font-weight: bold;">0</span>
+                <span class="snipcart-items-count" style="position: absolute; top: -8px; right: -8px; background: var(--icon); color: var(--block); border-radius: 50%; width: 20px; height: 20px; display: flex; align-items: center; justify-content: center; font-size: 0.7rem; font-weight: bold;">0</span>
               </button>
               <button class="lang-btn nav-btn nav-lang" type="button" onclick="switchLang()">
                 <i class="fa-solid fa-earth-asia"></i> CN/EN
@@ -134,7 +134,11 @@
           </a>
           
             
-    </div>
+  </div>
+  <a href="/categories/" class="home-section-btn">
+    <i class="fa-solid fa-grid-2"></i>View more
+  </a>
+
   </section>
 
   <section class="home-section">
@@ -207,6 +211,9 @@
         </div>
       </div>
     </div>
+    <a href="/" class="home-section-btn">
+      <i class="fa-solid fa-grid-2"></i>View more
+    </a>
   </section>
 
   <section class="home-section">
@@ -1074,66 +1081,272 @@
         <i class="fa-solid fa-chevron-right"></i>
       </button>
     </div>
+    <a href="/" class="home-section-btn">
+      <i class="fa-solid fa-grid-2"></i>View more
+    </a>
   </section>
 
   <section class="home-section">
     <h2><i class="fa-solid fa-laptop" style="color: var(--icon);"></i> Things I've Made</h2>
-    <div class="projects-container">
-      
-        <a href="" target="_blank" class="project-item">
-          <div class="project-info">
-            <h3>
-              Lán Ink Studio
-            </h3>
-            <p>
-              Lán Ink Studio is a specialized online shop for authentic, handwritten Chinese calligraphy tattoo designs, offering ready-made and custom designs, detailed cultural context, and tattoo-artist-ready files - all designed to make the process of choosing a Chinese tattoo simple, inspiring, and trustworthy.
-            </p>
-          </div>
-          <div class="project-media">
-            
-              <img src="/project-img/laninkstudio_preview.jpg" alt="Lán Ink Studio">
-            
-          </div>
-        </a>
+    
+    <div class="project-card-carousel" id="projectCardCarousel" data-count="5">
+      <div class="project-card-track" id="projectCardTrack" aria-label="Project cards">
         
+        <article class="project-card" aria-label="Lán Ink Studio">
+          <div class="project-card-preview">
+            
+              <img src="/project-img/laninkstudio_preview.jpg" alt="">
+            
+          </div>
+          <div class="project-card-content">
+            <h3 class="project-card-title">Lán Ink Studio</h3>
+            <p class="project-card-desc">Lán Ink Studio is a specialized online shop for authentic, handwritten Chinese calligraphy tattoo designs, offering ready-made and custom designs, detailed cultural context, and tattoo-artist-ready files.</p>
+            <a href="https://www.baidu.com/" target="_blank" rel="noopener" class="project-card-link">
+              <i class="fa-solid fa-external-link-alt"></i> Click to Open
+            </a>
+          </div>
+        </article>
+        
+        <article class="project-card" aria-label="Lán Ink Studio">
+          <div class="project-card-preview">
+            
+              <img src="/project-img/laninkstudio_preview.jpg" alt="">
+            
+          </div>
+          <div class="project-card-content">
+            <h3 class="project-card-title">Lán Ink Studio</h3>
+            <p class="project-card-desc">Lán Ink Studio is a specialized online shop for authentic, handwritten Chinese calligraphy tattoo designs, offering ready-made and custom designs, detailed cultural context, and tattoo-artist-ready files.</p>
+            <a href="https://www.baidu.com/" target="_blank" rel="noopener" class="project-card-link">
+              <i class="fa-solid fa-external-link-alt"></i> Click to Open
+            </a>
+          </div>
+        </article>
+        
+        <article class="project-card" aria-label="Lán Ink Studio">
+          <div class="project-card-preview">
+            
+              <img src="/project-img/laninkstudio_preview.jpg" alt="">
+            
+          </div>
+          <div class="project-card-content">
+            <h3 class="project-card-title">Lán Ink Studio</h3>
+            <p class="project-card-desc">Lán Ink Studio is a specialized online shop for authentic, handwritten Chinese calligraphy tattoo designs, offering ready-made and custom designs, detailed cultural context, and tattoo-artist-ready files.</p>
+            <a href="https://www.baidu.com/" target="_blank" rel="noopener" class="project-card-link">
+              <i class="fa-solid fa-external-link-alt"></i> Click to Open
+            </a>
+          </div>
+        </article>
+        
+        <article class="project-card" aria-label="Lán Ink Studio">
+          <div class="project-card-preview">
+            
+              <img src="/project-img/laninkstudio_preview.jpg" alt="">
+            
+          </div>
+          <div class="project-card-content">
+            <h3 class="project-card-title">Lán Ink Studio</h3>
+            <p class="project-card-desc">Lán Ink Studio is a specialized online shop for authentic, handwritten Chinese calligraphy tattoo designs, offering ready-made and custom designs, detailed cultural context, and tattoo-artist-ready files.</p>
+            <a href="https://www.baidu.com/" target="_blank" rel="noopener" class="project-card-link">
+              <i class="fa-solid fa-external-link-alt"></i> Click to Open
+            </a>
+          </div>
+        </article>
+        
+        <article class="project-card" aria-label="Lán Ink Studio">
+          <div class="project-card-preview">
+            
+              <img src="/project-img/laninkstudio_preview.jpg" alt="">
+            
+          </div>
+          <div class="project-card-content">
+            <h3 class="project-card-title">Lán Ink Studio</h3>
+            <p class="project-card-desc">Lán Ink Studio is a specialized online shop for authentic, handwritten Chinese calligraphy tattoo designs, offering ready-made and custom designs, detailed cultural context, and tattoo-artist-ready files.</p>
+            <a href="https://www.baidu.com/" target="_blank" rel="noopener" class="project-card-link">
+              <i class="fa-solid fa-external-link-alt"></i> Click to Open
+            </a>
+          </div>
+        </article>
+        
+      </div>
+      
+      <div class="project-card-dots" id="projectCardDots" aria-label="Select project card">
+        
+        <button type="button" class="project-card-dot is-active" data-index="0" aria-label="Card 1" aria-current="true"></button>
+        
+        <button type="button" class="project-card-dot " data-index="1" aria-label="Card 2" aria-current="false"></button>
+        
+        <button type="button" class="project-card-dot " data-index="2" aria-label="Card 3" aria-current="false"></button>
+        
+        <button type="button" class="project-card-dot " data-index="3" aria-label="Card 4" aria-current="false"></button>
+        
+        <button type="button" class="project-card-dot " data-index="4" aria-label="Card 5" aria-current="false"></button>
+        
+      </div>
+      
     </div>
+    <a href="/" class="home-section-btn">
+      <i class="fa-solid fa-grid-2"></i>View more
+    </a>
   </section>
 
-  <!-- <section class="home-section">
-    <h2><i class="fa-solid fa-basket-shopping" style="color: var(--gold);"></i> Things I Recommend</h2>
+  <section class="home-section">
+    <h2><i class="fa-solid fa-hands-clapping" style="color: var(--icon);"></i> Things I Recommend</h2>
+    
+    <script type="application/json" id="recommendationNotesData">[{"title":"Riot Women","type":"TV series","layout":"recommendation-tv-series","updated":"2026-02-01T16:00:00.000Z","extraLabel":"Year:","extraValue":"2025","notes":"w呜呜呜好喜欢！"},{"title":"The accountant","type":"movie","layout":"recommendation-movie","updated":"2026-02-01T16:00:00.000Z","extraLabel":"Year:","extraValue":"2016","notes":"大本！！"},{"title":"The thrill is gone","type":"music","layout":"recommendation-music","updated":"2026-02-01T16:00:00.000Z","extraLabel":"Artist:","extraValue":"Raye","notes":"喜欢！"},{"title":"Writing the blockbuster novel","type":"book","layout":"recommendation-book","updated":"2026-02-01T16:00:00.000Z","extraLabel":"Author:","extraValue":"Albert Zuckerman","notes":"好看！！"},{"title":"Wake Up Dead Man: A Knives Out Mystery","type":"movie","layout":"recommendation-movie","updated":"2025-12-27T16:00:00.000Z","extraLabel":"Year:","extraValue":"2025","notes":"很好看！！！"},{"title":"Mindhunter","type":"TV series","layout":"recommendation-tv-series","updated":"2025-03-02T16:00:00.000Z","extraLabel":"Year:","extraValue":"2017","notes":"太好看了....."}]</script>
     <div class="recommendation-table">
       <div class="recommendation-header">
         <span>Type</span>
         <span>Selection</span>
         <span>Last Stored</span>
+        <span>Lan's notes</span>
       </div>
       
         <div class="recommendation-row">
-          <span class="recommendation-badge">
-            Music
+          <span class="recommendation-badge recommendation-badge--tv-series">
+            TV series
           </span>
           <span class="recommendation-title">
-            Spirited Away (Soundtrack)
+            Riot Women
           </span>
           <span class="recommendation-date">
-            2026-01-26
+            2026-02-02
+          </span>
+          <span class="recommendation-notes-cell">
+            <button type="button" class="recommendation-notes-btn project-card-link" data-index="0" aria-label="Open Lan's notes for Riot Women">
+              <span class="recommendation-notes-icon">
+                <i class="fa-solid fa-envelope recommendation-notes-icon-default"></i>
+                <i class="fa-solid fa-envelope-open recommendation-notes-icon-hover"></i>
+              </span> Open
+            </button>
           </span>
         </div>
-        
+      
         <div class="recommendation-row">
-          <span class="recommendation-badge">
+          <span class="recommendation-badge recommendation-badge--movie">
             movie
           </span>
           <span class="recommendation-title">
-            Spirited Away (Soundtrack)
+            The accountant
           </span>
           <span class="recommendation-date">
-            2026-01-26
+            2026-02-02
+          </span>
+          <span class="recommendation-notes-cell">
+            <button type="button" class="recommendation-notes-btn project-card-link" data-index="1" aria-label="Open Lan's notes for The accountant">
+              <span class="recommendation-notes-icon">
+                <i class="fa-solid fa-envelope recommendation-notes-icon-default"></i>
+                <i class="fa-solid fa-envelope-open recommendation-notes-icon-hover"></i>
+              </span> Open
+            </button>
           </span>
         </div>
-        
+      
+        <div class="recommendation-row">
+          <span class="recommendation-badge recommendation-badge--music">
+            music
+          </span>
+          <span class="recommendation-title">
+            The thrill is gone
+          </span>
+          <span class="recommendation-date">
+            2026-02-02
+          </span>
+          <span class="recommendation-notes-cell">
+            <button type="button" class="recommendation-notes-btn project-card-link" data-index="2" aria-label="Open Lan's notes for The thrill is gone">
+              <span class="recommendation-notes-icon">
+                <i class="fa-solid fa-envelope recommendation-notes-icon-default"></i>
+                <i class="fa-solid fa-envelope-open recommendation-notes-icon-hover"></i>
+              </span> Open
+            </button>
+          </span>
+        </div>
+      
+        <div class="recommendation-row">
+          <span class="recommendation-badge recommendation-badge--book">
+            book
+          </span>
+          <span class="recommendation-title">
+            Writing the blockbuster novel
+          </span>
+          <span class="recommendation-date">
+            2026-02-02
+          </span>
+          <span class="recommendation-notes-cell">
+            <button type="button" class="recommendation-notes-btn project-card-link" data-index="3" aria-label="Open Lan's notes for Writing the blockbuster novel">
+              <span class="recommendation-notes-icon">
+                <i class="fa-solid fa-envelope recommendation-notes-icon-default"></i>
+                <i class="fa-solid fa-envelope-open recommendation-notes-icon-hover"></i>
+              </span> Open
+            </button>
+          </span>
+        </div>
+      
+        <div class="recommendation-row">
+          <span class="recommendation-badge recommendation-badge--movie">
+            movie
+          </span>
+          <span class="recommendation-title">
+            Wake Up Dead Man: A Knives Out Mystery
+          </span>
+          <span class="recommendation-date">
+            2025-12-28
+          </span>
+          <span class="recommendation-notes-cell">
+            <button type="button" class="recommendation-notes-btn project-card-link" data-index="4" aria-label="Open Lan's notes for Wake Up Dead Man: A Knives Out Mystery">
+              <span class="recommendation-notes-icon">
+                <i class="fa-solid fa-envelope recommendation-notes-icon-default"></i>
+                <i class="fa-solid fa-envelope-open recommendation-notes-icon-hover"></i>
+              </span> Open
+            </button>
+          </span>
+        </div>
+      
+        <div class="recommendation-row">
+          <span class="recommendation-badge recommendation-badge--tv-series">
+            TV series
+          </span>
+          <span class="recommendation-title">
+            Mindhunter
+          </span>
+          <span class="recommendation-date">
+            2025-03-03
+          </span>
+          <span class="recommendation-notes-cell">
+            <button type="button" class="recommendation-notes-btn project-card-link" data-index="5" aria-label="Open Lan's notes for Mindhunter">
+              <span class="recommendation-notes-icon">
+                <i class="fa-solid fa-envelope recommendation-notes-icon-default"></i>
+                <i class="fa-solid fa-envelope-open recommendation-notes-icon-hover"></i>
+              </span> Open
+            </button>
+          </span>
+        </div>
+      
     </div>
-  </section> -->
+    <div class="recommendation-modal" id="recommendationModal" role="dialog" aria-modal="true" aria-labelledby="recommendationModalTitle" hidden>
+      <div class="recommendation-modal-backdrop" id="recommendationModalBackdrop"></div>
+      <div class="recommendation-modal-window">
+        <div class="recommendation-modal-titlebar" id="recommendationModalTitle">
+          <span>Lan's notes</span>
+          <button type="button" class="recommendation-modal-close" id="recommendationModalClose" aria-label="Close">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+        <div class="recommendation-modal-body">
+          <h3 class="recommendation-modal-item-title" id="recommendationModalItemTitle"></h3>
+          <dl class="recommendation-modal-meta">
+            <dt>Type:</dt>
+            <dd id="recommendationModalType"></dd>
+            <dt id="recommendationModalExtraLabel">Author</dt>
+            <dd id="recommendationModalExtraValue"></dd>
+          </dl>
+          <div class="recommendation-modal-notes" id="recommendationModalNotes"></div>
+        </div>
+      </div>
+    </div>
+    <a href="/" class="home-section-btn">
+      <i class="fa-solid fa-grid-2"></i>View more
+    </a>
+  </section>
 
 </div>
 
@@ -1209,14 +1422,30 @@
     }
   })();
 
-  // Memory scroll with arrow buttons
+  // Memory scroll with arrow buttons: scroll by 1 / 2 / 3 cards per click by viewport
   (function () {
     const viewport = document.getElementById('memoryScrollViewport');
     const btnLeft = document.getElementById('memoryScrollLeft');
     const btnRight = document.getElementById('memoryScrollRight');
     if (!viewport || !btnLeft || !btnRight) return;
 
-    const scrollAmount = 340; // card width (320px) + gap (20px)
+    function getCardsPerPage() {
+      const w = window.innerWidth;
+      if (w < 600) return 1;
+      if (w <= 900) return 2;
+      return 3;
+    }
+
+    function getScrollAmount() {
+      const cards = viewport.querySelectorAll('.memory-card');
+      if (!cards.length) return viewport.clientWidth;
+      const cardWidth = cards[0].offsetWidth;
+      const gapStr = getComputedStyle(viewport).gap;
+      const gap = typeof gapStr === 'string' ? parseFloat(gapStr) || 20 : 20;
+      const n = getCardsPerPage();
+      // Each “step” is one card + the space after it: scroll by n * (card + gap)
+      return n * (cardWidth + gap);
+    }
 
     function updateButtons() {
       const canScrollLeft = viewport.scrollLeft > 0;
@@ -1229,16 +1458,131 @@
     }
 
     btnLeft.addEventListener('click', function () {
-      viewport.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+      viewport.scrollBy({ left: -getScrollAmount(), behavior: 'smooth' });
     });
 
     btnRight.addEventListener('click', function () {
-      viewport.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+      viewport.scrollBy({ left: getScrollAmount(), behavior: 'smooth' });
     });
 
     viewport.addEventListener('scroll', updateButtons);
     window.addEventListener('resize', updateButtons);
     updateButtons(); // Initial check
+  })();
+
+  // Project card carousel: one card at a time, auto-advance 5s, dots to navigate
+  (function () {
+    const carousel = document.getElementById('projectCardCarousel');
+    const track = document.getElementById('projectCardTrack');
+    const dotsWrap = document.getElementById('projectCardDots');
+    if (!carousel || !track) return;
+
+    const count = parseInt(carousel.getAttribute('data-count') || '0', 10);
+    if (count <= 0) return;
+
+    let currentIndex = 0;
+    let autoTimer = null;
+    const INTERVAL_MS = 5000;
+
+    function goTo(index) {
+      currentIndex = (index + count) % count;
+      track.style.transform = 'translateX(-' + (currentIndex * 100) + '%)';
+      const dots = carousel.querySelectorAll('.project-card-dot');
+      dots.forEach(function (d, i) {
+        d.classList.toggle('is-active', i === currentIndex);
+        d.setAttribute('aria-current', i === currentIndex ? 'true' : 'false');
+      });
+    }
+
+    function next() {
+      goTo(currentIndex + 1);
+    }
+
+    if (dotsWrap) {
+      dotsWrap.addEventListener('click', function (e) {
+        const btn = e.target.closest('.project-card-dot');
+        if (!btn) return;
+        const idx = parseInt(btn.getAttribute('data-index'), 10);
+        if (!isNaN(idx)) {
+          goTo(idx);
+          resetAuto();
+        }
+      });
+    }
+
+    function startAuto() {
+      stopAuto();
+      autoTimer = setInterval(next, INTERVAL_MS);
+    }
+    function stopAuto() {
+      if (autoTimer) clearInterval(autoTimer);
+      autoTimer = null;
+    }
+    function resetAuto() {
+      startAuto();
+    }
+
+    startAuto();
+    carousel.addEventListener('mouseenter', stopAuto);
+    carousel.addEventListener('mouseleave', startAuto);
+  })();
+
+  // Recommendation notes modal
+  (function () {
+    const modal = document.getElementById('recommendationModal');
+    const backdrop = document.getElementById('recommendationModalBackdrop');
+    const titleEl = document.getElementById('recommendationModalItemTitle');
+    const typeEl = document.getElementById('recommendationModalType');
+    const extraLabelEl = document.getElementById('recommendationModalExtraLabel');
+    const extraValueEl = document.getElementById('recommendationModalExtraValue');
+    const notesEl = document.getElementById('recommendationModalNotes');
+    let notesData = [];
+
+    try {
+      const dataEl = document.getElementById('recommendationNotesData');
+      notesData = dataEl ? JSON.parse(dataEl.textContent || '[]') : [];
+    } catch (e) {
+      notesData = [];
+    }
+
+    function openModal(index) {
+      const item = notesData[index];
+      if (!item) return;
+      if (titleEl) titleEl.textContent = item.title || '';
+      if (typeEl) typeEl.textContent = item.type || '';
+      if (extraLabelEl) extraLabelEl.textContent = item.extraLabel || '';
+      if (extraValueEl) extraValueEl.textContent = item.extraValue || '';
+      if (notesEl) notesEl.textContent = item.notes || '';
+      if (modal) {
+        modal.hidden = false;
+        modal.setAttribute('aria-hidden', 'false');
+        document.body.classList.add('recommendation-modal-open');
+      }
+    }
+
+    function closeModal() {
+      if (modal) {
+        modal.hidden = true;
+        modal.setAttribute('aria-hidden', 'true');
+        document.body.classList.remove('recommendation-modal-open');
+      }
+    }
+
+    document.querySelectorAll('.recommendation-notes-btn').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        const idx = parseInt(this.getAttribute('data-index'), 10);
+        if (!isNaN(idx)) openModal(idx);
+      });
+    });
+
+    if (backdrop) backdrop.addEventListener('click', closeModal);
+
+    const closeBtn = document.getElementById('recommendationModalClose');
+    if (closeBtn) closeBtn.addEventListener('click', closeModal);
+
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && modal && !modal.hidden) closeModal();
+    });
   })();
 </script>
 
