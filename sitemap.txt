@@ -1,3 +1,4 @@
+http://example.com/instruction-videos/building-a-personal-blog/
 http://example.com/uncategorized/project1/
 http://example.com/uncategorized/project2/
 http://example.com/uncategorized/project3/
@@ -20,7 +21,6 @@ http://example.com/design-art/coffee-shop-poster/
 http://example.com/design-art/perfume-shop-logo/
 http://example.com/design-art/candy-store-logo/
 http://example.com/design-art/burger-store-logo/
-http://example.com/instruction-videos/building-a-personal-blog/
 http://example.com/instruction-videos/expanding-your-english-vocabulary/
 http://example.com/instruction-videos/creating-an-application-using-AI-without-coding/
 http://example.com/instruction-videos/creating-a-personal-journaling-system-using-onenote/
@@ -41,12 +41,12 @@ http://example.com/
 http://example.com/tags/marketing/
 http://example.com/tags/blogs/
 http://example.com/tags/swimming/
-http://example.com/tags/monthly-review/
 http://example.com/tags/vibe-coding/
-http://example.com/tags/paintings/
+http://example.com/tags/monthly-review/
 http://example.com/tags/calligraphy-art/
-http://example.com/tags/reading-notes/
+http://example.com/tags/paintings/
 http://example.com/tags/daily-sparks/
+http://example.com/tags/reading-notes/
 http://example.com/categories/design-art/
 http://example.com/categories/instruction-videos/
 http://example.com/categories/web-development/
