@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="html-lang-root">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/png" sizes="48x48" href="/img/favicon.png">
-	<link rel="shortcut icon" type="image/png" href="/img/favicon.png">
+  <link rel="icon" type="image/png" sizes="48x48" href="/img/favicon-notebook-48.png">
+	<link rel="shortcut icon" type="image/png" href="/img/favicon-notebook-48.png">
   
       <title>
         Lan&#39;s Notebook | The Life Journal of an Earthling
@@ -23,8 +23,8 @@
       <div class="logo">
         <h2 style="margin:0; color: var(--text);">
           <i class="fa-solid fa-leaf" style="color: var(--hover);"></i>
-          <a href="/">
-            Lan&#39;s Notebook
+          <a href="/" data-i18n="title">
+            <span class="i18n-text">Lan&#39;s Notebook</span>
           </a>
         </h2>
       </div>
@@ -38,35 +38,35 @@
     <nav id="site-nav" class="nav-links">
       
         
-          <a href="/"><i class="fa-solid fa-house"></i>
-            Home
+          <a href="/" data-i18n="menu.home"><i class="fa-solid fa-house"></i>
+            <span class="i18n-text">Home</span>
           </a>
           
             
         
-          <a href="/categories"><i class="fa-solid fa-book-open"></i>
-            Blog
+          <a href="/categories" data-i18n="menu.blog"><i class="fa-solid fa-book-open"></i>
+            <span class="i18n-text">Blog</span>
           </a>
           
             
         
-          <a href="/shop"><i class="fa-solid fa-basket-shopping"></i>
-            Market
+          <a href="/shop" data-i18n="menu.market"><i class="fa-solid fa-basket-shopping"></i>
+            <span class="i18n-text">Market</span>
           </a>
           
             
         
-          <a href="/about"><i class="fa-solid fa-user-astronaut"></i>
-            About me
+          <a href="/about" data-i18n="menu.about_me"><i class="fa-solid fa-user-astronaut"></i>
+            <span class="i18n-text">About me</span>
           </a>
           
             
               <button class="snipcart-checkout lang-btn nav-btn nav-cart" type="button">
-                <i class="fa-solid fa-shopping-cart"></i> Cart
+                <i class="fa-solid fa-shopping-cart"></i> <span data-i18n="cart">Cart</span>
                 <span class="snipcart-items-count" style="position: absolute; top: -8px; right: -8px; background: var(--icon); color: var(--block); border-radius: 50%; width: 20px; height: 20px; display: flex; align-items: center; justify-content: center; font-size: 0.7rem; font-weight: bold;">0</span>
               </button>
-              <button class="lang-btn nav-btn nav-lang" type="button" onclick="switchLang()">
-                <i class="fa-solid fa-earth-asia"></i> CN/EN
+              <button class="lang-btn nav-btn nav-lang" type="button" id="lang-switch-btn" aria-label="Switch language" onclick="switchLang()">
+                <i class="fa-solid fa-earth-asia"></i> <span id="lang-switch-label">CN/EN</span>
               </button>
     </nav>
     <div class="nav-backdrop" aria-hidden="true"></div>
@@ -120,17 +120,65 @@
     <p>
       <i class="fa-solid fa-cloud" style="color: #fff;"></i><br>
       &copy; 2026
-        Lan
+        <span data-i18n="author" class="i18n-text">Lan</span>
           <br>Living on Earth, dreaming in the cloud.
     </p>
   </footer>
 
   <script>
-    function switchLang() {
-      let path = window.location.pathname;
-      if (path.includes('/zh-CN/')) window.location.href = path.replace('/zh-CN/', '/');
-      else window.location.href = '/zh-CN' + path;
-    }
+    (function() {
+      var LANG_KEY = 'site-lang';
+      var i18n = {"en":{"title":"Lan's Notebook","subtitle":"The Life Journal of an Earthling","description":"Welcome to my notebook, where I record everything I love about the world and about living on Earth.","author":"Lan","menu.home":"Home","menu.blog":"Blog","menu.shop":"Market","menu.about":"About Me","cart":"Cart","sections.what_i_love":"What I'd Love to do","sections.things_proud_of":"Things I'm Proud of","sections.moments_alive":"Moments I Felt Alive","sections.things_made":"Things I've Made","sections.things_recommend":"Things I Recommend","buttons.view_more":"View more","buttons.click_to_open":"Click to Open","buttons.open":"Open","recommendation.type":"Type","recommendation.selection":"Selection","recommendation.last_stored":"Last Stored","recommendation.notes_header":"Lan's notes","recommendation.type_label":"Type:","recommendation.extra_label_author":"Author","recommendation.extra_label_artist":"Artist","recommendation.extra_label_year":"Year","selected_blog_categories.journaling":"Journaling","selected_blog_categories.learning":"Learning","selected_blog_categories.creating":"Creating","selected_blog_categories.coding":"Coding","menu.market":"Market","menu.about_me":"About Me"},"zh-CN":{"title":"生活笔记","subtitle":"地球漫游指南","description":"欢迎来到我的个人博物馆——这里记录着我作为一个人类，一生中最想留下的痕迹。","author":"秋边边","menu.home":"首页","menu.blog":"文章","menu.shop":"杂货铺","menu.about":"关于博主","cart":"购物车","sections.what_i_love":"我的记录","sections.things_proud_of":"我的成就","sections.moments_alive":"我的瞬间","sections.things_made":"我的作品","sections.things_recommend":"我的推荐","buttons.view_more":"查看更多","buttons.click_to_open":"点击打开","buttons.open":"查看","recommendation.type":"类型","recommendation.selection":"作品名称","recommendation.last_stored":"录入时间","recommendation.notes_header":"观后感","recommendation.type_label":"类型：","recommendation.extra_label_author":"作者","recommendation.extra_label_artist":"歌手","recommendation.extra_label_year":"年份","selected_blog_categories.journaling":"关于日记","selected_blog_categories.learning":"关于学习","selected_blog_categories.creating":"关于创作","selected_blog_categories.coding":"关于编程","menu.market":"杂货铺","menu.about_me":"关于博主"}};
+      function getLang() {
+        var params = new URLSearchParams(window.location.search);
+        var q = params.get('lang');
+        if (q === 'zh-CN' || q === 'en') return q;
+        try { return localStorage.getItem(LANG_KEY) || 'en'; } catch (e) { return 'en'; }
+      }
+      function setLang(lang) {
+        try { localStorage.setItem(LANG_KEY, lang); } catch (e) {}
+        var url = new URL(window.location.href);
+        if (lang === 'en') url.searchParams.delete('lang');
+        else url.searchParams.set('lang', lang);
+        window.location.href = url.toString();
+      }
+      function applyLang(lang) {
+        var root = document.documentElement;
+        if (root) root.setAttribute('lang', lang === 'zh-CN' ? 'zh-CN' : 'en');
+        var strings = i18n[lang] || i18n.en;
+        document.querySelectorAll('[data-i18n]').forEach(function(el) {
+          var key = el.getAttribute('data-i18n');
+          var text = strings[key];
+          if (text != null) {
+            var span = el.querySelector('.i18n-text');
+            if (span) span.textContent = text;
+            else el.textContent = text;
+          }
+        });
+        var label = document.getElementById('lang-switch-label');
+        if (label) label.textContent = lang === 'zh-CN' ? 'EN' : 'CN';
+        if (strings.title && strings.subtitle && (window.location.pathname === '/' || window.location.pathname === '' || /\/index\.html$/i.test(window.location.pathname))) {
+          document.title = strings.title + ' | ' + strings.subtitle;
+        }
+      }
+      window.switchLang = function() {
+        var current = getLang();
+        setLang(current === 'en' ? 'zh-CN' : 'en');
+      };
+      function initLang() {
+        applyLang(getLang());
+      }
+      // expose helpers for other scripts (homepage modal, etc.)
+      window.__i18n = i18n;
+      window.__getLang = getLang;
+      window.__applyLang = applyLang;
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initLang);
+      } else {
+        initLang();
+      }
+    })();
   </script>
   
   <!-- Snipcart JavaScript -->

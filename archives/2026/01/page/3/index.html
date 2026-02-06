@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="html-lang-root">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/png" sizes="48x48" href="/img/favicon.png">
-	<link rel="shortcut icon" type="image/png" href="/img/favicon.png">
+  <link rel="icon" type="image/png" sizes="48x48" href="/img/favicon-notebook-48.png">
+	<link rel="shortcut icon" type="image/png" href="/img/favicon-notebook-48.png">
   
       <title>
         Lan&#39;s Notebook | The Life Journal of an Earthling
@@ -23,8 +23,8 @@
       <div class="logo">
         <h2 style="margin:0; color: var(--text);">
           <i class="fa-solid fa-leaf" style="color: var(--hover);"></i>
-          <a href="/">
-            Lan&#39;s Notebook
+          <a href="/" data-i18n="title">
+            <span class="i18n-text">Lan&#39;s Notebook</span>
           </a>
         </h2>
       </div>
@@ -38,35 +38,35 @@
     <nav id="site-nav" class="nav-links">
       
         
-          <a href="/"><i class="fa-solid fa-house"></i>
-            Home
+          <a href="/" data-i18n="menu.home"><i class="fa-solid fa-house"></i>
+            <span class="i18n-text">Home</span>
           </a>
           
             
         
-          <a href="/categories"><i class="fa-solid fa-book-open"></i>
-            Blog
+          <a href="/categories" data-i18n="menu.blog"><i class="fa-solid fa-book-open"></i>
+            <span class="i18n-text">Blog</span>
           </a>
           
             
         
-          <a href="/shop"><i class="fa-solid fa-basket-shopping"></i>
-            Market
+          <a href="/shop" data-i18n="menu.market"><i class="fa-solid fa-basket-shopping"></i>
+            <span class="i18n-text">Market</span>
           </a>
           
             
         
-          <a href="/about"><i class="fa-solid fa-user-astronaut"></i>
-            About me
+          <a href="/about" data-i18n="menu.about_me"><i class="fa-solid fa-user-astronaut"></i>
+            <span class="i18n-text">About me</span>
           </a>
           
             
               <button class="snipcart-checkout lang-btn nav-btn nav-cart" type="button">
-                <i class="fa-solid fa-shopping-cart"></i> Cart
+                <i class="fa-solid fa-shopping-cart"></i> <span data-i18n="cart">Cart</span>
                 <span class="snipcart-items-count" style="position: absolute; top: -8px; right: -8px; background: var(--icon); color: var(--block); border-radius: 50%; width: 20px; height: 20px; display: flex; align-items: center; justify-content: center; font-size: 0.7rem; font-weight: bold;">0</span>
               </button>
-              <button class="lang-btn nav-btn nav-lang" type="button" onclick="switchLang()">
-                <i class="fa-solid fa-earth-asia"></i> CN/EN
+              <button class="lang-btn nav-btn nav-lang" type="button" id="lang-switch-btn" aria-label="Switch language" onclick="switchLang()">
+                <i class="fa-solid fa-earth-asia"></i> <span id="lang-switch-label">CN/EN</span>
               </button>
     </nav>
     <div class="nav-backdrop" aria-hidden="true"></div>
@@ -79,15 +79,15 @@
   </div>
 
   <h1>
-    Hi, I'm Lan！
+    Hi, I'm <span data-i18n="author" class="i18n-text">Lan</span>！
   </h1>
 
-  <p class="description">
-    Welcome to my notebook, where I record everything I love about the world and about living on Earth.
+  <p class="description" data-i18n="description">
+    <span class="i18n-text">Welcome to my notebook, where I record everything I love about the world and about living on Earth.</span>
   </p>
 
   <section class="home-section">
-    <h2><i class="fa-solid fa-seedling" style="color: var(--icon);"></i> What I'd Love to do</h2>
+    <h2><i class="fa-solid fa-seedling" style="color: var(--icon);"></i> <span data-i18n="sections.what_i_love" class="i18n-text">What I'd Love to do</span></h2>
     <div class="categories-grid">
       
         
@@ -96,7 +96,7 @@
               <i class="fa-solid fa-book"></i>
             </span>
             <span class="category-card-title"><i class="fa-solid fa-heart"></i>
-              Journaling
+              <span data-i18n="selected_blog_categories.journaling">Journaling</span>
             </span>
           </a>
           
@@ -107,7 +107,7 @@
               <i class="fa-solid fa-user-clock"></i>
             </span>
             <span class="category-card-title"><i class="fa-solid fa-heart"></i>
-              Learning
+              <span data-i18n="selected_blog_categories.learning">Learning</span>
             </span>
           </a>
           
@@ -118,7 +118,7 @@
               <i class="fa-solid fa-lightbulb"></i>
             </span>
             <span class="category-card-title"><i class="fa-solid fa-heart"></i>
-              Creating
+              <span data-i18n="selected_blog_categories.creating">Creating</span>
             </span>
           </a>
           
@@ -129,26 +129,26 @@
               <i class="fa-solid fa-laptop-code"></i>
             </span>
             <span class="category-card-title"><i class="fa-solid fa-heart"></i>
-              Coding
+              <span data-i18n="selected_blog_categories.coding">Coding</span>
             </span>
           </a>
           
             
   </div>
-  <a href="/categories/" class="home-section-btn">
-    <i class="fa-solid fa-grid-2"></i>View more
+  <a href="/categories/" class="home-section-btn" data-i18n="buttons.view_more">
+    <i class="fa-solid fa-grid-2"></i><span class="i18n-text">View more</span>
   </a>
 
   </section>
 
   <section class="home-section">
-    <h2><i class="fa-solid fa-crown" style="color: var(--icon);"></i> Things I'm Proud of</h2>
+    <h2><i class="fa-solid fa-crown" style="color: var(--icon);"></i> <span data-i18n="sections.things_proud_of" class="i18n-text">Things I'm Proud of</span></h2>
     
     
     
     
     
-    <script type="application/json" id="achievementsImagesJson">[{"src":"/achievements/2015-11-05-calligraphy.jpg","alt":"calligraphy","date":"2015.11.05","title":"calligraphy"},{"src":"/achievements/2020-12-21-stardew-valley.jpg","alt":"stardew valley","date":"2020.12.21","title":"stardew valley"},{"src":"/achievements/2021-04-27-calligraphy.jpg","alt":"calligraphy","date":"2021.04.27","title":"calligraphy"},{"src":"/achievements/2024-03-01-headphone-paintings.jpg","alt":"headphone paintings","date":"2024.03.01","title":"headphone paintings"},{"src":"/achievements/2025-03-29-%E5%8A%A8%E7%89%A9%E6%A3%AE%E5%8F%8B%E4%BC%9A-%E6%B9%96.jpg","alt":"动物森友会 湖","date":"2025.03.29","title":"动物森友会 湖"},{"src":"/achievements/2025-04-09-%E5%8A%A8%E7%89%A9%E6%A3%AE%E5%8F%8B%E4%BC%9A-%E5%92%96%E5%95%A1%E5%8E%85.jpg","alt":"动物森友会 咖啡厅","date":"2025.04.09","title":"动物森友会 咖啡厅"},{"src":"/achievements/2025-04-09-dongsen-muji.jpg","alt":"dongsen muji","date":"2025.04.09","title":"dongsen muji"}]</script>
+    <script type="application/json" id="achievementsImagesJson">[{"src":"/achievements/2015-11-05-calligraphy-art-of-the-poem-Sleepless%20Autumn-Night-written-in-clerical-script.webp","alt":"calligraphy art of the poem Sleepless Autumn Night written in clerical script","date":"2015.11.05","title":"calligraphy art of the poem Sleepless Autumn Night written in clerical script"},{"src":"/achievements/2020-12-21-my-seven-year-old-farm-in-stardew-valley.webp","alt":"my seven year old farm in stardew valley","date":"2020.12.21","title":"my seven year old farm in stardew valley"},{"src":"/achievements/2024-03-01-the-sketch-drawing-of-my-baby-headphones.webp","alt":"the sketch drawing of my baby headphones","date":"2024.03.01","title":"the sketch drawing of my baby headphones"},{"src":"/achievements/2025-03-29-built-a-great-lake-in-Animal-Crossing.webp","alt":"built a great lake in Animal Crossing","date":"2025.03.29","title":"built a great lake in Animal Crossing"},{"src":"/achievements/2025-04-09-built-a-little-cafe-in-Animal-Crossing.webp","alt":"built a little cafe in Animal Crossing","date":"2025.04.09","title":"built a little cafe in Animal Crossing"},{"src":"/achievements/2025-04-09-built-a-Muji-store-in-Animal-Crossing.webp","alt":"built a Muji store in Animal Crossing","date":"2025.04.09","title":"built a Muji store in Animal Crossing"}]</script>
     <div class="achievements-container">
       <div class="achievements-bento achievements-bento--fixed"
            id="achievementsBento"
@@ -211,13 +211,13 @@
         </div>
       </div>
     </div>
-    <a href="/" class="home-section-btn">
-      <i class="fa-solid fa-grid-2"></i>View more
+    <a href="/" class="home-section-btn" data-i18n="buttons.view_more">
+      <i class="fa-solid fa-grid-2"></i><span class="i18n-text">View more</span>
     </a>
   </section>
 
   <section class="home-section">
-    <h2><i class="fa-solid fa-sun" style="color: var(--icon);"></i> Moments I Felt Alive</h2>
+    <h2><i class="fa-solid fa-sun" style="color: var(--icon);"></i> <span data-i18n="sections.moments_alive" class="i18n-text">Moments I Felt Alive</span></h2>
     
     <div class="memory-scroll-container">
       <button class="memory-scroll-arrow memory-scroll-arrow--left" id="memoryScrollLeft" aria-label="Scroll left">
@@ -227,7 +227,132 @@
         
           <div class="memory-card">
             <div class="memory-card-image">
-              <img src="/memories/date-2024-09-06-location-kota%20kinabalu-malaysia-title-sitting-on-the-beach.jpg" alt="sitting on the beach" loading="lazy">
+              <img src="/memories/date-2026-01-25-location-chongqing-china-title-eating-chestnuts-in-a-cozy-restaurant.webp" alt="eating chestnuts in a cozy restaurant" loading="lazy">
+            </div>
+            <div class="memory-card-info">
+              
+                <div class="memory-card-date">
+                  <i class="fa-regular fa-calendar"></i>
+                  <span>2026.01.25</span>
+                </div>
+              
+              
+                <div class="memory-card-location">
+                  <i class="fa-solid fa-location-dot"></i>
+                  <span>chongqing china</span>
+                </div>
+              
+              
+                <div class="memory-card-title">
+                  Eating chestnuts in a cozy restaurant
+                </div>
+              
+            </div>
+          </div>
+        
+          <div class="memory-card">
+            <div class="memory-card-image">
+              <img src="/memories/date-2025-06-13-location-fujian-china-title-feeling-the-gentle-wind-on-a-bamboo-raft.webp" alt="feeling the gentle wind on a bamboo raft" loading="lazy">
+            </div>
+            <div class="memory-card-info">
+              
+                <div class="memory-card-date">
+                  <i class="fa-regular fa-calendar"></i>
+                  <span>2025.06.13</span>
+                </div>
+              
+              
+                <div class="memory-card-location">
+                  <i class="fa-solid fa-location-dot"></i>
+                  <span>fujian china</span>
+                </div>
+              
+              
+                <div class="memory-card-title">
+                  Feeling the gentle wind on a bamboo raft
+                </div>
+              
+            </div>
+          </div>
+        
+          <div class="memory-card">
+            <div class="memory-card-image">
+              <img src="/memories/date-2025-05-24-location-chongqing-china-title-ran-into-my-dream-doll.webp" alt="ran into my dream doll" loading="lazy">
+            </div>
+            <div class="memory-card-info">
+              
+                <div class="memory-card-date">
+                  <i class="fa-regular fa-calendar"></i>
+                  <span>2025.05.24</span>
+                </div>
+              
+              
+                <div class="memory-card-location">
+                  <i class="fa-solid fa-location-dot"></i>
+                  <span>chongqing china</span>
+                </div>
+              
+              
+                <div class="memory-card-title">
+                  Ran into my dream doll
+                </div>
+              
+            </div>
+          </div>
+        
+          <div class="memory-card">
+            <div class="memory-card-image">
+              <img src="/memories/date-2025-05-18-location-chongqing-china-title-watching-sunset-with-wen.webp" alt="watching sunset with wen" loading="lazy">
+            </div>
+            <div class="memory-card-info">
+              
+                <div class="memory-card-date">
+                  <i class="fa-regular fa-calendar"></i>
+                  <span>2025.05.18</span>
+                </div>
+              
+              
+                <div class="memory-card-location">
+                  <i class="fa-solid fa-location-dot"></i>
+                  <span>chongqing china</span>
+                </div>
+              
+              
+                <div class="memory-card-title">
+                  Watching sunset with wen
+                </div>
+              
+            </div>
+          </div>
+        
+          <div class="memory-card">
+            <div class="memory-card-image">
+              <img src="/memories/date-2025-04-02-location-chongqing-china-title-eating-qingtuan-during-Qingming-Festival.webp" alt="eating qingtuan during Qingming Festival" loading="lazy">
+            </div>
+            <div class="memory-card-info">
+              
+                <div class="memory-card-date">
+                  <i class="fa-regular fa-calendar"></i>
+                  <span>2025.04.02</span>
+                </div>
+              
+              
+                <div class="memory-card-location">
+                  <i class="fa-solid fa-location-dot"></i>
+                  <span>chongqing china</span>
+                </div>
+              
+              
+                <div class="memory-card-title">
+                  Eating qingtuan during Qingming Festival
+                </div>
+              
+            </div>
+          </div>
+        
+          <div class="memory-card">
+            <div class="memory-card-image">
+              <img src="/memories/date-2024-09-06-location-kota%20kinabalu-malaysia-title-sitting-on-the-beach.webp" alt="sitting on the beach" loading="lazy">
             </div>
             <div class="memory-card-info">
               
@@ -252,7 +377,57 @@
         
           <div class="memory-card">
             <div class="memory-card-image">
-              <img src="/memories/date-2024-03-10-location-chongqing-china-title-stunned-the-moment-I-saw-it.jpg" alt="stunned the moment I saw it" loading="lazy">
+              <img src="/memories/date-2024-06-08-location-chongqing-china-title-get-ready-for-a-game-night.webp" alt="get ready for a game night" loading="lazy">
+            </div>
+            <div class="memory-card-info">
+              
+                <div class="memory-card-date">
+                  <i class="fa-regular fa-calendar"></i>
+                  <span>2024.06.08</span>
+                </div>
+              
+              
+                <div class="memory-card-location">
+                  <i class="fa-solid fa-location-dot"></i>
+                  <span>chongqing china</span>
+                </div>
+              
+              
+                <div class="memory-card-title">
+                  Get ready for a game night
+                </div>
+              
+            </div>
+          </div>
+        
+          <div class="memory-card">
+            <div class="memory-card-image">
+              <img src="/memories/date-2024-06-02-location-chongqing-china-title-enjoy-a-beautiful-carrot-cake.webp" alt="enjoy a beautiful carrot cake" loading="lazy">
+            </div>
+            <div class="memory-card-info">
+              
+                <div class="memory-card-date">
+                  <i class="fa-regular fa-calendar"></i>
+                  <span>2024.06.02</span>
+                </div>
+              
+              
+                <div class="memory-card-location">
+                  <i class="fa-solid fa-location-dot"></i>
+                  <span>chongqing china</span>
+                </div>
+              
+              
+                <div class="memory-card-title">
+                  Enjoy a beautiful carrot cake
+                </div>
+              
+            </div>
+          </div>
+        
+          <div class="memory-card">
+            <div class="memory-card-image">
+              <img src="/memories/date-2024-03-10-location-chongqing-china-title-stunned-the-moment-I-saw-it.webp" alt="stunned the moment I saw it" loading="lazy">
             </div>
             <div class="memory-card-info">
               
@@ -277,7 +452,7 @@
         
           <div class="memory-card">
             <div class="memory-card-image">
-              <img src="/memories/date-2024-02-16-location-chongqing-china-title-finished-jigsaw-puzzles-of-line-puppy.jpg" alt="finished jigsaw puzzles of line puppy" loading="lazy">
+              <img src="/memories/date-2024-02-16-location-chongqing-china-title-finished-jigsaw-puzzles-of-line-puppy.webp" alt="finished jigsaw puzzles of line puppy" loading="lazy">
             </div>
             <div class="memory-card-info">
               
@@ -302,7 +477,7 @@
         
           <div class="memory-card">
             <div class="memory-card-image">
-              <img src="/memories/date-2024-02-08-location-chongqing-china-title-solo-long-distance-driving-for-the-first-time.jpg" alt="solo long distance driving for the first time" loading="lazy">
+              <img src="/memories/date-2024-02-08-location-chongqing-china-title-solo-long-distance-driving-for-the-first-time.webp" alt="solo long distance driving for the first time" loading="lazy">
             </div>
             <div class="memory-card-info">
               
@@ -327,7 +502,7 @@
         
           <div class="memory-card">
             <div class="memory-card-image">
-              <img src="/memories/date-2023-10-28-location-chongqing-china-title-a-doll-that-feels-like-a-cloud.jpg" alt="a doll that feels like a cloud" loading="lazy">
+              <img src="/memories/date-2023-10-28-location-chongqing-china-title-a-doll-that-feels-like-a-cloud.webp" alt="a doll that feels like a cloud" loading="lazy">
             </div>
             <div class="memory-card-info">
               
@@ -352,7 +527,7 @@
         
           <div class="memory-card">
             <div class="memory-card-image">
-              <img src="/memories/date-2023-10-15-location-chongqing-china-title-finished-my-first-desk-setup-after-moving.jpg" alt="finished my first desk setup after moving" loading="lazy">
+              <img src="/memories/date-2023-10-15-location-chongqing-china-title-finished-my-first-desk-setup-after-moving.webp" alt="finished my first desk setup after moving" loading="lazy">
             </div>
             <div class="memory-card-info">
               
@@ -377,7 +552,7 @@
         
           <div class="memory-card">
             <div class="memory-card-image">
-              <img src="/memories/date-2023-10-15-location-chongqing-china-title-my-baby-keyboard.jpg" alt="my baby keyboard" loading="lazy">
+              <img src="/memories/date-2023-10-15-location-chongqing-china-title-my-baby-keyboard.webp" alt="my baby keyboard" loading="lazy">
             </div>
             <div class="memory-card-info">
               
@@ -402,7 +577,7 @@
         
           <div class="memory-card">
             <div class="memory-card-image">
-              <img src="/memories/date-2023-10-08-location-chongqing-china-title-went-through-a-rollercoaster-emotional-journey-while-taking-metro-to-work.jpg" alt="went through a rollercoaster emotional journey while taking metro to work" loading="lazy">
+              <img src="/memories/date-2023-10-08-location-chongqing-china-title-experienced-an-emotional-rollercoaster-on-my-way-to-work.webp" alt="experienced an emotional rollercoaster on my way to work" loading="lazy">
             </div>
             <div class="memory-card-info">
               
@@ -419,7 +594,7 @@
               
               
                 <div class="memory-card-title">
-                  Went through a rollercoaster emotional journey while taking metro to work
+                  Experienced an emotional rollercoaster on my way to work
                 </div>
               
             </div>
@@ -427,7 +602,7 @@
         
           <div class="memory-card">
             <div class="memory-card-image">
-              <img src="/memories/date-2023-09-02-location-fuling-china-title-pink-pearl-cloud.jpg" alt="pink pearl cloud" loading="lazy">
+              <img src="/memories/date-2023-09-02-location-fuling-china-title-pink-pearl-cloud.webp" alt="pink pearl cloud" loading="lazy">
             </div>
             <div class="memory-card-info">
               
@@ -452,7 +627,7 @@
         
           <div class="memory-card">
             <div class="memory-card-image">
-              <img src="/memories/date-2023-08-07-location-chongqing-china-title-golden-trio-night.jpg" alt="golden trio night" loading="lazy">
+              <img src="/memories/date-2023-08-07-location-chongqing-china-title-golden-trio-night.webp" alt="golden trio night" loading="lazy">
             </div>
             <div class="memory-card-info">
               
@@ -477,7 +652,7 @@
         
           <div class="memory-card">
             <div class="memory-card-image">
-              <img src="/memories/date-2023-05-06-location-chongqing-china-title-making-ex-boyfriend-toast-for-the-first-time.jpg" alt="making ex boyfriend toast for the first time" loading="lazy">
+              <img src="/memories/date-2023-05-06-location-chongqing-china-title-making-ex-boyfriend-toast-for-the-first-time.webp" alt="making ex boyfriend toast for the first time" loading="lazy">
             </div>
             <div class="memory-card-info">
               
@@ -502,7 +677,7 @@
         
           <div class="memory-card">
             <div class="memory-card-image">
-              <img src="/memories/date-2022-12-21-location-chongqing-china-title-a-difficult-but-happy-choice.jpg" alt="a difficult but happy choice" loading="lazy">
+              <img src="/memories/date-2022-12-21-location-chongqing-china-title-a-difficult-but-happy-choice.webp" alt="a difficult but happy choice" loading="lazy">
             </div>
             <div class="memory-card-info">
               
@@ -527,7 +702,7 @@
         
           <div class="memory-card">
             <div class="memory-card-image">
-              <img src="/memories/date-2022-12-04-location-chongqing-china-title-Stardew-Valley-Fair-in-a-cozy-night.jpg" alt="Stardew Valley Fair in a cozy night" loading="lazy">
+              <img src="/memories/date-2022-12-04-location-chongqing-china-title-Stardew-Valley-Fair-in-a-cozy-night.webp" alt="Stardew Valley Fair in a cozy night" loading="lazy">
             </div>
             <div class="memory-card-info">
               
@@ -552,7 +727,7 @@
         
           <div class="memory-card">
             <div class="memory-card-image">
-              <img src="/memories/date-2022-11-18-location-chongqing-china-title-product-of-its-time.jpg" alt="product of its time" loading="lazy">
+              <img src="/memories/date-2022-11-18-location-chongqing-china-title-product-of-its-time.webp" alt="product of its time" loading="lazy">
             </div>
             <div class="memory-card-info">
               
@@ -577,7 +752,7 @@
         
           <div class="memory-card">
             <div class="memory-card-image">
-              <img src="/memories/date-2022-10-29-location-chongqing-china-title-celebrating-my-birthday-with-friends-on-the-street.jpg" alt="celebrating my birthday with friends on the street" loading="lazy">
+              <img src="/memories/date-2022-10-29-location-chongqing-china-title-celebrating-my-birthday-with-friends-on-the-street.webp" alt="celebrating my birthday with friends on the street" loading="lazy">
             </div>
             <div class="memory-card-info">
               
@@ -602,7 +777,7 @@
         
           <div class="memory-card">
             <div class="memory-card-image">
-              <img src="/memories/date-2022-09-22-location-chongqing-china-title-watching-ARIA-on-an-old-TV.jpg" alt="watching ARIA on an old TV" loading="lazy">
+              <img src="/memories/date-2022-09-22-location-chongqing-china-title-watching-ARIA-on-an-old-TV.webp" alt="watching ARIA on an old TV" loading="lazy">
             </div>
             <div class="memory-card-info">
               
@@ -627,7 +802,7 @@
         
           <div class="memory-card">
             <div class="memory-card-image">
-              <img src="/memories/date-2022-07-30-location-chongqing-china-title-on-the-highway.jpg" alt="on the highway" loading="lazy">
+              <img src="/memories/date-2022-07-30-location-chongqing-china-title-on-the-highway.webp" alt="on the highway" loading="lazy">
             </div>
             <div class="memory-card-info">
               
@@ -652,7 +827,7 @@
         
           <div class="memory-card">
             <div class="memory-card-image">
-              <img src="/memories/date-2022-07-23-location-chongqing-china-title-the-elevated-bridge-that-divides-the-sky.jpg" alt="the elevated bridge that divides the sky" loading="lazy">
+              <img src="/memories/date-2022-07-23-location-chongqing-china-title-the-elevated-bridge-that-divides-the-sky.webp" alt="the elevated bridge that divides the sky" loading="lazy">
             </div>
             <div class="memory-card-info">
               
@@ -677,7 +852,7 @@
         
           <div class="memory-card">
             <div class="memory-card-image">
-              <img src="/memories/date-2022-06-20-location-ma'anshan-china-title-product-of-its-time.jpg" alt="product of its time" loading="lazy">
+              <img src="/memories/date-2022-06-20-location-ma'anshan-china-title-product-of-its-time.webp" alt="product of its time" loading="lazy">
             </div>
             <div class="memory-card-info">
               
@@ -702,7 +877,7 @@
         
           <div class="memory-card">
             <div class="memory-card-image">
-              <img src="/memories/date-2022-06-07-location-chongqing-china-title-bought-my-baby-laptop-and-decorated-it-with-starlight-covers.jpg" alt="bought my baby laptop and decorated it with starlight covers" loading="lazy">
+              <img src="/memories/date-2022-06-07-location-chongqing-china-title-bought-my-baby-laptop-and-decorated-it-with-starlight-covers.webp" alt="bought my baby laptop and decorated it with starlight covers" loading="lazy">
             </div>
             <div class="memory-card-info">
               
@@ -727,7 +902,7 @@
         
           <div class="memory-card">
             <div class="memory-card-image">
-              <img src="/memories/date-2022-05-29-location-chongqing-china-title-receiving-my-ukulele.jpg" alt="receiving my ukulele" loading="lazy">
+              <img src="/memories/date-2022-05-29-location-chongqing-china-title-the-day-of-receiving-my-beautiful-ukulele.webp" alt="the day of receiving my beautiful ukulele" loading="lazy">
             </div>
             <div class="memory-card-info">
               
@@ -744,7 +919,7 @@
               
               
                 <div class="memory-card-title">
-                  Receiving my ukulele
+                  The day of receiving my beautiful ukulele
                 </div>
               
             </div>
@@ -752,7 +927,7 @@
         
           <div class="memory-card">
             <div class="memory-card-image">
-              <img src="/memories/date-2022-04-09-location-chongqing-china-title-university-tour-with-xiaocao.jpg" alt="university tour with xiaocao" loading="lazy">
+              <img src="/memories/date-2022-04-09-location-chongqing-china-title-university-tour-with-xiaocao.webp" alt="university tour with xiaocao" loading="lazy">
             </div>
             <div class="memory-card-info">
               
@@ -777,7 +952,7 @@
         
           <div class="memory-card">
             <div class="memory-card-image">
-              <img src="/memories/date-2022-03-16-location-chongqing-china-title-having-cake-for-dinner-on-an-overtime-day.jpg" alt="having cake for dinner on an overtime day" loading="lazy">
+              <img src="/memories/date-2022-03-16-location-chongqing-china-title-having-cake-for-dinner-on-an-overtime-day.webp" alt="having cake for dinner on an overtime day" loading="lazy">
             </div>
             <div class="memory-card-info">
               
@@ -802,7 +977,7 @@
         
           <div class="memory-card">
             <div class="memory-card-image">
-              <img src="/memories/date-2022-01-29-location-chongqing-china-title-playing-Animal-Crossing-at-childhood-home-during-spring-festival-holiday.jpg" alt="playing Animal Crossing at childhood home during spring festival holiday" loading="lazy">
+              <img src="/memories/date-2022-01-29-location-chongqing-china-title-playing-Animal-Crossing-at-childhood-home-during-Spring-Festival-holiday.webp" alt="playing Animal Crossing at childhood home during Spring Festival holiday" loading="lazy">
             </div>
             <div class="memory-card-info">
               
@@ -819,7 +994,7 @@
               
               
                 <div class="memory-card-title">
-                  Playing Animal Crossing at childhood home during spring festival holiday
+                  Playing Animal Crossing at childhood home during Spring Festival holiday
                 </div>
               
             </div>
@@ -827,7 +1002,7 @@
         
           <div class="memory-card">
             <div class="memory-card-image">
-              <img src="/memories/date-2021-10-23-location-chongqing-china-title-when-the-leaves-glowed.jpg" alt="when the leaves glowed" loading="lazy">
+              <img src="/memories/date-2021-10-23-location-chongqing-china-title-when-the-leaves-glowed.webp" alt="when the leaves glowed" loading="lazy">
             </div>
             <div class="memory-card-info">
               
@@ -852,7 +1027,7 @@
         
           <div class="memory-card">
             <div class="memory-card-image">
-              <img src="/memories/date-2021-06-06-location-chongqing-china-title-playing-chess-with-ZJJ-while-enjoying-buttered-bread.jpg" alt="playing chess with ZJJ while enjoying buttered bread" loading="lazy">
+              <img src="/memories/date-2021-06-06-location-chongqing-china-title-playing-chess-with-ZJJ-while-enjoying-buttered-bread.webp" alt="playing chess with ZJJ while enjoying buttered bread" loading="lazy">
             </div>
             <div class="memory-card-info">
               
@@ -877,7 +1052,7 @@
         
           <div class="memory-card">
             <div class="memory-card-image">
-              <img src="/memories/date-2021-04-25-location-nanjing-china-title-trying-meilingzhou-for-the-first-time.jpg" alt="trying meilingzhou for the first time" loading="lazy">
+              <img src="/memories/date-2021-04-25-location-nanjing-china-title-trying-Meiling-Porridge-for-the-first-time.webp" alt="trying Meiling Porridge for the first time" loading="lazy">
             </div>
             <div class="memory-card-info">
               
@@ -894,7 +1069,7 @@
               
               
                 <div class="memory-card-title">
-                  Trying meilingzhou for the first time
+                  Trying Meiling Porridge for the first time
                 </div>
               
             </div>
@@ -902,7 +1077,7 @@
         
           <div class="memory-card">
             <div class="memory-card-image">
-              <img src="/memories/date-2021-03-31-location-chongqing-china-title-mysterious-arrow.jpg" alt="mysterious arrow" loading="lazy">
+              <img src="/memories/date-2021-03-31-location-chongqing-china-title-bumped-into-a-mysterious-arrow-sign.webp" alt="bumped into a mysterious arrow sign" loading="lazy">
             </div>
             <div class="memory-card-info">
               
@@ -919,7 +1094,7 @@
               
               
                 <div class="memory-card-title">
-                  Mysterious arrow
+                  Bumped into a mysterious arrow sign
                 </div>
               
             </div>
@@ -927,7 +1102,7 @@
         
           <div class="memory-card">
             <div class="memory-card-image">
-              <img src="/memories/date-2021-03-13-location-chongqing-china-title-a-spring-outing-to-Nanshan-with-wenwen.jpg" alt="a spring outing to Nanshan with wenwen" loading="lazy">
+              <img src="/memories/date-2021-03-13-location-chongqing-china-title-looking-for-spring-on-Nanshan-with-wen.webp" alt="looking for spring on Nanshan with wen" loading="lazy">
             </div>
             <div class="memory-card-info">
               
@@ -944,7 +1119,7 @@
               
               
                 <div class="memory-card-title">
-                  A spring outing to Nanshan with wenwen
+                  Looking for spring on Nanshan with wen
                 </div>
               
             </div>
@@ -952,7 +1127,7 @@
         
           <div class="memory-card">
             <div class="memory-card-image">
-              <img src="/memories/date-2021-02-27-location-chongqing-china-title-went-to-a-private-bar-with-wenwen.jpg" alt="went to a private bar with wenwen" loading="lazy">
+              <img src="/memories/date-2021-02-27-location-chongqing-china-title-went-to-a-private-bar-with-wen.webp" alt="went to a private bar with wen" loading="lazy">
             </div>
             <div class="memory-card-info">
               
@@ -969,7 +1144,7 @@
               
               
                 <div class="memory-card-title">
-                  Went to a private bar with wenwen
+                  Went to a private bar with wen
                 </div>
               
             </div>
@@ -977,7 +1152,7 @@
         
           <div class="memory-card">
             <div class="memory-card-image">
-              <img src="/memories/date-2021-02-06-location-chongqing-china-title-the-feeling-of-a-cat's-paw-on-my-thigh.jpg" alt="the feeling of a cat&#39;s paw on my thigh" loading="lazy">
+              <img src="/memories/date-2021-02-06-location-chongqing-china-title-the-feeling-of-a-cat's-paw-on-my-thigh.webp" alt="the feeling of a cat&#39;s paw on my thigh" loading="lazy">
             </div>
             <div class="memory-card-info">
               
@@ -1002,7 +1177,7 @@
         
           <div class="memory-card">
             <div class="memory-card-image">
-              <img src="/memories/date-2020-12-27-location-stardew-valley-title-playing-with-patpat-remotely-together-for-the-first-time.jpg" alt="playing with patpat remotely together for the first time" loading="lazy">
+              <img src="/memories/date-2020-12-27-location-stardew-valley-title-playing-with-patpat-remotely-together-for-the-first-time.webp" alt="playing with patpat remotely together for the first time" loading="lazy">
             </div>
             <div class="memory-card-info">
               
@@ -1027,7 +1202,257 @@
         
           <div class="memory-card">
             <div class="memory-card-image">
-              <img src="/memories/date-2019-03-10-location-arizona-USA-title-favorite-dinner-at-the-time-while-watching-my-favorite-cartoon.jpg" alt="favorite dinner at the time while watching my favorite cartoon" loading="lazy">
+              <img src="/memories/date-2020-07-11-location-chongqing-china-title-eating-childhood-food.webp" alt="eating childhood food" loading="lazy">
+            </div>
+            <div class="memory-card-info">
+              
+                <div class="memory-card-date">
+                  <i class="fa-regular fa-calendar"></i>
+                  <span>2020.07.11</span>
+                </div>
+              
+              
+                <div class="memory-card-location">
+                  <i class="fa-solid fa-location-dot"></i>
+                  <span>chongqing china</span>
+                </div>
+              
+              
+                <div class="memory-card-title">
+                  Eating childhood food
+                </div>
+              
+            </div>
+          </div>
+        
+          <div class="memory-card">
+            <div class="memory-card-image">
+              <img src="/memories/date-2020-01-24-location-arizona-USA-title-sunset-at-metro-station.webp" alt="sunset at metro station" loading="lazy">
+            </div>
+            <div class="memory-card-info">
+              
+                <div class="memory-card-date">
+                  <i class="fa-regular fa-calendar"></i>
+                  <span>2020.01.24</span>
+                </div>
+              
+              
+                <div class="memory-card-location">
+                  <i class="fa-solid fa-location-dot"></i>
+                  <span>arizona USA</span>
+                </div>
+              
+              
+                <div class="memory-card-title">
+                  Sunset at metro station
+                </div>
+              
+            </div>
+          </div>
+        
+          <div class="memory-card">
+            <div class="memory-card-image">
+              <img src="/memories/date-2019-12-21-location-arizona-USA-title-the-first-day-of-receiving-my-baby-headphones.webp" alt="the first day of receiving my baby headphones" loading="lazy">
+            </div>
+            <div class="memory-card-info">
+              
+                <div class="memory-card-date">
+                  <i class="fa-regular fa-calendar"></i>
+                  <span>2019.12.21</span>
+                </div>
+              
+              
+                <div class="memory-card-location">
+                  <i class="fa-solid fa-location-dot"></i>
+                  <span>arizona USA</span>
+                </div>
+              
+              
+                <div class="memory-card-title">
+                  The first day of receiving my baby headphones
+                </div>
+              
+            </div>
+          </div>
+        
+          <div class="memory-card">
+            <div class="memory-card-image">
+              <img src="/memories/date-2019-12-06-location-arizona-USA-title-a-full-stock-of-snacks.webp" alt="a full stock of snacks" loading="lazy">
+            </div>
+            <div class="memory-card-info">
+              
+                <div class="memory-card-date">
+                  <i class="fa-regular fa-calendar"></i>
+                  <span>2019.12.06</span>
+                </div>
+              
+              
+                <div class="memory-card-location">
+                  <i class="fa-solid fa-location-dot"></i>
+                  <span>arizona USA</span>
+                </div>
+              
+              
+                <div class="memory-card-title">
+                  A full stock of snacks
+                </div>
+              
+            </div>
+          </div>
+        
+          <div class="memory-card">
+            <div class="memory-card-image">
+              <img src="/memories/date-2019-11-22-location-arizona-USA-title-a-sunny-day-(as-always).webp" alt="a sunny day (as always)" loading="lazy">
+            </div>
+            <div class="memory-card-info">
+              
+                <div class="memory-card-date">
+                  <i class="fa-regular fa-calendar"></i>
+                  <span>2019.11.22</span>
+                </div>
+              
+              
+                <div class="memory-card-location">
+                  <i class="fa-solid fa-location-dot"></i>
+                  <span>arizona USA</span>
+                </div>
+              
+              
+                <div class="memory-card-title">
+                  A sunny day (as always)
+                </div>
+              
+            </div>
+          </div>
+        
+          <div class="memory-card">
+            <div class="memory-card-image">
+              <img src="/memories/date-2019-11-21-location-arizona-USA-title-a-dreamy-rainy-day.webp" alt="a dreamy rainy day" loading="lazy">
+            </div>
+            <div class="memory-card-info">
+              
+                <div class="memory-card-date">
+                  <i class="fa-regular fa-calendar"></i>
+                  <span>2019.11.21</span>
+                </div>
+              
+              
+                <div class="memory-card-location">
+                  <i class="fa-solid fa-location-dot"></i>
+                  <span>arizona USA</span>
+                </div>
+              
+              
+                <div class="memory-card-title">
+                  A dreamy rainy day
+                </div>
+              
+            </div>
+          </div>
+        
+          <div class="memory-card">
+            <div class="memory-card-image">
+              <img src="/memories/date-2019-11-21-location-arizona-USA-title-a-rainy-sunset-at-metro-station.webp" alt="a rainy sunset at metro station" loading="lazy">
+            </div>
+            <div class="memory-card-info">
+              
+                <div class="memory-card-date">
+                  <i class="fa-regular fa-calendar"></i>
+                  <span>2019.11.21</span>
+                </div>
+              
+              
+                <div class="memory-card-location">
+                  <i class="fa-solid fa-location-dot"></i>
+                  <span>arizona USA</span>
+                </div>
+              
+              
+                <div class="memory-card-title">
+                  A rainy sunset at metro station
+                </div>
+              
+            </div>
+          </div>
+        
+          <div class="memory-card">
+            <div class="memory-card-image">
+              <img src="/memories/date-2019-09-29-location-arizona-USA-title-waiting-for-the-light-rail-with-my-roommate.webp" alt="waiting for the light rail with my roommate" loading="lazy">
+            </div>
+            <div class="memory-card-info">
+              
+                <div class="memory-card-date">
+                  <i class="fa-regular fa-calendar"></i>
+                  <span>2019.09.29</span>
+                </div>
+              
+              
+                <div class="memory-card-location">
+                  <i class="fa-solid fa-location-dot"></i>
+                  <span>arizona USA</span>
+                </div>
+              
+              
+                <div class="memory-card-title">
+                  Waiting for the light rail with my roommate
+                </div>
+              
+            </div>
+          </div>
+        
+          <div class="memory-card">
+            <div class="memory-card-image">
+              <img src="/memories/date-2019-08-01-location-jiangxi-china-title-stumbled-upon-an-incredibly-delicious-egg-fried-rice.webp" alt="stumbled upon an incredibly delicious egg fried rice" loading="lazy">
+            </div>
+            <div class="memory-card-info">
+              
+                <div class="memory-card-date">
+                  <i class="fa-regular fa-calendar"></i>
+                  <span>2019.08.01</span>
+                </div>
+              
+              
+                <div class="memory-card-location">
+                  <i class="fa-solid fa-location-dot"></i>
+                  <span>jiangxi china</span>
+                </div>
+              
+              
+                <div class="memory-card-title">
+                  Stumbled upon an incredibly delicious egg fried rice
+                </div>
+              
+            </div>
+          </div>
+        
+          <div class="memory-card">
+            <div class="memory-card-image">
+              <img src="/memories/date-2019-06-09-location-chongqing-china-title-watching-GOT-season1.webp" alt="watching GOT season1" loading="lazy">
+            </div>
+            <div class="memory-card-info">
+              
+                <div class="memory-card-date">
+                  <i class="fa-regular fa-calendar"></i>
+                  <span>2019.06.09</span>
+                </div>
+              
+              
+                <div class="memory-card-location">
+                  <i class="fa-solid fa-location-dot"></i>
+                  <span>chongqing china</span>
+                </div>
+              
+              
+                <div class="memory-card-title">
+                  Watching GOT season1
+                </div>
+              
+            </div>
+          </div>
+        
+          <div class="memory-card">
+            <div class="memory-card-image">
+              <img src="/memories/date-2019-03-10-location-arizona-USA-title-enjoy-my-favorite-dinner-while-watching-my-favorite-cartoon.webp" alt="enjoy my favorite dinner while watching my favorite cartoon" loading="lazy">
             </div>
             <div class="memory-card-info">
               
@@ -1044,7 +1469,7 @@
               
               
                 <div class="memory-card-title">
-                  Favorite dinner at the time while watching my favorite cartoon
+                  Enjoy my favorite dinner while watching my favorite cartoon
                 </div>
               
             </div>
@@ -1052,7 +1477,182 @@
         
           <div class="memory-card">
             <div class="memory-card-image">
-              <img src="/memories/date-2019-01-28-location-arizona-USA-title-a-glimpse-of-sunset.jpg" alt="a glimpse of sunset" loading="lazy">
+              <img src="/memories/date-2019-03-06-location-arizona-USA-title-passing-by-Hot-N-Juicy.webp" alt="passing by Hot N Juicy" loading="lazy">
+            </div>
+            <div class="memory-card-info">
+              
+                <div class="memory-card-date">
+                  <i class="fa-regular fa-calendar"></i>
+                  <span>2019.03.06</span>
+                </div>
+              
+              
+                <div class="memory-card-location">
+                  <i class="fa-solid fa-location-dot"></i>
+                  <span>arizona USA</span>
+                </div>
+              
+              
+                <div class="memory-card-title">
+                  Passing by Hot N Juicy
+                </div>
+              
+            </div>
+          </div>
+        
+          <div class="memory-card">
+            <div class="memory-card-image">
+              <img src="/memories/date-2019-03-03-location-arizona-USA-title-dinner-with-can.webp" alt="dinner with can" loading="lazy">
+            </div>
+            <div class="memory-card-info">
+              
+                <div class="memory-card-date">
+                  <i class="fa-regular fa-calendar"></i>
+                  <span>2019.03.03</span>
+                </div>
+              
+              
+                <div class="memory-card-location">
+                  <i class="fa-solid fa-location-dot"></i>
+                  <span>arizona USA</span>
+                </div>
+              
+              
+                <div class="memory-card-title">
+                  Dinner with can
+                </div>
+              
+            </div>
+          </div>
+        
+          <div class="memory-card">
+            <div class="memory-card-image">
+              <img src="/memories/date-2019-03-03-location-arizona-USA-title-visiting-Musical-Instrument-Museum-with-can.webp" alt="visiting Musical Instrument Museum with can" loading="lazy">
+            </div>
+            <div class="memory-card-info">
+              
+                <div class="memory-card-date">
+                  <i class="fa-regular fa-calendar"></i>
+                  <span>2019.03.03</span>
+                </div>
+              
+              
+                <div class="memory-card-location">
+                  <i class="fa-solid fa-location-dot"></i>
+                  <span>arizona USA</span>
+                </div>
+              
+              
+                <div class="memory-card-title">
+                  Visiting Musical Instrument Museum with can
+                </div>
+              
+            </div>
+          </div>
+        
+          <div class="memory-card">
+            <div class="memory-card-image">
+              <img src="/memories/date-2019-02-18-location-arizona-USA-title-a-normal-night-chiling-at-school.webp" alt="a normal night chiling at school" loading="lazy">
+            </div>
+            <div class="memory-card-info">
+              
+                <div class="memory-card-date">
+                  <i class="fa-regular fa-calendar"></i>
+                  <span>2019.02.18</span>
+                </div>
+              
+              
+                <div class="memory-card-location">
+                  <i class="fa-solid fa-location-dot"></i>
+                  <span>arizona USA</span>
+                </div>
+              
+              
+                <div class="memory-card-title">
+                  A normal night chiling at school
+                </div>
+              
+            </div>
+          </div>
+        
+          <div class="memory-card">
+            <div class="memory-card-image">
+              <img src="/memories/date-2019-02-16-location-arizona-USA-title-a-broken-vending-machine.webp" alt="a broken vending machine" loading="lazy">
+            </div>
+            <div class="memory-card-info">
+              
+                <div class="memory-card-date">
+                  <i class="fa-regular fa-calendar"></i>
+                  <span>2019.02.16</span>
+                </div>
+              
+              
+                <div class="memory-card-location">
+                  <i class="fa-solid fa-location-dot"></i>
+                  <span>arizona USA</span>
+                </div>
+              
+              
+                <div class="memory-card-title">
+                  A broken vending machine
+                </div>
+              
+            </div>
+          </div>
+        
+          <div class="memory-card">
+            <div class="memory-card-image">
+              <img src="/memories/date-2019-02-10-location-arizona-USA-title-bumped-into-a-princess-in-the-music-building.webp" alt="bumped into a princess in the music building" loading="lazy">
+            </div>
+            <div class="memory-card-info">
+              
+                <div class="memory-card-date">
+                  <i class="fa-regular fa-calendar"></i>
+                  <span>2019.02.10</span>
+                </div>
+              
+              
+                <div class="memory-card-location">
+                  <i class="fa-solid fa-location-dot"></i>
+                  <span>arizona USA</span>
+                </div>
+              
+              
+                <div class="memory-card-title">
+                  Bumped into a princess in the music building
+                </div>
+              
+            </div>
+          </div>
+        
+          <div class="memory-card">
+            <div class="memory-card-image">
+              <img src="/memories/date-2019-02-01-location-arizona-USA-title-fighting-with-brains-in-gym.webp" alt="fighting with brains in gym" loading="lazy">
+            </div>
+            <div class="memory-card-info">
+              
+                <div class="memory-card-date">
+                  <i class="fa-regular fa-calendar"></i>
+                  <span>2019.02.01</span>
+                </div>
+              
+              
+                <div class="memory-card-location">
+                  <i class="fa-solid fa-location-dot"></i>
+                  <span>arizona USA</span>
+                </div>
+              
+              
+                <div class="memory-card-title">
+                  Fighting with brains in gym
+                </div>
+              
+            </div>
+          </div>
+        
+          <div class="memory-card">
+            <div class="memory-card-image">
+              <img src="/memories/date-2019-01-28-location-arizona-USA-title-a-glimpse-of-sunset-from-the-piano-room.webp" alt="a glimpse of sunset from the piano room" loading="lazy">
             </div>
             <div class="memory-card-info">
               
@@ -1069,7 +1669,657 @@
               
               
                 <div class="memory-card-title">
-                  A glimpse of sunset
+                  A glimpse of sunset from the piano room
+                </div>
+              
+            </div>
+          </div>
+        
+          <div class="memory-card">
+            <div class="memory-card-image">
+              <img src="/memories/date-2019-01-22-location-arizona-USA-title-stepped-out-of-the-library-feeling-relieved-for-the-first-time-in-a-long-time.webp" alt="stepped out of the library feeling relieved for the first time in a long time" loading="lazy">
+            </div>
+            <div class="memory-card-info">
+              
+                <div class="memory-card-date">
+                  <i class="fa-regular fa-calendar"></i>
+                  <span>2019.01.22</span>
+                </div>
+              
+              
+                <div class="memory-card-location">
+                  <i class="fa-solid fa-location-dot"></i>
+                  <span>arizona USA</span>
+                </div>
+              
+              
+                <div class="memory-card-title">
+                  Stepped out of the library feeling relieved for the first time in a long time
+                </div>
+              
+            </div>
+          </div>
+        
+          <div class="memory-card">
+            <div class="memory-card-image">
+              <img src="/memories/date-2019-01-21-location-arizona-USA-title-sitting-by-the-window-of-the-library.webp" alt="sitting by the window of the library" loading="lazy">
+            </div>
+            <div class="memory-card-info">
+              
+                <div class="memory-card-date">
+                  <i class="fa-regular fa-calendar"></i>
+                  <span>2019.01.21</span>
+                </div>
+              
+              
+                <div class="memory-card-location">
+                  <i class="fa-solid fa-location-dot"></i>
+                  <span>arizona USA</span>
+                </div>
+              
+              
+                <div class="memory-card-title">
+                  Sitting by the window of the library
+                </div>
+              
+            </div>
+          </div>
+        
+          <div class="memory-card">
+            <div class="memory-card-image">
+              <img src="/memories/date-2018-12-30-location-arizona-USA-title-when-I-am-tired-of-sandwich.webp" alt="when I am tired of sandwich" loading="lazy">
+            </div>
+            <div class="memory-card-info">
+              
+                <div class="memory-card-date">
+                  <i class="fa-regular fa-calendar"></i>
+                  <span>2018.12.30</span>
+                </div>
+              
+              
+                <div class="memory-card-location">
+                  <i class="fa-solid fa-location-dot"></i>
+                  <span>arizona USA</span>
+                </div>
+              
+              
+                <div class="memory-card-title">
+                  When I am tired of sandwich
+                </div>
+              
+            </div>
+          </div>
+        
+          <div class="memory-card">
+            <div class="memory-card-image">
+              <img src="/memories/date-2018-12-29-location-arizona-USA-title-yoghurt-from-heaven.webp" alt="yoghurt from heaven" loading="lazy">
+            </div>
+            <div class="memory-card-info">
+              
+                <div class="memory-card-date">
+                  <i class="fa-regular fa-calendar"></i>
+                  <span>2018.12.29</span>
+                </div>
+              
+              
+                <div class="memory-card-location">
+                  <i class="fa-solid fa-location-dot"></i>
+                  <span>arizona USA</span>
+                </div>
+              
+              
+                <div class="memory-card-title">
+                  Yoghurt from heaven
+                </div>
+              
+            </div>
+          </div>
+        
+          <div class="memory-card">
+            <div class="memory-card-image">
+              <img src="/memories/date-2018-12-04-location-arizona-USA-title-chilling-on-a-comfortable-sofa-in-the-public-rest-area-of-__the-school-building.webp" alt="chilling on a comfortable sofa in the public rest area of the school building" loading="lazy">
+            </div>
+            <div class="memory-card-info">
+              
+                <div class="memory-card-date">
+                  <i class="fa-regular fa-calendar"></i>
+                  <span>2018.12.04</span>
+                </div>
+              
+              
+                <div class="memory-card-location">
+                  <i class="fa-solid fa-location-dot"></i>
+                  <span>arizona USA</span>
+                </div>
+              
+              
+                <div class="memory-card-title">
+                  Chilling on a comfortable sofa in the public rest area of the school building
+                </div>
+              
+            </div>
+          </div>
+        
+          <div class="memory-card">
+            <div class="memory-card-image">
+              <img src="/memories/date-2018-11-30-location-arizona-USA-title-hot-chocolate-on-a-cold-winter-day-before-final-week.webp" alt="hot chocolate on a cold winter day before final week" loading="lazy">
+            </div>
+            <div class="memory-card-info">
+              
+                <div class="memory-card-date">
+                  <i class="fa-regular fa-calendar"></i>
+                  <span>2018.11.30</span>
+                </div>
+              
+              
+                <div class="memory-card-location">
+                  <i class="fa-solid fa-location-dot"></i>
+                  <span>arizona USA</span>
+                </div>
+              
+              
+                <div class="memory-card-title">
+                  Hot chocolate on a cold winter day before final week
+                </div>
+              
+            </div>
+          </div>
+        
+          <div class="memory-card">
+            <div class="memory-card-image">
+              <img src="/memories/date-2018-11-30-location-arizona-USA-title-winter-market.webp" alt="winter market" loading="lazy">
+            </div>
+            <div class="memory-card-info">
+              
+                <div class="memory-card-date">
+                  <i class="fa-regular fa-calendar"></i>
+                  <span>2018.11.30</span>
+                </div>
+              
+              
+                <div class="memory-card-location">
+                  <i class="fa-solid fa-location-dot"></i>
+                  <span>arizona USA</span>
+                </div>
+              
+              
+                <div class="memory-card-title">
+                  Winter market
+                </div>
+              
+            </div>
+          </div>
+        
+          <div class="memory-card">
+            <div class="memory-card-image">
+              <img src="/memories/date-2018-11-16-location-arizona-USA-title-in-library.webp" alt="in library" loading="lazy">
+            </div>
+            <div class="memory-card-info">
+              
+                <div class="memory-card-date">
+                  <i class="fa-regular fa-calendar"></i>
+                  <span>2018.11.16</span>
+                </div>
+              
+              
+                <div class="memory-card-location">
+                  <i class="fa-solid fa-location-dot"></i>
+                  <span>arizona USA</span>
+                </div>
+              
+              
+                <div class="memory-card-title">
+                  In library
+                </div>
+              
+            </div>
+          </div>
+        
+          <div class="memory-card">
+            <div class="memory-card-image">
+              <img src="/memories/date-2018-11-10-location-arizona-USA-title-my-favorite-breakfast-in-school-cafeteria.webp" alt="my favorite breakfast in school cafeteria" loading="lazy">
+            </div>
+            <div class="memory-card-info">
+              
+                <div class="memory-card-date">
+                  <i class="fa-regular fa-calendar"></i>
+                  <span>2018.11.10</span>
+                </div>
+              
+              
+                <div class="memory-card-location">
+                  <i class="fa-solid fa-location-dot"></i>
+                  <span>arizona USA</span>
+                </div>
+              
+              
+                <div class="memory-card-title">
+                  My favorite breakfast in school cafeteria
+                </div>
+              
+            </div>
+          </div>
+        
+          <div class="memory-card">
+            <div class="memory-card-image">
+              <img src="/memories/date-2018-11-07-location-arizona-USA-title-loooove-sushi.webp" alt="loooove sushi" loading="lazy">
+            </div>
+            <div class="memory-card-info">
+              
+                <div class="memory-card-date">
+                  <i class="fa-regular fa-calendar"></i>
+                  <span>2018.11.07</span>
+                </div>
+              
+              
+                <div class="memory-card-location">
+                  <i class="fa-solid fa-location-dot"></i>
+                  <span>arizona USA</span>
+                </div>
+              
+              
+                <div class="memory-card-title">
+                  Loooove sushi
+                </div>
+              
+            </div>
+          </div>
+        
+          <div class="memory-card">
+            <div class="memory-card-image">
+              <img src="/memories/date-2018-10-07-location-arizona-USA-title-a-blue-sunset.webp" alt="a blue sunset" loading="lazy">
+            </div>
+            <div class="memory-card-info">
+              
+                <div class="memory-card-date">
+                  <i class="fa-regular fa-calendar"></i>
+                  <span>2018.10.07</span>
+                </div>
+              
+              
+                <div class="memory-card-location">
+                  <i class="fa-solid fa-location-dot"></i>
+                  <span>arizona USA</span>
+                </div>
+              
+              
+                <div class="memory-card-title">
+                  A blue sunset
+                </div>
+              
+            </div>
+          </div>
+        
+          <div class="memory-card">
+            <div class="memory-card-image">
+              <img src="/memories/date-2018-09-01-location-arizona-USA-title-starting-the-new-semester-of-junior-year.webp" alt="starting the new semester of junior year" loading="lazy">
+            </div>
+            <div class="memory-card-info">
+              
+                <div class="memory-card-date">
+                  <i class="fa-regular fa-calendar"></i>
+                  <span>2018.09.01</span>
+                </div>
+              
+              
+                <div class="memory-card-location">
+                  <i class="fa-solid fa-location-dot"></i>
+                  <span>arizona USA</span>
+                </div>
+              
+              
+                <div class="memory-card-title">
+                  Starting the new semester of junior year
+                </div>
+              
+            </div>
+          </div>
+        
+          <div class="memory-card">
+            <div class="memory-card-image">
+              <img src="/memories/date-2018-08-09-location-chongqing-china-title-greenery-outside-the-window.webp" alt="greenery outside the window" loading="lazy">
+            </div>
+            <div class="memory-card-info">
+              
+                <div class="memory-card-date">
+                  <i class="fa-regular fa-calendar"></i>
+                  <span>2018.08.09</span>
+                </div>
+              
+              
+                <div class="memory-card-location">
+                  <i class="fa-solid fa-location-dot"></i>
+                  <span>chongqing china</span>
+                </div>
+              
+              
+                <div class="memory-card-title">
+                  Greenery outside the window
+                </div>
+              
+            </div>
+          </div>
+        
+          <div class="memory-card">
+            <div class="memory-card-image">
+              <img src="/memories/date-2018-07-29-location-chongqing-china-title-childhood.webp" alt="childhood" loading="lazy">
+            </div>
+            <div class="memory-card-info">
+              
+                <div class="memory-card-date">
+                  <i class="fa-regular fa-calendar"></i>
+                  <span>2018.07.29</span>
+                </div>
+              
+              
+                <div class="memory-card-location">
+                  <i class="fa-solid fa-location-dot"></i>
+                  <span>chongqing china</span>
+                </div>
+              
+              
+                <div class="memory-card-title">
+                  Childhood
+                </div>
+              
+            </div>
+          </div>
+        
+          <div class="memory-card">
+            <div class="memory-card-image">
+              <img src="/memories/date-2018-07-15-location-chongqing-china-title-a-perfect-meal-(Chongqing's-summer-exclusive).webp" alt="a perfect meal (Chongqing&#39;s summer exclusive)" loading="lazy">
+            </div>
+            <div class="memory-card-info">
+              
+                <div class="memory-card-date">
+                  <i class="fa-regular fa-calendar"></i>
+                  <span>2018.07.15</span>
+                </div>
+              
+              
+                <div class="memory-card-location">
+                  <i class="fa-solid fa-location-dot"></i>
+                  <span>chongqing china</span>
+                </div>
+              
+              
+                <div class="memory-card-title">
+                  A perfect meal (Chongqing&#39;s summer exclusive)
+                </div>
+              
+            </div>
+          </div>
+        
+          <div class="memory-card">
+            <div class="memory-card-image">
+              <img src="/memories/date-2018-05-27-location-chongqing-china-title-playing-kalimba.webp" alt="playing kalimba" loading="lazy">
+            </div>
+            <div class="memory-card-info">
+              
+                <div class="memory-card-date">
+                  <i class="fa-regular fa-calendar"></i>
+                  <span>2018.05.27</span>
+                </div>
+              
+              
+                <div class="memory-card-location">
+                  <i class="fa-solid fa-location-dot"></i>
+                  <span>chongqing china</span>
+                </div>
+              
+              
+                <div class="memory-card-title">
+                  Playing kalimba
+                </div>
+              
+            </div>
+          </div>
+        
+          <div class="memory-card">
+            <div class="memory-card-image">
+              <img src="/memories/date-2018-04-17-location-arizona-USA-title-caught-a-glimpse-of-a-rainbow.webp" alt="caught a glimpse of a rainbow" loading="lazy">
+            </div>
+            <div class="memory-card-info">
+              
+                <div class="memory-card-date">
+                  <i class="fa-regular fa-calendar"></i>
+                  <span>2018.04.17</span>
+                </div>
+              
+              
+                <div class="memory-card-location">
+                  <i class="fa-solid fa-location-dot"></i>
+                  <span>arizona USA</span>
+                </div>
+              
+              
+                <div class="memory-card-title">
+                  Caught a glimpse of a rainbow
+                </div>
+              
+            </div>
+          </div>
+        
+          <div class="memory-card">
+            <div class="memory-card-image">
+              <img src="/memories/date-2018-02-19-location-arizona-USA-title-my-favorite-snack-at-the-time.webp" alt="my favorite snack at the time" loading="lazy">
+            </div>
+            <div class="memory-card-info">
+              
+                <div class="memory-card-date">
+                  <i class="fa-regular fa-calendar"></i>
+                  <span>2018.02.19</span>
+                </div>
+              
+              
+                <div class="memory-card-location">
+                  <i class="fa-solid fa-location-dot"></i>
+                  <span>arizona USA</span>
+                </div>
+              
+              
+                <div class="memory-card-title">
+                  My favorite snack at the time
+                </div>
+              
+            </div>
+          </div>
+        
+          <div class="memory-card">
+            <div class="memory-card-image">
+              <img src="/memories/date-2018-02-16-location-arizona-USA-title-celebrating-Chinese-New-Year-at-Yankee's-house.webp" alt="celebrating Chinese New Year at Yankee&#39;s house" loading="lazy">
+            </div>
+            <div class="memory-card-info">
+              
+                <div class="memory-card-date">
+                  <i class="fa-regular fa-calendar"></i>
+                  <span>2018.02.16</span>
+                </div>
+              
+              
+                <div class="memory-card-location">
+                  <i class="fa-solid fa-location-dot"></i>
+                  <span>arizona USA</span>
+                </div>
+              
+              
+                <div class="memory-card-title">
+                  Celebrating Chinese New Year at Yankee&#39;s house
+                </div>
+              
+            </div>
+          </div>
+        
+          <div class="memory-card">
+            <div class="memory-card-image">
+              <img src="/memories/date-2018-02-16-location-arizona-USA-title-sunset-in-Tempe-downtown.webp" alt="sunset in Tempe downtown" loading="lazy">
+            </div>
+            <div class="memory-card-info">
+              
+                <div class="memory-card-date">
+                  <i class="fa-regular fa-calendar"></i>
+                  <span>2018.02.16</span>
+                </div>
+              
+              
+                <div class="memory-card-location">
+                  <i class="fa-solid fa-location-dot"></i>
+                  <span>arizona USA</span>
+                </div>
+              
+              
+                <div class="memory-card-title">
+                  Sunset in Tempe downtown
+                </div>
+              
+            </div>
+          </div>
+        
+          <div class="memory-card">
+            <div class="memory-card-image">
+              <img src="/memories/date-2018-01-12-location-arizona-USA-title-a-dramatic-flop-for-a-skateboard.webp" alt="a dramatic flop for a skateboard" loading="lazy">
+            </div>
+            <div class="memory-card-info">
+              
+                <div class="memory-card-date">
+                  <i class="fa-regular fa-calendar"></i>
+                  <span>2018.01.12</span>
+                </div>
+              
+              
+                <div class="memory-card-location">
+                  <i class="fa-solid fa-location-dot"></i>
+                  <span>arizona USA</span>
+                </div>
+              
+              
+                <div class="memory-card-title">
+                  A dramatic flop for a skateboard
+                </div>
+              
+            </div>
+          </div>
+        
+          <div class="memory-card">
+            <div class="memory-card-image">
+              <img src="/memories/date-2017-08-17-location-arizona-USA-title-a-perfect-heart-shaped-strawberry.webp" alt="a perfect heart shaped strawberry" loading="lazy">
+            </div>
+            <div class="memory-card-info">
+              
+                <div class="memory-card-date">
+                  <i class="fa-regular fa-calendar"></i>
+                  <span>2017.08.17</span>
+                </div>
+              
+              
+                <div class="memory-card-location">
+                  <i class="fa-solid fa-location-dot"></i>
+                  <span>arizona USA</span>
+                </div>
+              
+              
+                <div class="memory-card-title">
+                  A perfect heart shaped strawberry
+                </div>
+              
+            </div>
+          </div>
+        
+          <div class="memory-card">
+            <div class="memory-card-image">
+              <img src="/memories/date-2017-08-11-location-chongqing-china-title-the-first-photo-taken-after-getting-a-new-iPhone-7-(so-nostalgic).webp" alt="the first photo taken after getting a new iPhone 7 (so nostalgic)" loading="lazy">
+            </div>
+            <div class="memory-card-info">
+              
+                <div class="memory-card-date">
+                  <i class="fa-regular fa-calendar"></i>
+                  <span>2017.08.11</span>
+                </div>
+              
+              
+                <div class="memory-card-location">
+                  <i class="fa-solid fa-location-dot"></i>
+                  <span>chongqing china</span>
+                </div>
+              
+              
+                <div class="memory-card-title">
+                  The first photo taken after getting a new iPhone 7 (so nostalgic)
+                </div>
+              
+            </div>
+          </div>
+        
+          <div class="memory-card">
+            <div class="memory-card-image">
+              <img src="/memories/date-2017-04-11-location-arizona-USA-title-enjoy-the-night-view-with-Can-on-A-mountain.webp" alt="enjoy the night view with Can on A mountain" loading="lazy">
+            </div>
+            <div class="memory-card-info">
+              
+                <div class="memory-card-date">
+                  <i class="fa-regular fa-calendar"></i>
+                  <span>2017.04.11</span>
+                </div>
+              
+              
+                <div class="memory-card-location">
+                  <i class="fa-solid fa-location-dot"></i>
+                  <span>arizona USA</span>
+                </div>
+              
+              
+                <div class="memory-card-title">
+                  Enjoy the night view with Can on A mountain
+                </div>
+              
+            </div>
+          </div>
+        
+          <div class="memory-card">
+            <div class="memory-card-image">
+              <img src="/memories/date-2017-03-25-location-arizona-USA-title-somewhere-on-campus.webp" alt="somewhere on campus" loading="lazy">
+            </div>
+            <div class="memory-card-info">
+              
+                <div class="memory-card-date">
+                  <i class="fa-regular fa-calendar"></i>
+                  <span>2017.03.25</span>
+                </div>
+              
+              
+                <div class="memory-card-location">
+                  <i class="fa-solid fa-location-dot"></i>
+                  <span>arizona USA</span>
+                </div>
+              
+              
+                <div class="memory-card-title">
+                  Somewhere on campus
+                </div>
+              
+            </div>
+          </div>
+        
+          <div class="memory-card">
+            <div class="memory-card-image">
+              <img src="/memories/date-2016-03-15-location-chongqing-china-title-accidentally-wrote-a-perfect-Chinese-character.webp" alt="accidentally wrote a perfect Chinese character" loading="lazy">
+            </div>
+            <div class="memory-card-info">
+              
+                <div class="memory-card-date">
+                  <i class="fa-regular fa-calendar"></i>
+                  <span>2016.03.15</span>
+                </div>
+              
+              
+                <div class="memory-card-location">
+                  <i class="fa-solid fa-location-dot"></i>
+                  <span>chongqing china</span>
+                </div>
+              
+              
+                <div class="memory-card-title">
+                  Accidentally wrote a perfect Chinese character
                 </div>
               
             </div>
@@ -1081,25 +2331,25 @@
         <i class="fa-solid fa-chevron-right"></i>
       </button>
     </div>
-    <a href="/" class="home-section-btn">
-      <i class="fa-solid fa-grid-2"></i>View more
+    <a href="/" class="home-section-btn" data-i18n="buttons.view_more">
+      <i class="fa-solid fa-grid-2"></i><span class="i18n-text">View more</span>
     </a>
   </section>
 
   <section class="home-section">
-    <h2><i class="fa-solid fa-laptop" style="color: var(--icon);"></i> Things I've Made</h2>
+    <h2><i class="fa-solid fa-laptop" style="color: var(--icon);"></i> <span data-i18n="sections.things_made" class="i18n-text">Things I've Made</span></h2>
     
-    <div class="project-card-carousel" id="projectCardCarousel" data-count="5">
+    <div class="project-card-carousel" id="projectCardCarousel" data-count="2">
       <div class="project-card-track" id="projectCardTrack" aria-label="Project cards">
         
-        <article class="project-card" aria-label="Lán Ink Studio">
+        <article class="project-card" aria-label="Lán Ink Studio - Chinese Tattoo Design">
           <div class="project-card-preview">
             
-              <img src="/project-img/laninkstudio_preview.jpg" alt="">
+              <img src="/project-img/laninkstudio_preview.webp" alt="">
             
           </div>
           <div class="project-card-content">
-            <h3 class="project-card-title">Lán Ink Studio</h3>
+            <h3 class="project-card-title">Lán Ink Studio - Chinese Tattoo Design</h3>
             <p class="project-card-desc">Lán Ink Studio is a specialized online shop for authentic, handwritten Chinese calligraphy tattoo designs, offering ready-made and custom designs, detailed cultural context, and tattoo-artist-ready files.</p>
             <a href="https://www.baidu.com/" target="_blank" rel="noopener" class="project-card-link">
               <i class="fa-solid fa-external-link-alt"></i> Click to Open
@@ -1107,60 +2357,15 @@
           </div>
         </article>
         
-        <article class="project-card" aria-label="Lán Ink Studio">
+        <article class="project-card" aria-label="Glossary - Smart Reader &amp; Vocabulary">
           <div class="project-card-preview">
             
-              <img src="/project-img/laninkstudio_preview.jpg" alt="">
+              <img src="/project-img/glossary_preview.webp" alt="">
             
           </div>
           <div class="project-card-content">
-            <h3 class="project-card-title">Lán Ink Studio</h3>
-            <p class="project-card-desc">Lán Ink Studio is a specialized online shop for authentic, handwritten Chinese calligraphy tattoo designs, offering ready-made and custom designs, detailed cultural context, and tattoo-artist-ready files.</p>
-            <a href="https://www.baidu.com/" target="_blank" rel="noopener" class="project-card-link">
-              <i class="fa-solid fa-external-link-alt"></i> Click to Open
-            </a>
-          </div>
-        </article>
-        
-        <article class="project-card" aria-label="Lán Ink Studio">
-          <div class="project-card-preview">
-            
-              <img src="/project-img/laninkstudio_preview.jpg" alt="">
-            
-          </div>
-          <div class="project-card-content">
-            <h3 class="project-card-title">Lán Ink Studio</h3>
-            <p class="project-card-desc">Lán Ink Studio is a specialized online shop for authentic, handwritten Chinese calligraphy tattoo designs, offering ready-made and custom designs, detailed cultural context, and tattoo-artist-ready files.</p>
-            <a href="https://www.baidu.com/" target="_blank" rel="noopener" class="project-card-link">
-              <i class="fa-solid fa-external-link-alt"></i> Click to Open
-            </a>
-          </div>
-        </article>
-        
-        <article class="project-card" aria-label="Lán Ink Studio">
-          <div class="project-card-preview">
-            
-              <img src="/project-img/laninkstudio_preview.jpg" alt="">
-            
-          </div>
-          <div class="project-card-content">
-            <h3 class="project-card-title">Lán Ink Studio</h3>
-            <p class="project-card-desc">Lán Ink Studio is a specialized online shop for authentic, handwritten Chinese calligraphy tattoo designs, offering ready-made and custom designs, detailed cultural context, and tattoo-artist-ready files.</p>
-            <a href="https://www.baidu.com/" target="_blank" rel="noopener" class="project-card-link">
-              <i class="fa-solid fa-external-link-alt"></i> Click to Open
-            </a>
-          </div>
-        </article>
-        
-        <article class="project-card" aria-label="Lán Ink Studio">
-          <div class="project-card-preview">
-            
-              <img src="/project-img/laninkstudio_preview.jpg" alt="">
-            
-          </div>
-          <div class="project-card-content">
-            <h3 class="project-card-title">Lán Ink Studio</h3>
-            <p class="project-card-desc">Lán Ink Studio is a specialized online shop for authentic, handwritten Chinese calligraphy tattoo designs, offering ready-made and custom designs, detailed cultural context, and tattoo-artist-ready files.</p>
+            <h3 class="project-card-title">Glossary - Smart Reader &amp; Vocabulary</h3>
+            <p class="project-card-desc">A smart document reader with integrated dictionary lookup, AI-powered definitions using Gemini, and an automated Ebbinghaus spaced-repetition vocabulary builder.</p>
             <a href="https://www.baidu.com/" target="_blank" rel="noopener" class="project-card-link">
               <i class="fa-solid fa-external-link-alt"></i> Click to Open
             </a>
@@ -1175,30 +2380,24 @@
         
         <button type="button" class="project-card-dot " data-index="1" aria-label="Card 2" aria-current="false"></button>
         
-        <button type="button" class="project-card-dot " data-index="2" aria-label="Card 3" aria-current="false"></button>
-        
-        <button type="button" class="project-card-dot " data-index="3" aria-label="Card 4" aria-current="false"></button>
-        
-        <button type="button" class="project-card-dot " data-index="4" aria-label="Card 5" aria-current="false"></button>
-        
       </div>
       
     </div>
-    <a href="/" class="home-section-btn">
-      <i class="fa-solid fa-grid-2"></i>View more
+    <a href="/" class="home-section-btn" data-i18n="buttons.view_more">
+      <i class="fa-solid fa-grid-2"></i><span class="i18n-text">View more</span>
     </a>
   </section>
 
   <section class="home-section">
-    <h2><i class="fa-solid fa-hands-clapping" style="color: var(--icon);"></i> Things I Recommend</h2>
+    <h2><i class="fa-solid fa-hands-clapping" style="color: var(--icon);"></i> <span data-i18n="sections.things_recommend" class="i18n-text">Things I Recommend</span></h2>
     
-    <script type="application/json" id="recommendationNotesData">[{"title":"Riot Women","type":"TV series","layout":"recommendation-tv-series","updated":"2026-02-01T16:00:00.000Z","extraLabel":"Year:","extraValue":"2025","notes":"w呜呜呜好喜欢！"},{"title":"The accountant","type":"movie","layout":"recommendation-movie","updated":"2026-02-01T16:00:00.000Z","extraLabel":"Year:","extraValue":"2016","notes":"大本！！"},{"title":"The thrill is gone","type":"music","layout":"recommendation-music","updated":"2026-02-01T16:00:00.000Z","extraLabel":"Artist:","extraValue":"Raye","notes":"喜欢！"},{"title":"Writing the blockbuster novel","type":"book","layout":"recommendation-book","updated":"2026-02-01T16:00:00.000Z","extraLabel":"Author:","extraValue":"Albert Zuckerman","notes":"好看！！"},{"title":"Wake Up Dead Man: A Knives Out Mystery","type":"movie","layout":"recommendation-movie","updated":"2025-12-27T16:00:00.000Z","extraLabel":"Year:","extraValue":"2025","notes":"很好看！！！"},{"title":"Mindhunter","type":"TV series","layout":"recommendation-tv-series","updated":"2025-03-02T16:00:00.000Z","extraLabel":"Year:","extraValue":"2017","notes":"太好看了....."}]</script>
+    <script type="application/json" id="recommendationNotesData">[{"title":"Riot Women","type":"TV series","layout":"recommendation-tv-series","updated":"2026-02-01T16:00:00.000Z","extraLabel":"Year:","extraValue":"2025","notes":"w呜呜呜好喜欢！"},{"title":"The accountant","type":"movie","layout":"recommendation-movie","updated":"2026-02-01T16:00:00.000Z","extraLabel":"Year:","extraValue":"2016","notes":"大本！！"},{"title":"Writing the blockbuster novel","type":"book","layout":"recommendation-book","updated":"2026-02-01T16:00:00.000Z","extraLabel":"Author:","extraValue":"Albert Zuckerman","notes":"好看！！"},{"title":"The thrill is gone","type":"music","layout":"recommendation-music","updated":"2026-02-01T16:00:00.000Z","extraLabel":"Artist:","extraValue":"Raye","notes":"喜欢！"},{"title":"Wake Up Dead Man: A Knives Out Mystery","type":"movie","layout":"recommendation-movie","updated":"2025-12-27T16:00:00.000Z","extraLabel":"Year:","extraValue":"2025","notes":"很好看！！！"},{"title":"Mindhunter","type":"TV series","layout":"recommendation-tv-series","updated":"2025-03-02T16:00:00.000Z","extraLabel":"Year:","extraValue":"2017","notes":"太好看了....."}]</script>
     <div class="recommendation-table">
       <div class="recommendation-header">
-        <span>Type</span>
-        <span>Selection</span>
-        <span>Last Stored</span>
-        <span>Lan's notes</span>
+        <span data-i18n="recommendation.type" class="i18n-text">Type</span>
+        <span data-i18n="recommendation.selection" class="i18n-text">Selection</span>
+        <span data-i18n="recommendation.last_stored" class="i18n-text">Last Stored</span>
+        <span data-i18n="recommendation.notes_header" class="i18n-text">Lan's notes</span>
       </div>
       
         <div class="recommendation-row">
@@ -1216,7 +2415,7 @@
               <span class="recommendation-notes-icon">
                 <i class="fa-solid fa-envelope recommendation-notes-icon-default"></i>
                 <i class="fa-solid fa-envelope-open recommendation-notes-icon-hover"></i>
-              </span> Open
+              </span> <span data-i18n="buttons.open" class="i18n-text">Open</span>
             </button>
           </span>
         </div>
@@ -1236,27 +2435,7 @@
               <span class="recommendation-notes-icon">
                 <i class="fa-solid fa-envelope recommendation-notes-icon-default"></i>
                 <i class="fa-solid fa-envelope-open recommendation-notes-icon-hover"></i>
-              </span> Open
-            </button>
-          </span>
-        </div>
-      
-        <div class="recommendation-row">
-          <span class="recommendation-badge recommendation-badge--music">
-            music
-          </span>
-          <span class="recommendation-title">
-            The thrill is gone
-          </span>
-          <span class="recommendation-date">
-            2026-02-02
-          </span>
-          <span class="recommendation-notes-cell">
-            <button type="button" class="recommendation-notes-btn project-card-link" data-index="2" aria-label="Open Lan's notes for The thrill is gone">
-              <span class="recommendation-notes-icon">
-                <i class="fa-solid fa-envelope recommendation-notes-icon-default"></i>
-                <i class="fa-solid fa-envelope-open recommendation-notes-icon-hover"></i>
-              </span> Open
+              </span> <span data-i18n="buttons.open" class="i18n-text">Open</span>
             </button>
           </span>
         </div>
@@ -1272,11 +2451,31 @@
             2026-02-02
           </span>
           <span class="recommendation-notes-cell">
-            <button type="button" class="recommendation-notes-btn project-card-link" data-index="3" aria-label="Open Lan's notes for Writing the blockbuster novel">
+            <button type="button" class="recommendation-notes-btn project-card-link" data-index="2" aria-label="Open Lan's notes for Writing the blockbuster novel">
               <span class="recommendation-notes-icon">
                 <i class="fa-solid fa-envelope recommendation-notes-icon-default"></i>
                 <i class="fa-solid fa-envelope-open recommendation-notes-icon-hover"></i>
-              </span> Open
+              </span> <span data-i18n="buttons.open" class="i18n-text">Open</span>
+            </button>
+          </span>
+        </div>
+      
+        <div class="recommendation-row">
+          <span class="recommendation-badge recommendation-badge--music">
+            music
+          </span>
+          <span class="recommendation-title">
+            The thrill is gone
+          </span>
+          <span class="recommendation-date">
+            2026-02-02
+          </span>
+          <span class="recommendation-notes-cell">
+            <button type="button" class="recommendation-notes-btn project-card-link" data-index="3" aria-label="Open Lan's notes for The thrill is gone">
+              <span class="recommendation-notes-icon">
+                <i class="fa-solid fa-envelope recommendation-notes-icon-default"></i>
+                <i class="fa-solid fa-envelope-open recommendation-notes-icon-hover"></i>
+              </span> <span data-i18n="buttons.open" class="i18n-text">Open</span>
             </button>
           </span>
         </div>
@@ -1296,7 +2495,7 @@
               <span class="recommendation-notes-icon">
                 <i class="fa-solid fa-envelope recommendation-notes-icon-default"></i>
                 <i class="fa-solid fa-envelope-open recommendation-notes-icon-hover"></i>
-              </span> Open
+              </span> <span data-i18n="buttons.open" class="i18n-text">Open</span>
             </button>
           </span>
         </div>
@@ -1316,7 +2515,7 @@
               <span class="recommendation-notes-icon">
                 <i class="fa-solid fa-envelope recommendation-notes-icon-default"></i>
                 <i class="fa-solid fa-envelope-open recommendation-notes-icon-hover"></i>
-              </span> Open
+              </span> <span data-i18n="buttons.open" class="i18n-text">Open</span>
             </button>
           </span>
         </div>
@@ -1334,17 +2533,17 @@
         <div class="recommendation-modal-body">
           <h3 class="recommendation-modal-item-title" id="recommendationModalItemTitle"></h3>
           <dl class="recommendation-modal-meta">
-            <dt>Type:</dt>
+            <dt data-i18n="recommendation.type_label" class="i18n-text">Type:</dt>
             <dd id="recommendationModalType"></dd>
-            <dt id="recommendationModalExtraLabel">Author</dt>
+            <dt id="recommendationModalExtraLabel" data-i18n="recommendation.extra_label_author" class="i18n-text">Author</dt>
             <dd id="recommendationModalExtraValue"></dd>
           </dl>
           <div class="recommendation-modal-notes" id="recommendationModalNotes"></div>
         </div>
       </div>
     </div>
-    <a href="/" class="home-section-btn">
-      <i class="fa-solid fa-grid-2"></i>View more
+    <a href="/" class="home-section-btn" data-i18n="buttons.view_more">
+      <i class="fa-solid fa-grid-2"></i><span class="i18n-text">View more</span>
     </a>
   </section>
 
@@ -1550,7 +2749,22 @@
       if (!item) return;
       if (titleEl) titleEl.textContent = item.title || '';
       if (typeEl) typeEl.textContent = item.type || '';
-      if (extraLabelEl) extraLabelEl.textContent = item.extraLabel || '';
+
+      // Choose extra label key based on layout (book/music/other)
+      if (extraLabelEl) {
+        let key = 'recommendation.extra_label_year';
+        const layout = String(item.layout || '');
+        if (layout.indexOf('book') !== -1) key = 'recommendation.extra_label_author';
+        else if (layout.indexOf('music') !== -1) key = 'recommendation.extra_label_artist';
+        extraLabelEl.setAttribute('data-i18n', key);
+
+        if (window.__applyLang && window.__getLang) {
+          try {
+            window.__applyLang(window.__getLang());
+          } catch (e) {}
+        }
+      }
+
       if (extraValueEl) extraValueEl.textContent = item.extraValue || '';
       if (notesEl) notesEl.textContent = item.notes || '';
       if (modal) {
@@ -1592,17 +2806,65 @@
     <p>
       <i class="fa-solid fa-cloud" style="color: #fff;"></i><br>
       &copy; 2026
-        Lan
+        <span data-i18n="author" class="i18n-text">Lan</span>
           <br>Living on Earth, dreaming in the cloud.
     </p>
   </footer>
 
   <script>
-    function switchLang() {
-      let path = window.location.pathname;
-      if (path.includes('/zh-CN/')) window.location.href = path.replace('/zh-CN/', '/');
-      else window.location.href = '/zh-CN' + path;
-    }
+    (function() {
+      var LANG_KEY = 'site-lang';
+      var i18n = {"en":{"title":"Lan's Notebook","subtitle":"The Life Journal of an Earthling","description":"Welcome to my notebook, where I record everything I love about the world and about living on Earth.","author":"Lan","menu.home":"Home","menu.blog":"Blog","menu.shop":"Market","menu.about":"About Me","cart":"Cart","sections.what_i_love":"What I'd Love to do","sections.things_proud_of":"Things I'm Proud of","sections.moments_alive":"Moments I Felt Alive","sections.things_made":"Things I've Made","sections.things_recommend":"Things I Recommend","buttons.view_more":"View more","buttons.click_to_open":"Click to Open","buttons.open":"Open","recommendation.type":"Type","recommendation.selection":"Selection","recommendation.last_stored":"Last Stored","recommendation.notes_header":"Lan's notes","recommendation.type_label":"Type:","recommendation.extra_label_author":"Author","recommendation.extra_label_artist":"Artist","recommendation.extra_label_year":"Year","selected_blog_categories.journaling":"Journaling","selected_blog_categories.learning":"Learning","selected_blog_categories.creating":"Creating","selected_blog_categories.coding":"Coding","menu.market":"Market","menu.about_me":"About Me"},"zh-CN":{"title":"生活笔记","subtitle":"地球漫游指南","description":"欢迎来到我的个人博物馆——这里记录着我作为一个人类，一生中最想留下的痕迹。","author":"秋边边","menu.home":"首页","menu.blog":"文章","menu.shop":"杂货铺","menu.about":"关于博主","cart":"购物车","sections.what_i_love":"我的记录","sections.things_proud_of":"我的成就","sections.moments_alive":"我的瞬间","sections.things_made":"我的作品","sections.things_recommend":"我的推荐","buttons.view_more":"查看更多","buttons.click_to_open":"点击打开","buttons.open":"查看","recommendation.type":"类型","recommendation.selection":"作品名称","recommendation.last_stored":"录入时间","recommendation.notes_header":"观后感","recommendation.type_label":"类型：","recommendation.extra_label_author":"作者","recommendation.extra_label_artist":"歌手","recommendation.extra_label_year":"年份","selected_blog_categories.journaling":"关于日记","selected_blog_categories.learning":"关于学习","selected_blog_categories.creating":"关于创作","selected_blog_categories.coding":"关于编程","menu.market":"杂货铺","menu.about_me":"关于博主"}};
+      function getLang() {
+        var params = new URLSearchParams(window.location.search);
+        var q = params.get('lang');
+        if (q === 'zh-CN' || q === 'en') return q;
+        try { return localStorage.getItem(LANG_KEY) || 'en'; } catch (e) { return 'en'; }
+      }
+      function setLang(lang) {
+        try { localStorage.setItem(LANG_KEY, lang); } catch (e) {}
+        var url = new URL(window.location.href);
+        if (lang === 'en') url.searchParams.delete('lang');
+        else url.searchParams.set('lang', lang);
+        window.location.href = url.toString();
+      }
+      function applyLang(lang) {
+        var root = document.documentElement;
+        if (root) root.setAttribute('lang', lang === 'zh-CN' ? 'zh-CN' : 'en');
+        var strings = i18n[lang] || i18n.en;
+        document.querySelectorAll('[data-i18n]').forEach(function(el) {
+          var key = el.getAttribute('data-i18n');
+          var text = strings[key];
+          if (text != null) {
+            var span = el.querySelector('.i18n-text');
+            if (span) span.textContent = text;
+            else el.textContent = text;
+          }
+        });
+        var label = document.getElementById('lang-switch-label');
+        if (label) label.textContent = lang === 'zh-CN' ? 'EN' : 'CN';
+        if (strings.title && strings.subtitle && (window.location.pathname === '/' || window.location.pathname === '' || /\/index\.html$/i.test(window.location.pathname))) {
+          document.title = strings.title + ' | ' + strings.subtitle;
+        }
+      }
+      window.switchLang = function() {
+        var current = getLang();
+        setLang(current === 'en' ? 'zh-CN' : 'en');
+      };
+      function initLang() {
+        applyLang(getLang());
+      }
+      // expose helpers for other scripts (homepage modal, etc.)
+      window.__i18n = i18n;
+      window.__getLang = getLang;
+      window.__applyLang = applyLang;
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initLang);
+      } else {
+        initLang();
+      }
+    })();
   </script>
   
   <!-- Snipcart JavaScript -->
