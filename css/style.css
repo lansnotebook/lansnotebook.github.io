@@ -1251,6 +1251,10 @@ body.nav-locked{
   color: var(--block);
 }
 
+.recommendation-table-body {
+  display: contents;
+}
+
 .recommendation-row {
   display: grid;
   grid-template-columns: 100px 1fr 120px 130px;

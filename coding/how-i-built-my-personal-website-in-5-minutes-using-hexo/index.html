@@ -17,7 +17,7 @@
         <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.4.0/default/snipcart.css" />
 <meta name="generator" content="Hexo 6.3.0"></head>
 
-<body>
+<body data-page-title-en="How I Built My Personal Website in 5 Minutes (Using Hexo)" data-page-title-zh="在5分钟内搭建属于你的个人网站（Hexo框架）">
   <header class="site-header">
     <div class="header-bar">
       <div class="logo">
@@ -81,10 +81,15 @@
         <span class="article-date">
             January 22nd, 2026
         </span>
-        <h1>How I Built My Personal Website in 5 Minutes (Using Hexo)</h1>
+        
+        <h1 class="article-title-wrapper">
+            <span class="lang-content" data-lang="en" style="">How I Built My Personal Website in 5 Minutes (Using Hexo)</span>
+            <span class="lang-content" data-lang="zh-CN" style="display:none;">在5分钟内搭建属于你的个人网站（Hexo框架）</span>
+        </h1>
+        
     </div>
-    <div class="article-content">
-      <p>Let&#39;s be honest:</p>
+    
+    <div class="article-content lang-content" data-lang="en" style=""><p>Let&#39;s be honest:</p>
 <p>most of us <em>think</em> about building a personal website far more than we actually build one.</p>
 <p>We imagine:</p>
 <ul>
@@ -181,8 +186,141 @@
 </ul>
 <p>Your website doesn&#39;t need to be finished.</p>
 <p>It just needs to be <strong>alive</strong>.</p>
+</div>
+    <div class="article-content lang-content" data-lang="zh-CN" style="display:none;"><p>说实话：</p>
+<p>我们大多数人<em>想</em>建个人网站的时间远比实际建网站的时间长得多。</p>
+<p>我们想象着：</p>
+<ul>
+<li><p>完美的布局</p>
+</li>
+<li><p>充满诗意的“关于我”页面</p>
+</li>
+<li><p>既展现我才华又体现我设计品味的雅致字体</p>
+</li>
+</ul>
+<p>然后……我们就关掉了网页。</p>
+<p>这次，我的做法不一样。</p>
+<p>我只用了<strong>大约5分钟</strong>就建好了我的个人网站——没有夸张，没有神秘的编程能力，也没有网页设计师的化身。</p>
+<hr>
+<h2 id="为什么选择Hexo？"><a href="#为什么选择Hexo？" class="headerlink" title="为什么选择Hexo？"></a>为什么选择Hexo？</h2><p>Hexo 是一个<strong>静态网站生成器</strong>，简单来说就是：</p>
+<blockquote>
+<p>你写点东西 → Hexo 把它们变成一个网站</p>
+</blockquote>
+<p>我喜欢它的原因：</p>
+<ul>
+<li><p>轻量级</p>
+</li>
+<li><p>基于 Markdown（也就是写作时无需忍受界面的繁琐）</p>
+</li>
+<li><p>非常适合博客、日志、作品集以及“我只想在网上存在”之类的网站</p>
+</li>
+<li><p>可自定义（重点：可自定义）</p>
+</li>
+</ul>
+<p>如果你的目标是<em>分享想法</em>，而不是<em>与 CSS 作斗争</em>，那么 Hexo 就是你的好帮手。</p>
+<hr>
+<h2 id="你需要准备的东西（非常简短的清单）"><a href="#你需要准备的东西（非常简短的清单）" class="headerlink" title="你需要准备的东西（非常简短的清单）"></a>你需要准备的东西（非常简短的清单）</h2><p>在我们召唤网站之神之前，请确保你已安装：</p>
+<ul>
+<li><p><strong>Node.js</strong></p>
+</li>
+<li><p><strong>Git</strong></p>
+</li>
+<li><p>终端（别害怕，它只是一个充满自信的文本框）</p>
+</li>
+</ul>
+<p>就这些。没有 27 步的清单。</p>
+<hr>
+<h2 id="步骤-1：安装-Hexo（30-秒）"><a href="#步骤-1：安装-Hexo（30-秒）" class="headerlink" title="步骤 1：安装 Hexo（30 秒）"></a>步骤 1：安装 Hexo（30 秒）</h2><p>在终端中输入：</p>
+<pre><code>
+npm install -g hexo-cli
+</code></pre>
+<p>恭喜！您已成功安装 Hexo，正式成为一名“终端用户”。</p>
+<hr>
+<h2 id="步骤-2：创建您的网站（1-分钟）"><a href="#步骤-2：创建您的网站（1-分钟）" class="headerlink" title="步骤 2：创建您的网站（1 分钟）"></a>步骤 2：创建您的网站（1 分钟）</h2><pre><code>
+hexo init my-blog
 
-    </div>
+cd my-blog
+
+npm install
+</code></pre>
+<p>此时，Hexo 已悄然创建了：</p>
+<ul>
+<li><p>博客结构</p>
+</li>
+<li><p>名称神秘的文件夹</p>
+</li>
+<li><p>存放您想法的未来</p>
+</li>
+</ul>
+<hr>
+<h2 id="步骤-3：本地运行（30-秒）"><a href="#步骤-3：本地运行（30-秒）" class="headerlink" title="步骤 3：本地运行（30 秒）"></a>步骤 3：本地运行（30 秒）</h2><pre><code>
+hexo server
+</code></pre>
+<p>打开浏览器并访问：</p>
+<p>👉 <a target="_blank" rel="noopener" href="http://localhost:4000/">http://localhost:4000</a></p>
+<p>搞定！</p>
+<p>您现在拥有一个网站了。</p>
+<p>已经！</p>
+<p>是的，就是这么快！</p>
+<hr>
+<h2 id="第四步：写点什么（有趣的部分）"><a href="#第四步：写点什么（有趣的部分）" class="headerlink" title="第四步：写点什么（有趣的部分）"></a>第四步：写点什么（有趣的部分）</h2><p>创建你的第一篇文章：</p>
+<pre><code>
+hexo new post &quot;Hello World&quot;
+</code></pre>
+<p>使用 Markdown 编辑 <code>source/_posts</code> 文件夹中的文件。</p>
+<p>没有干扰。</p>
+<p>没有格式焦虑。</p>
+<p>只有文字。</p>
+<p>非常适合：</p>
+<ul>
+<li><p>日记</p>
+</li>
+<li><p>项目笔记</p>
+</li>
+<li><p>深夜哲学思考</p>
+</li>
+<li><p>“我的人生目标是什么”之类的文章</p>
+</li>
+</ul>
+<hr>
+<h2 id="第五步：部署（可选，但很神奇）"><a href="#第五步：部署（可选，但很神奇）" class="headerlink" title="第五步：部署（可选，但很神奇）"></a>第五步：部署（可选，但很神奇）</h2><p>你可以部署到 GitHub Pages、Netlify 或任何支持静态网站的平台。</p>
+<p>部署完成后，你的个人网站就正式存在于互联网上了——仔细想想，这感觉还挺奇妙的。</p>
+<hr>
+<h2 id="为什么它适合个人博客"><a href="#为什么它适合个人博客" class="headerlink" title="为什么它适合个人博客"></a>为什么它适合个人博客</h2><p>Hexo 不会给人“企业”的感觉。</p>
+<p>它不会强迫你使用那些感觉像删减了情感的 LinkedIn 个人资料模板。</p>
+<p>相反，它给人的感觉更像是：</p>
+<ul>
+<li><p>一本笔记本</p>
+</li>
+<li><p>互联网上的一处静谧角落</p>
+</li>
+<li><p>一个可以让你自在存在，不受算法干扰的地方</p>
+</li>
+</ul>
+<p>这正是我想要的。</p>
+<hr>
+<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>你不需要：</p>
+<ul>
+<li><p>一个完美的设计</p>
+</li>
+<li><p>40 篇准备好的博客文章</p>
+</li>
+<li><p>一份个人品牌战略文件</p>
+</li>
+</ul>
+<p>你只需要：</p>
+<ul>
+<li><p>一页纸</p>
+</li>
+<li><p>一个想法</p>
+</li>
+<li><p>五分钟的勇气</p>
+</li>
+</ul>
+<p>你的网站不需要完美无缺。</p>
+<p>它只需要<strong>鲜活</strong>地存在。</p>
+</div>
+    
     <div class="article-footer">
         ~ 🍂 🐿️ 🍂 ~
     </div>
@@ -203,7 +341,7 @@
   <script>
     (function() {
       var LANG_KEY = 'site-lang';
-      var i18n = {"en":{"title":"Lan's Notebook","subtitle":"The Life Journal of an Earthling","description":"Welcome to my notebook, where I record everything I love about the world and about living on Earth.","author":"Lan","menu.home":"Home","menu.blog":"Blog","menu.shop":"Market","menu.about":"About Me","cart":"Cart","sections.what_i_love":"What I'd Love to do","sections.things_proud_of":"Things I'm Proud of","sections.moments_alive":"Moments I Felt Alive","sections.things_made":"Things I've Made","sections.things_recommend":"Things I Recommend","buttons.view_more":"View more","buttons.click_to_open":"Click to Open","buttons.open":"Open","recommendation.type":"Type","recommendation.selection":"Selection","recommendation.last_stored":"Last Stored","recommendation.notes_header":"Lan's notes","recommendation.type_label":"Type:","recommendation.extra_label_author":"Author","recommendation.extra_label_artist":"Artist","recommendation.extra_label_year":"Year","selected_blog_categories.journaling":"Journaling","selected_blog_categories.learning":"Learning","selected_blog_categories.creating":"Creating","selected_blog_categories.coding":"Coding","menu.market":"Market","menu.about_me":"About Me"},"zh-CN":{"title":"生活笔记","subtitle":"地球漫游指南","description":"欢迎来到我的个人博物馆——这里记录着我作为一个人类，一生中最想留下的痕迹。","author":"秋边边","menu.home":"首页","menu.blog":"文章","menu.shop":"小卖部","menu.about":"关于博主","cart":"购物车","sections.what_i_love":"我的记录","sections.things_proud_of":"我的成就","sections.moments_alive":"我的瞬间","sections.things_made":"我的作品","sections.things_recommend":"我的推荐","buttons.view_more":"查看更多","buttons.click_to_open":"点击打开","buttons.open":"查看","recommendation.type":"类型","recommendation.selection":"作品名称","recommendation.last_stored":"录入时间","recommendation.notes_header":"观后感","recommendation.type_label":"类型：","recommendation.extra_label_author":"作者","recommendation.extra_label_artist":"歌手","recommendation.extra_label_year":"年份","selected_blog_categories.journaling":"关于日记","selected_blog_categories.learning":"关于学习","selected_blog_categories.creating":"关于创作","selected_blog_categories.coding":"关于编程","menu.market":"小卖部","menu.about_me":"关于博主"}};
+      var i18n = {"en":{"title":"Lan's Notebook","subtitle":"The Life Journal of an Earthling","description":"Welcome to my notebook, where I record everything I love about the world and about living on Earth.","author":"Lan","menu.home":"Home","menu.blog":"Blog","menu.shop":"Market","menu.about":"About Me","cart":"Cart","blog_page.title":"My Blog","blog_page.description":"As an earthling, all I do in my life is ...","sections.what_i_love":"What I'd Love to do","sections.things_proud_of":"Things I'm Proud of","sections.moments_alive":"Moments I Felt Alive","sections.things_made":"Things I've Made","sections.things_recommend":"Things I Recommend","buttons.view_more":"View more","buttons.click_to_open":"Click to Open","buttons.open":"Open","recommendation.type":"Type","recommendation.selection":"Selection","recommendation.last_stored":"Last Stored","recommendation.notes_header":"Lan's notes","recommendation.type_label":"Type:","recommendation.extra_label_author":"Author","recommendation.extra_label_artist":"Artist","recommendation.extra_label_year":"Year","selected_blog_categories.journaling":"Journaling","selected_blog_categories.learning":"Learning","selected_blog_categories.creating":"Creating","selected_blog_categories.coding":"Coding","post_meta.categories":"Categories","post_meta.tags":"Tags","tags.reading_notes":"Reading notes","tags.daily_sparks":"Daily sparks","tags.monthly_review":"Monthly review","tags.note_taking":"Note Taking","tags.religions":"Religions","tags.life_kits":"Life Kits","tags.languages":"Languages","tags.calligraphy_art":"Calligraphy art","tags.paintings":"Paintings","tags.web_development":"Web development","tags.vibe_coding":"Vibe coding","tag_descriptions.reading_notes":"Traces left by other minds passing through mine.","tag_descriptions.daily_sparks":"Thoughts drifting like clouds.","tag_descriptions.monthly_review":"Looking back at the Earth time that has just passed.","tag_descriptions.note_taking":"Observations captured before they disappear.","tag_descriptions.religions":"Ways humans search for meaning beyond the visible world.","tag_descriptions.life_kits":"Tools and ideas for surviving daily life on Earth.","tag_descriptions.languages":"Different sounds humans use to name the same world.","tag_descriptions.calligraphy_art":"Movement, ink, and breath meeting on paper.","tag_descriptions.paintings":"Colors arranged to record a feeling of being alive.","tag_descriptions.web_development":"Building bridges between the digital and the real world.","tag_descriptions.vibe_coding":"Code with a feeling, not just logic.","selected_blog_categories_descriptions.journaling":"Fragments of daily life, inner weather, and passing thoughts on Earth.","selected_blog_categories_descriptions.learning":"Observations collected while trying to understand how this world works.","selected_blog_categories_descriptions.creating":"Things shaped by hand to make inner experiences visible.","selected_blog_categories_descriptions.coding":"Code that transforms ideas into reality.","menu.market":"Market","menu.about_me":"About Me"},"zh-CN":{"title":"生活笔记","subtitle":"地球漫游指南","description":"欢迎来到我的个人博物馆——这里记录着我作为一个人类，一生中最想留下的痕迹。","author":"秋边边","menu.home":"首页","menu.blog":"博客","menu.shop":"商店","menu.about":"关于博主","cart":"购物车","blog_page.title":"我的博客","blog_page.description":"快来探索我的空间吧！","sections.what_i_love":"我的记录","sections.things_proud_of":"我的成就","sections.moments_alive":"我的瞬间","sections.things_made":"我的作品","sections.things_recommend":"我的推荐","buttons.view_more":"查看更多","buttons.click_to_open":"浏览","buttons.open":"查看","recommendation.type":"类型","recommendation.selection":"作品名称","recommendation.last_stored":"录入时间","recommendation.notes_header":"观后感","recommendation.type_label":"类型：","recommendation.extra_label_author":"作者","recommendation.extra_label_artist":"歌手","recommendation.extra_label_year":"年份","selected_blog_categories.journaling":"日记","selected_blog_categories.learning":"学习","selected_blog_categories.creating":"创作","selected_blog_categories.coding":"编程","post_meta.categories":"分类","post_meta.tags":"标签","tags.reading_notes":"阅读笔记","tags.daily_sparks":"日记随笔","tags.monthly_review":"月度回顾","tags.note_taking":"笔记系统","tags.religions":"宗教","tags.life_kits":"人类生存指南","tags.languages":"语言学习","tags.calligraphy_art":"书法","tags.paintings":"绘画","tags.web_development":"网页开发","tags.vibe_coding":"氛围编程","tag_descriptions.reading_notes":"他人思想经过我时，留下的痕迹。","tag_descriptions.daily_sparks":"像云一样飘着的念头。","tag_descriptions.monthly_review":"过去的一个月干了点啥呢。","tag_descriptions.note_taking":"像姑姑教过儿捉鸟一样捕捉那些转瞬即逝的灵感。","tag_descriptions.religions":"人类仰望世界时，提出的不同答案。","tag_descriptions.life_kits":"真正聪明的人才能学会的东西。","tag_descriptions.languages":"人类用来呼唤同一个世界的不同声音。","tag_descriptions.calligraphy_art":"手的动作，墨的流动，呼吸的节奏。","tag_descriptions.paintings":"把当下的感觉，留在颜色里。","tag_descriptions.web_development":"我的赛博之家。","tag_descriptions.vibe_coding":"别先想对不对，先顺着感觉写。","selected_blog_categories_descriptions.journaling":"关于我的日常、情绪与一些缓慢流动的思绪。","selected_blog_categories_descriptions.learning":"关于我试图理解世界这件事情。","selected_blog_categories_descriptions.creating":"关于我的创造，手作与记录。","selected_blog_categories_descriptions.coding":"将想法转化为现实的代码。","menu.market":"商店","menu.about_me":"关于博主"}};
       function getLang() {
         var params = new URLSearchParams(window.location.search);
         var q = params.get('lang');
@@ -215,7 +353,10 @@
         var url = new URL(window.location.href);
         if (lang === 'en') url.searchParams.delete('lang');
         else url.searchParams.set('lang', lang);
-        window.location.href = url.toString();
+        if (window.history && window.history.replaceState) {
+          window.history.replaceState({}, '', url.toString());
+        }
+        applyLang(lang);
       }
       function applyLang(lang) {
         var root = document.documentElement;
@@ -234,7 +375,17 @@
         if (label) label.textContent = lang === 'zh-CN' ? 'EN' : 'CN';
         if (strings.title && strings.subtitle && (window.location.pathname === '/' || window.location.pathname === '' || /\/index\.html$/i.test(window.location.pathname))) {
           document.title = strings.title + ' | ' + strings.subtitle;
+        } else {
+          var body = document.body;
+          var titleEn = body && body.getAttribute('data-page-title-en');
+          var titleZh = body && body.getAttribute('data-page-title-zh');
+          if (titleEn != null && titleZh != null) {
+            document.title = lang === 'zh-CN' ? titleZh : titleEn;
+          }
         }
+        document.querySelectorAll('.lang-content[data-lang]').forEach(function(el) {
+          el.style.display = el.getAttribute('data-lang') === lang ? '' : 'none';
+        });
         document.dispatchEvent(new CustomEvent('lang-applied', { detail: { lang: lang } }));
       }
       window.switchLang = function() {
