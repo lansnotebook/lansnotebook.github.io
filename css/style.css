@@ -2138,6 +2138,18 @@ button.snipcart-add-item i,
   margin-bottom: 15px;
 }
 
+.shop-title-section .category-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.shop-title-section .category-title-row .category-box-icon {
+  margin-bottom: 0;
+}
+
 .category-box h3 {
   margin: 10px 0;
   color: var(--text);
