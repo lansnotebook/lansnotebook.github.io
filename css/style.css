@@ -470,7 +470,7 @@ body.nav-locked{
   color: var(--icon);
   font-size: 1rem; 
   max-width: 600px; 
-  margin: 20px auto 0 auto; 
+  margin: 40px auto 0 auto; 
   background: var(--block); 
   padding: 30px; 
   border-radius: 20px;
@@ -600,7 +600,7 @@ body.nav-locked{
 
 /* Responsive */
 @media (max-width: 768px) {
-  .categories-grid { padding: 20px 5%; }
+  .categories-grid { padding: 10px 5%; padding-top: 0; }
 }
 
 /* ------ Achievements --------- */
@@ -1006,7 +1006,8 @@ body.nav-locked{
 /* Responsive: 2 cards between 600px–900px */
 @media (max-width: 900px) and (min-width: 600px) {
   .memory-scroll-container {
-    /* padding: 20px 45px; */
+    padding-bottom: 0;
+    margin-bottom: 0;
   }
   .memory-card {
     flex: 0 0 calc((100% - 20px) / 2);
@@ -1023,7 +1024,7 @@ body.nav-locked{
 /* Responsive: 1 card under 600px */
 @media (max-width: 599px) {
   .memory-scroll-container {
-    /* padding: 20px 40px; */
+    padding-bottom: 5px;
   }
   .memory-card {
     flex: 0 0 100%;
@@ -2031,7 +2032,7 @@ body.recommendation-modal-open {
     padding: 20px;
   }
   .article-content-container h1 {
-    font-size: 1.7rem;
+    font-size: 1.6rem;
   }
   .article-content-container h2 {
     font-size: 1.5rem;
