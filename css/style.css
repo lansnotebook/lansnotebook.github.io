@@ -1701,6 +1701,31 @@ body.recommendation-modal-open {
   transform: translateX(-50%);
 }
 
+/* 时间线两端的小圆球（可爱风格） */
+.timeline-line::before,
+.timeline-line::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: linear-gradient(145deg, var(--icon), var(--icon));
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.4);
+  transform: translateX(-50%);
+}
+.timeline-line::after {
+  background: linear-gradient(145deg, var(--hover), var(--hover));
+}
+
+.timeline-line::before {
+  top: 0;
+}
+
+.timeline-line::after {
+  bottom: 0;
+}
+
 .timeline-item {
   position: relative;
   display: grid;
@@ -1782,6 +1807,14 @@ body.recommendation-modal-open {
     left: 24px;
     transform: none;
     width: 3px;
+  }
+
+  .timeline-line::before,
+  .timeline-line::after {
+    left: 24px;
+    width: 12px;
+    height: 12px;
+    transform: translateX(-50%);
   }
 
   .timeline-item {
