@@ -254,7 +254,7 @@
   </url>
   
   <url>
-    <loc>http://example.com/uncategorized/recommendation-riot-women-cn/</loc>
+    <loc>http://example.com/uncategorized/recommendation-riot-women-en/</loc>
     
     <lastmod>2026-02-01</lastmod>
     
@@ -263,7 +263,7 @@
   </url>
   
   <url>
-    <loc>http://example.com/uncategorized/recommendation-riot-women-en/</loc>
+    <loc>http://example.com/uncategorized/recommendation-riot-women-cn/</loc>
     
     <lastmod>2026-02-01</lastmod>
     
@@ -299,7 +299,7 @@
   </url>
   
   <url>
-    <loc>http://example.com/uncategorized/recommendation-the-accountant-en/</loc>
+    <loc>http://example.com/uncategorized/recommendation-writing-the-blockbuster-novel-en/</loc>
     
     <lastmod>2026-02-01</lastmod>
     
@@ -317,7 +317,7 @@
   </url>
   
   <url>
-    <loc>http://example.com/uncategorized/recommendation-writing-the-blockbuster-novel-en/</loc>
+    <loc>http://example.com/uncategorized/recommendation-the-accountant-en/</loc>
     
     <lastmod>2026-02-01</lastmod>
     
@@ -398,7 +398,7 @@
   </url>
   
   <url>
-    <loc>http://example.com/uncategorized/recommendation-anatomy-of-a-fall-en/</loc>
+    <loc>http://example.com/uncategorized/recommendation-anatomy-of-a-fall-cn/</loc>
     
     <lastmod>2024-01-28</lastmod>
     
@@ -407,7 +407,7 @@
   </url>
   
   <url>
-    <loc>http://example.com/uncategorized/recommendation-anatomy-of-a-fall-cn/</loc>
+    <loc>http://example.com/uncategorized/recommendation-anatomy-of-a-fall-en/</loc>
     
     <lastmod>2024-01-28</lastmod>
     
@@ -439,14 +439,7 @@
   </url>
   
   <url>
-    <loc>http://example.com/tags/web-development/</loc>
-    <lastmod>2026-02-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://example.com/tags/life-Kits/</loc>
+    <loc>http://example.com/tags/note-taking/</loc>
     <lastmod>2026-02-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -460,14 +453,14 @@
   </url>
   
   <url>
-    <loc>http://example.com/tags/note-taking/</loc>
+    <loc>http://example.com/tags/reading-notes/</loc>
     <lastmod>2026-02-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://example.com/tags/reading-notes/</loc>
+    <loc>http://example.com/tags/life-Kits/</loc>
     <lastmod>2026-02-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -482,6 +475,13 @@
   
   <url>
     <loc>http://example.com/tags/paintings/</loc>
+    <lastmod>2026-02-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/tags/web-development/</loc>
     <lastmod>2026-02-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -532,14 +532,14 @@
   </url>
   
   <url>
-    <loc>http://example.com/categories/design-art/</loc>
+    <loc>http://example.com/categories/instruction-videos/</loc>
     <lastmod>2026-02-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://example.com/categories/instruction-videos/</loc>
+    <loc>http://example.com/categories/design-art/</loc>
     <lastmod>2026-02-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
