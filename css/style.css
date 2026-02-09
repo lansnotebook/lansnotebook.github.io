@@ -1986,6 +1986,27 @@ body.recommendation-modal-open {
     padding: 30px;
   }
   .article-content-container h1 {
+    font-size: 1.8rem;
+  }
+  .article-content-container h2 {
+    font-size: 1.6rem;
+  }
+  .article-content-container h3 {
+    font-size: 1.4rem;
+  }
+  .article-content {
+    font-size: 1.05rem;
+  }
+  .article-footer {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .article-content-container {
+    padding: 20px;
+  }
+  .article-content-container h1 {
     font-size: 1.7rem;
   }
   .article-content-container h2 {
@@ -1995,28 +2016,7 @@ body.recommendation-modal-open {
     font-size: 1.3rem;
   }
   .article-content {
-    font-size: 0.95rem;
-  }
-  .article-footer {
-    font-size: 1.7rem;
-  }
-}
-
-@media (max-width: 500px) {
-  .article-content-container {
-    padding: 20px;
-  }
-  .article-content-container h1 {
-    font-size: 1.6rem;
-  }
-  .article-content-container h2 {
-    font-size: 1.4rem;
-  }
-  .article-content-container h3 {
-    font-size: 1.2rem;
-  }
-  .article-content {
-    font-size: 0.9rem;
+    font-size: 0.1rem;
   }
   .article-footer {
     font-size: 1.6rem;
