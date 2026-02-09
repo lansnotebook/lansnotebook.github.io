@@ -281,15 +281,6 @@
   </url>
   
   <url>
-    <loc>http://example.com/uncategorized/recommendation-the-accountant-en/</loc>
-    
-    <lastmod>2026-02-01</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://example.com/uncategorized/recommendation-the-thrill-is-gone-cn/</loc>
     
     <lastmod>2026-02-01</lastmod>
@@ -299,7 +290,7 @@
   </url>
   
   <url>
-    <loc>http://example.com/uncategorized/recommendation-writing-the-blockbuster-novel-cn/</loc>
+    <loc>http://example.com/uncategorized/recommendation-the-thrill-is-gone-en/</loc>
     
     <lastmod>2026-02-01</lastmod>
     
@@ -308,7 +299,16 @@
   </url>
   
   <url>
-    <loc>http://example.com/uncategorized/recommendation-the-thrill-is-gone-en/</loc>
+    <loc>http://example.com/uncategorized/recommendation-the-accountant-en/</loc>
+    
+    <lastmod>2026-02-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/uncategorized/recommendation-writing-the-blockbuster-novel-cn/</loc>
     
     <lastmod>2026-02-01</lastmod>
     
@@ -532,14 +532,14 @@
   </url>
   
   <url>
-    <loc>http://example.com/categories/instruction-videos/</loc>
+    <loc>http://example.com/categories/design-art/</loc>
     <lastmod>2026-02-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://example.com/categories/design-art/</loc>
+    <loc>http://example.com/categories/instruction-videos/</loc>
     <lastmod>2026-02-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
