@@ -432,7 +432,7 @@
   </url>
   
   <url>
-    <loc>http://example.com/tags/web-development/</loc>
+    <loc>http://example.com/tags/vibe-coding/</loc>
     <lastmod>2026-02-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -453,7 +453,7 @@
   </url>
   
   <url>
-    <loc>http://example.com/tags/vibe-coding/</loc>
+    <loc>http://example.com/tags/note-taking/</loc>
     <lastmod>2026-02-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -467,14 +467,14 @@
   </url>
   
   <url>
-    <loc>http://example.com/tags/note-taking/</loc>
+    <loc>http://example.com/tags/calligraphy-art/</loc>
     <lastmod>2026-02-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://example.com/tags/calligraphy-art/</loc>
+    <loc>http://example.com/tags/web-development/</loc>
     <lastmod>2026-02-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -525,14 +525,14 @@
   </url>
   
   <url>
-    <loc>http://example.com/categories/instruction-videos/</loc>
+    <loc>http://example.com/categories/creating/</loc>
     <lastmod>2026-02-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://example.com/categories/creating/</loc>
+    <loc>http://example.com/categories/instruction-videos/</loc>
     <lastmod>2026-02-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
