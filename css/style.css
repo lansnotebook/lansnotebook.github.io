@@ -1811,7 +1811,7 @@ body.recommendation-modal-open {
 
   .timeline-line::before,
   .timeline-line::after {
-    left: 24px;
+    /* left: 24px; */
     width: 12px;
     height: 12px;
     transform: translateX(-50%);
