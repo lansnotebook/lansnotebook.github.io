@@ -1351,6 +1351,7 @@
       
     
   </div>
+  <div class="memories-gallery-pagination" id="memoriesGalleryPagination"></div>
 </div>
 
 <script>
@@ -1370,14 +1371,74 @@
       return (enData && enData.length) ? enData : cnData;
     }
 
-    function renderMemoriesGallery(lang) {
+    var PAGE_SIZE = 12;
+
+    function getPageFromUrl() {
+      try {
+        var url = new URL(window.location.href);
+        var p = parseInt(url.searchParams.get('m_page') || '1', 10);
+        if (!p || p < 1) return 1;
+        return p;
+      } catch (e) {
+        return 1;
+      }
+    }
+
+    function setPageInUrl(page) {
+      try {
+        var url = new URL(window.location.href);
+        if (page <= 1) url.searchParams.delete('m_page');
+        else url.searchParams.set('m_page', String(page));
+        if (window.history && window.history.replaceState) {
+          window.history.replaceState({}, '', url.toString());
+        }
+      } catch (e) {}
+    }
+
+    function renderMemoriesPagination(currentPage, totalPages) {
+      var pager = document.getElementById('memoriesGalleryPagination');
+      if (!pager) return;
+      if (!totalPages || totalPages <= 1) {
+        pager.innerHTML = '';
+        return;
+      }
+      var lang = getCurrentLang();
+      var isZh = (lang === 'zh-CN');
+      var firstLabel = isZh ? '首页' : 'First';
+      var lastLabel = isZh ? '末页' : 'Last';
+      var html = '';
+      // 首页
+      html += '<button class="memories-page-btn memories-page-btn-first' + (currentPage <= 1 ? ' is-disabled' : '') + '" data-page="1">' + firstLabel + '</button>';
+      // 上一页
+      html += '<button class="memories-page-btn memories-page-btn-prev' + (currentPage <= 1 ? ' is-disabled' : '') + '" data-page="' + (currentPage - 1) + '">‹</button>';
+      // 当前页 / 总页数
+      html += '<span class="memories-page-info">' + currentPage + ' / ' + totalPages + '</span>';
+      // 下一页
+      html += '<button class="memories-page-btn memories-page-btn-next' + (currentPage >= totalPages ? ' is-disabled' : '') + '" data-page="' + (currentPage + 1) + '">›</button>';
+      // 末页
+      html += '<button class="memories-page-btn memories-page-btn-last' + (currentPage >= totalPages ? ' is-disabled' : '') + '" data-page="' + totalPages + '">' + lastLabel + '</button>';
+      pager.innerHTML = html;
+      pager.dataset.currentPage = String(currentPage);
+    }
+
+    function renderMemoriesGallery(lang, page) {
       var container = document.getElementById('memoriesGalleryGrid');
       if (!container) return;
       var data = readMemoriesData(lang);
-      if (!data || !data.length) return;
+      if (!data || !data.length) {
+        container.innerHTML = '';
+        renderMemoriesPagination(1, 1);
+        return;
+      }
+      var totalPages = Math.max(1, Math.ceil(data.length / PAGE_SIZE));
+      var currentPage = page || getPageFromUrl();
+      if (currentPage > totalPages) currentPage = totalPages;
+      if (currentPage < 1) currentPage = 1;
+      var start = (currentPage - 1) * PAGE_SIZE;
+      var slice = data.slice(start, start + PAGE_SIZE);
       var html = '';
-      for (var i = 0; i < data.length; i++) {
-        var img = data[i] || {};
+      for (var i = 0; i < slice.length; i++) {
+        var img = slice[i] || {};
         var title = (img.title || 'Memory');
         var escTitleAttr = String(title).replace(/"/g, '&quot;');
         var escTitleText = String(title).replace(/</g, '&lt;').replace(/>/g, '&gt;');
@@ -1397,6 +1458,7 @@
         html += '</div>';
       }
       container.innerHTML = html;
+      renderMemoriesPagination(currentPage, totalPages);
     }
 
     function getCurrentLang() {
@@ -1408,15 +1470,32 @@
 
     if (document.readyState === 'loading') {
       document.addEventListener('DOMContentLoaded', function() {
-        renderMemoriesGallery(getCurrentLang());
+        renderMemoriesGallery(getCurrentLang(), getPageFromUrl());
       });
     } else {
-      renderMemoriesGallery(getCurrentLang());
+      renderMemoriesGallery(getCurrentLang(), getPageFromUrl());
     }
 
     document.addEventListener('lang-applied', function(e) {
       var lang = (e && e.detail && e.detail.lang) || getCurrentLang();
-      renderMemoriesGallery(lang);
+      renderMemoriesGallery(lang, getPageFromUrl());
+    });
+
+    document.addEventListener('click', function(e) {
+      var pager = document.getElementById('memoriesGalleryPagination');
+      if (!pager || !pager.contains(e.target)) return;
+      var btn = e.target.closest('.memories-page-btn');
+      if (!btn || btn.classList.contains('is-disabled')) return;
+      var page = parseInt(btn.getAttribute('data-page') || '1', 10);
+      if (!page || page < 1) page = 1;
+      setPageInUrl(page);
+      renderMemoriesGallery(getCurrentLang(), page);
+      // 翻页后回到页面顶部
+      try {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      } catch (err) {
+        window.scrollTo(0, 0);
+      }
     });
   })();
 </script>

@@ -1208,6 +1208,46 @@ body.nav-locked{
   font-size: 0.95rem;
 }
 
+.memories-gallery-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 32px;
+}
+
+.memories-page-btn {
+  border: none;
+  background: var(--block);
+  color: var(--text);
+  padding: 6px 12px;
+  border-radius: 999px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  font-size: 0.95rem;
+  min-width: 36px;
+  transition: background 0.2s ease, transform 0.1s ease, box-shadow 0.2s ease, color 0.2s ease;
+}
+
+.memories-page-btn:hover:not(.is-disabled) {
+  background: var(--hover);
+  color: var(--block);
+  transform: translateY(-1px);
+  box-shadow: 0 5px 16px rgba(0, 0, 0, 0.12);
+}
+
+.memories-page-btn.is-disabled {
+  opacity: 0.4;
+  cursor: default;
+  box-shadow: none;
+}
+
+.memories-page-info {
+  font-size: 0.95rem;
+  color: var(--text);
+  opacity: 0.8;
+}
+
 @media (max-width: 1100px) {
   .memories-gallery-grid {
     gap: 25px;
