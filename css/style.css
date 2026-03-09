@@ -2582,6 +2582,323 @@ button.snipcart-add-item i,
 /* --------------All Products Page Styles ends-------------- */
 
 
+/* --------------Projects Page (all projects) -------------- */
+.projects-page-wrap {
+  height: calc(100vh - var(--site-header-height, 60px));
+  display: flex;
+  flex-direction: column;
+  padding: 10px 8%;
+  overflow: hidden;
+}
+
+.projects-top-row {
+  flex: 0 0 80%;
+  height: 80%;
+  min-height: 0;
+  max-height: 80%;
+  display: flex;
+  align-items: stretch;
+}
+
+.projects-showcase {
+  display: flex;
+  flex: 1;
+  min-height: 0;
+  width: 100%;
+  gap: 0;
+  padding: 20px;
+  background: var(--block);
+  border-radius: var(--radius);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(113, 13, 28, 0.08);
+}
+
+.projects-showcase-left {
+  flex: 0 0 65%;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+}
+
+.projects-image-carousel {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+.projects-image-track {
+  display: flex;
+  flex: 1;
+  min-height: 0;
+  transition: transform 0.35s ease-out;
+  will-change: transform;
+}
+
+.projects-image-slide {
+  flex: 0 0 100%;
+  width: 100%;
+  min-width: 0;
+  min-height: 0;
+  display: flex;
+  align-items: stretch;
+  justify-content: stretch;
+  overflow: hidden;
+  background: var(--block);
+}
+
+.projects-image-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.projects-image-placeholder {
+  width: 100%;
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--icon);
+  font-size: 3rem;
+  background: var(--base);
+  border-radius: var(--radius);
+}
+
+.projects-want-more-block {
+  width: 100%;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+  text-align: center;
+  background: var(--block);
+  border-radius: var(--radius);
+}
+
+/* Last slide: center only the text+button in projects-showcase; slide layout unchanged */
+.projects-slide-last {
+  position: relative;
+}
+
+.projects-slide-last .projects-want-more-block {
+  position: absolute;
+  left: calc(50% / 0.65);
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 85%;
+  min-width: 280px;
+  max-width: 90%;
+  box-sizing: border-box;
+}
+
+.projects-want-more-text {
+  margin: 0;
+  font-size: 1.2rem;
+  color: var(--text);
+  line-height: 1.5;
+}
+
+.projects-image-dots {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 12px 0;
+  flex-shrink: 0;
+}
+
+.projects-image-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: none;
+  background: color-mix(in srgb, var(--text) 35%, transparent);
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.projects-image-dot:hover {
+  background: color-mix(in srgb, var(--text) 55%, transparent);
+}
+
+.projects-image-dot.is-active {
+  background: var(--icon);
+  transform: scale(1.2);
+}
+
+.projects-showcase-right {
+  flex: 0 0 35%;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  /* padding: 20px 24px 16px 16px; */
+}
+
+.projects-desc-carousel {
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.projects-desc-track {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  flex-shrink: 0;
+  transition: transform 0.35s ease-out;
+  will-change: transform;
+}
+
+.projects-desc-slide {
+  flex: 0 0 100%;
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  padding: 1.5rem;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.projects-desc-title {
+  margin: 0 0 1rem;
+  font-size: 1.4rem;
+  color: var(--text);
+  font-weight: 700;
+}
+
+.projects-desc-text {
+  margin: 0 0 1rem;
+  font-size: 1.05rem;
+  color: var(--text);
+  line-height: 1.6;
+  flex: 1;
+}
+
+.projects-desc-slide .project-card-link {
+  margin-top: auto;
+}
+
+.projects-bottom-row {
+  flex: 0 0 20%;
+  height: 20%;
+  min-height: 80px;
+  max-height: 20%;
+  display: flex;
+  align-items: center;
+  gap: 0;
+  padding: 12px 8px;
+}
+
+.projects-nav-arrow {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  border: none;
+  border-radius: 50%;
+  background: var(--block);
+  color: var(--icon);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, color 0.2s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.projects-nav-arrow:hover {
+  background: var(--icon);
+  color: var(--block);
+}
+
+.projects-strip-wrap {
+  flex: 1;
+  min-width: 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  padding: 0 8px;
+  container-type: inline-size;
+}
+
+.projects-strip-wrap::-webkit-scrollbar {
+  height: 6px;
+}
+
+.projects-strip {
+  display: flex;
+  gap: 12px;
+  padding: 0;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  width: max-content;
+  min-width: 100%;
+}
+
+.projects-strip-btn {
+  flex: 0 0 calc((100cqw - 24px) / 3);
+  min-width: 0;
+  padding: 25px 20px;
+  border: 2px solid color-mix(in srgb, var(--text) 25%, transparent);
+  border-radius: 10px;
+  background: var(--block);
+  color: var(--text);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s, color 0.2s;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.projects-strip-btn:hover {
+  border-color: var(--icon);
+  color: var(--icon);
+}
+
+.projects-strip-btn.is-active {
+  background: var(--icon);
+  border-color: var(--icon);
+  color: var(--block);
+}
+
+@media (max-width: 768px) {
+  .projects-showcase {
+    flex-direction: column;
+  }
+
+  .projects-showcase-left,
+  .projects-showcase-right {
+    flex: 0 0 auto;
+    padding: 12px 16px;
+  }
+
+  .projects-top-row {
+    flex: 1 1 auto;
+    min-height: 50%;
+  }
+
+  .projects-image-slide img {
+    max-height: 280px;
+  }
+
+  .projects-strip-btn {
+    min-width: 120px;
+    max-width: none;
+  }
+}
+
+
 /* --------------Footer starts-------------- */
 footer {
     background: var(--icon);
